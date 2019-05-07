@@ -1,0 +1,137 @@
+<div class="container">
+  <h1>REGISTRO</h1>
+  <form >
+    <!-- Nombre -->
+    <label class="col-md-4 control-label" for="name">Nombre</label>
+      <div class="col-md-8 inputGroupContainer">
+        <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input 
+            type="text" 
+            name="name"
+            required
+            class="form-control"
+            id="name"
+            [(ngModel)]="model.name"/>
+        </div>
+      </div>
+    
+    <!-- Ap -->
+    <label for="ap">
+      Apellido Paterno
+    </label>
+    <input 
+      type="text" 
+      name="ap"
+      required
+      class="form-control"
+      id="ap"
+      [(ngModel)]="model.ap"/>
+    <!-- Am -->
+    <label for="am">
+      Apellido Materno
+    </label>
+    <input 
+      type="text" 
+      name="am"
+      required
+      class="form-control"
+      id="am"
+      [(ngModel)]="model.am"/>
+    <!-- Genero -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="genere">Genero</label>
+        <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+              <select class="selectpicker form-control"
+                      type="text" 
+                      name="genere"
+                      required
+                      id="genere"
+                      [(ngModel)]="model.genere">
+                <option>Mujer</option>
+                <option>Hombre</option>
+              </select>
+            </div>
+         </div>
+      </div>
+
+    <!-- Fraccionamiento -->
+    <label for="neighborhood">
+      Fraccionamiento
+    </label>
+    <input 
+      type="text" 
+      name="neighborhood"
+      required
+      class="form-control"
+      id="neighborhood"
+      [(ngModel)]="model.neighborhood"/>
+    <!-- Numero -->
+    <label for="number">
+      Numero
+    </label>
+    <input 
+      type="number" 
+      name="number"
+      required
+      class="form-control"
+      id="number"
+      [(ngModel)]="model.number"/>
+    <!-- Calle -->
+    <label for="streat">
+      Calle
+    </label>
+    <input 
+      type="text" 
+      name="streat"
+      required
+      class="form-control"
+      id="streat"
+      [(ngModel)]="model.streat"/>
+    <!--edad-->
+    <label for="age">
+      Edad
+    </label>
+    <input 
+      type="text" 
+      name="age"
+      required
+      class="form-control"
+      id="age"
+      [(ngModel)]="model.age"/>
+    <!-- Telefono -->
+    <label for="phone">
+      Telefono
+    </label>
+    <input 
+      type="tel" 
+      name="phone"
+      required
+      class="form-control"
+      id="phone"
+      [(ngModel)]="model.phone"/>
+    <!-- email -->
+    <label for="email">
+      email
+    </label>
+    <input 
+      type="email" 
+      name="email"
+      required
+      class="form-control"
+      id="email"
+      [(ngModel)]="model.email"/>
+
+    <!-- boton -->
+    <button type="submit">Registrar</button>
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+</div>
