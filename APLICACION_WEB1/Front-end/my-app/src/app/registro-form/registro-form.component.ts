@@ -8,7 +8,7 @@ import { registro } from 'src/app/registro.model';
   styleUrls: ['./registro-form.component.css']
 })
 export class RegistroFormComponent implements OnInit {
-	model = new registro(1,'','','','','',0,'',0,0,'');
+	model = new registro(1,'','','','','',null,'',null,null,'');
 
   constructor() { }
 
