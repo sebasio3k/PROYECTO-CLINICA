@@ -11,11 +11,16 @@ import { FormsModule } from '@angular/forms';
 // Se importa atm, el componente que creamos desde la consola con ng g component nombre-componenete
 import { RegistroFormComponent } from './registro-form/registro-form.component';
 
+import { Login } from './componenteLogin/login'
 
+
+
+// Aqui se 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistroFormComponent
+    RegistroFormComponent,
+    Login
   ],
   imports: [
     BrowserModule,
