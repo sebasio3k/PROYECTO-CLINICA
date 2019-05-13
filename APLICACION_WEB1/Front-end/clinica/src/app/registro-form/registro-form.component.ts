@@ -15,7 +15,7 @@ export class RegistroFormComponent implements OnInit {
   ngOnInit() {
   }
   get currentregistro(){
-  		return JSON.stringify(this.model);
+    return JSON.stringify(this.model);
   }
 
 }
