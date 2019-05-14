@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { RegistroFormComponent } from './registro-form/registro-form.component';
 
 import { LoginComponent } from './login/login.component';
+import { RegistrodoctoresComponent } from './registrodoctores/registrodoctores.component';
 
 
 
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
   declarations: [
     AppComponent,
     RegistroFormComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrodoctoresComponent
   ],
   imports: [
     BrowserModule,

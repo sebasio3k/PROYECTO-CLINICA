@@ -9,10 +9,10 @@ export class LoginComponent implements OnInit {
   pass;
   usr;
   constructor() { }
-  inicioSesion(){
+  inicioSesion() {
     if(this.usr=="admin" && this.pass=="1234"){
       alert("Datos Correctos");
-      document.location.href="registro";
+      document.location.href="registrodoctores";
     }else{
       alert("Datos incorrectos");
     }
