@@ -13,6 +13,15 @@ import { RegistroFormComponent } from './registro-form/registro-form.component';
 
 import { LoginComponent } from './login/login.component';
 import { RegistrodoctoresComponent } from './registrodoctores/registrodoctores.component';
+import { RegistropersonalComponent } from './registropersonal/registropersonal.component';
+import { RegistrodepartamentoComponent } from './registrodepartamento/registrodepartamento.component';
+import { TratamientoComponent } from './tratamiento/tratamiento.component';
+import { CitasComponent } from './citas/citas.component';
+import { TratamientopacienteComponent } from './tratamientopaciente/tratamientopaciente.component';
+import { TipopersonalComponent } from './tipopersonal/tipopersonal.component';
+import { RegistropromocionesComponent } from './registropromociones/registropromociones.component';
+import { HistorialComponent } from './historial/historial.component';
+import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
 
 
 
@@ -22,7 +31,16 @@ import { RegistrodoctoresComponent } from './registrodoctores/registrodoctores.c
     AppComponent,
     RegistroFormComponent,
     LoginComponent,
-    RegistrodoctoresComponent
+    RegistrodoctoresComponent,
+    RegistropersonalComponent,
+    RegistrodepartamentoComponent,
+    TratamientoComponent,
+    CitasComponent,
+    TratamientopacienteComponent,
+    TipopersonalComponent,
+    RegistropromocionesComponent,
+    HistorialComponent,
+    RegistrohorarioComponent
   ],
   imports: [
     BrowserModule,

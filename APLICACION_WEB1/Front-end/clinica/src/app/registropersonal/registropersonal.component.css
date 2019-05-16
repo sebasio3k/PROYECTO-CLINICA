@@ -1,0 +1,32 @@
+h1{
+	background: #aaaa;
+	font-family: "century gothic";
+	margin: 0 auto;
+	font-weight: bold;
+	
+}
+label{
+	font-family: "century gothic";
+}
+.formulario{
+	margin: 0 auto;
+    text-align: center;
+}
+option{
+	font-family: "century gothic";
+}
+.boton{
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+input{
+	font-family: "century gothic";
+	justify-content: center;
+	margin: 0 auto;
+	
+}
+
+.fondo {
+	background-color: #b0d9de;
+}

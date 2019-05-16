@@ -1,0 +1,258 @@
+<div class="container fondo" >
+  <h1 align="center">Registro de Personal</h1>
+
+  <form id="formulario ">
+    <!-- Nombre -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="name">Nombre</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="name"
+                          size="100"
+                          required
+                          class="form-control"
+                          id="name"
+                          [(ngModel)]="model.name"
+                          placeholder="Nombre del médico" />
+                </div>
+          </div>
+    </div>
+      
+    <!-- Ap -->
+    <div class="form-group offset-md-4">
+        <label class="col-md-4 control-label" for="ap">Apellido Paterno</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
+                               type="text" 
+                               name="ap"
+                               required
+                               class="form-control"
+                               id="ap"
+                               [(ngModel)]="model.ap"
+                               placeholder="Apellido paterno del médico"/>
+                  </div>
+             </div>
+    </div>
+
+   <!-- Am -->
+   <div class="form-group offset-md-4">
+     <label class="col-md-4 control-label" for="am">Apellido Materno</label>
+            <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input 
+                        type="text" 
+                        name="am"
+                        required
+                        class="form-control"
+                        id="am"
+                        [(ngModel)]="model.am"
+                        placeholder="Apellido materno del médico" />
+                    </div>
+            </div>
+    </div>
+  
+    <!-- Genero -->
+    <div class="form-group offset-md-4">
+      <label class="col-md-4 control-label" for="genere">Genero</label>
+        <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+              <select class="selectpicker form-control"
+                      type="text" 
+                      name="genere"
+                      required
+                      id="genere"
+                      [(ngModel)]="model.genere"
+                      placeholder="Genero del médico">
+                <option>Mujer</option>
+                <option>Hombre</option>
+              </select>
+            </div>
+         </div>
+      </div>
+      <!-- Fraccionamiento -->
+    <div class="form-group offset-md-4">
+      <label class="col-md-4 control-label" for="neighborhood">Fraccionamiento</label>
+         <div class="col-md-8 inputGroupContainer">
+               <div class="input-group">
+                 <span class="input-group-addon">
+                   <i class="glyphicon glyphicon-home"></i>
+                 </span>
+                 <input 
+                    type="text" 
+                    name="neighborhood"
+                    required
+                    class="form-control"
+                    id="neighborhood"
+                    [(ngModel)]="model.neighborhood"
+                    placeholder="Fraccionamiento del paciente" />
+               </div>
+         </div>
+     </div>
+     
+     <!-- Numero -->
+     <div class="form-group offset-md-4" for="number">
+         <label class="col-md-4 control-label">Numero</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group">
+                   <span class="input-group-addon">
+                     <i class="glyphicon glyphicon-earphone"></i>
+                   </span>
+                   <input 
+                       type="number" 
+                       name="number"
+                       required
+                       class="form-control"
+                       id="number"
+                       [(ngModel)]="model.number"
+                       placeholder="Número de casa/Hogar" />
+                 </div>
+             </div>
+     </div>
+              
+    <!-- Calle -->
+    <div class="form-group offset-md-4" for="streat">
+      <label class="col-md-4 control-label">Calle</label>
+          <div class="col-md-8 inputGroupContainer">
+               <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-home"></i>
+                </span><input 
+                    type="text" 
+                    name="streat"
+                    required
+                    class="form-control"
+                    id="streat"
+                    [(ngModel)]="model.streat"
+                    placeholder="Calle" />
+              </div>
+          </div>
+    </div>
+    
+     <!--edad-->
+      <div class="form-group offset-md-4" for="age">
+          <label class="col-md-4 control-label">Edad</label>
+              <div class="col-md-8 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-earphone"></i>
+                    </span>
+                    <input 
+                        type="text" 
+                        name="age"
+                        required
+                        class="form-control"
+                        id="age"
+                        [(ngModel)]="model.age"/>
+                  </div>
+              </div>
+      </div>
+                 
+    <!-- Telefono -->
+     <div class="form-group offset-md-4" for="phone">
+       <label class="col-md-4 control-label">Telefono</label>
+         <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+             <span class="input-group-addon">
+               <i class="glyphicon glyphicon-earphone"></i>
+             </span>
+             <input 
+                  type="tel" 
+                  name="phone"
+                  required
+                  class="form-control"
+                  id="phone"
+                  [(ngModel)]="model.phone"
+                  placeholder="telefono del médico celular/fijo" />
+           </div>
+          </div>
+    </div>
+       
+    <!-- email -->
+    <div class="form-group offset-md-4" for="email">
+       <label class="col-md-4 control-label">Email</label>
+          <div class="col-md-8 inputGroupContainer">
+               <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-envelope"></i>
+                </span>
+                <input 
+                  type="email" 
+                  name="email"
+                  required
+                  class="form-control"
+                  id="email"
+                  [(ngModel)]="model.email"
+                   placeholder="correo electronico del médico, de tipo: email@email.com"/>
+                </div>
+          </div>
+    </div>
+  
+  <!-- iddepartamento -->
+  <div class="form-group offset-md-4" for="iddeptart">
+    <label class="col-md-4 control-label">Id-departamento</label>
+       <div class="col-md-8 inputGroupContainer">
+            <div class="input-group">
+             <span class="input-group-addon">
+               <i class="glyphicon glyphicon-envelope"></i>
+             </span>
+             <input 
+               type="text" 
+               name="iddepart"
+               required
+               class="form-control"
+               id="iddepart"
+               [(ngModel)]="model.iddepart"
+                placeholder="Ingresa el Id del departamento"/>
+             </div>
+       </div>
+ </div>
+      
+     
+    
+    <!-- sueldo -->
+    <div class="form-group offset-md-4" for="sueldo">
+      <label class="col-md-4 control-label">Sueldo</label>
+         <div class="col-md-8 inputGroupContainer">
+              <div class="input-group">
+               <span class="input-group-addon">
+                 <i class="glyphicon glyphicon-envelope"></i>
+               </span>
+               <input 
+                 type="text" 
+                 name="sueldo"
+                 required
+                 class="form-control"
+                 id="sueldo"
+                 [(ngModel)]="model.sueldo"
+                  placeholder="Sueldo del médico"/>
+               </div>
+         </div>
+   </div>
+    
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

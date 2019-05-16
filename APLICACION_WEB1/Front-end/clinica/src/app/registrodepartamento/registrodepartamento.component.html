@@ -1,0 +1,76 @@
+<div class="container fondo" >
+  <h1 align="center">Registro depratamentos administrativos</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+ 
+
+  <form id="formulario ">
+    <!-- Nombre -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="name">Nombre</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="name"
+                          size="100"
+                          required
+                          class="form-control"
+                          id="name"
+                          [(ngModel)]="model.name"
+                          placeholder="Nombre del médico" />
+                </div>
+          </div>
+    </div>
+      
+   
+  <!-- Ubicacion -->
+<div class="form-group offset-md-4">
+  <label class="col-md-4 control-label" for="ubicacion">ubicacion</label>
+         <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group">
+                   <span class="input-group-addon">
+                     <i class="glyphicon glyphicon-user"></i>
+                   </span>
+                   <input 
+                     type="text" 
+                     name="ubicacion"
+                     required
+                     class="form-control"
+                     id="ubicacion"
+                     [(ngModel)]="model.ubicacion"
+                     placeholder="Ubicación del consultorio (direccion del edificio)" />
+                 </div>
+         </div>
+ </div>
+    
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>
