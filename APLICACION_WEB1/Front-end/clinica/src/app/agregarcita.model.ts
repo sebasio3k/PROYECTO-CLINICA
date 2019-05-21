@@ -3,7 +3,7 @@ export class agregarcitas {
 	constructor(
 		public id : number,
 		public idpaciente:number,
-		public hora : number,
+		public hora : string,
 		public fecha : string,
 		public iddoctor : number,
 		public nconsultorio : string,

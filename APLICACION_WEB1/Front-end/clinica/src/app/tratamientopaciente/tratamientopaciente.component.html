@@ -1,3 +1,156 @@
-<p>
-  tratamientopaciente works!
-</p>
+<div class="container fondo" >
+    <h1 align="center">Registro de Tratamientos al paciente</h1>
+  
+    <form id="formulario ">
+      <!-- Nombre -->
+      <div class="form-group offset-md-4 ">
+          <label class="col-md-4  control-label" for="id">ID tratamiento</label>
+              <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input 
+                             type="text" 
+                              name="id"
+                              size="100"
+                              required
+                              class="form-control"
+                              id="id"
+                              [(ngModel)]="model.id"
+                              placeholder="ID del tratamiento" />
+                    </div>
+              </div>
+        </div>
+          
+        <!-- Ap -->
+        <div class="form-group offset-md-4">
+            <label class="col-md-4 control-label" for=idpaciente>ID paciente</label>
+                 <div class="col-md-8 inputGroupContainer">
+                     <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input 
+                                   type="text" 
+                                   name="idpaciente"
+                                   required
+                                   class="form-control"
+                                   id="idpaciente"
+                                   [(ngModel)]="model.idpaciente"
+                                   placeholder="ID del paciente"/>
+                      </div>
+                 </div>
+        </div>
+      <!--edad-->
+      <div class="form-group offset-md-4" for="age">
+          <label class="col-md-4 control-label">ID doctor</label>
+              <div class="col-md-8 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <i class="glyphicon glyphicon-earphone"></i>
+                    </span>
+                    <input 
+                        type="text" 
+                        name="iddoctor"
+                        required
+                        class="form-control"
+                        id="iddoctor"
+                        [(ngModel)]="model.iddoctor"
+                        placeholder="ID del doctor"/>
+                  </div>
+              </div>
+      </div>
+       <!-- Am -->
+       <div class="form-group offset-md-4">
+         <label class="col-md-4 control-label" for="ncitas">Numero de citas</label>
+                <div class="col-md-8 inputGroupContainer">
+                        <div class="input-group">
+                          <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                          </span>
+                          <input 
+                            type="number" 
+                            name="ncitas"
+                            required
+                            class="form-control"
+                            id="ncitas"
+                            [(ngModel)]="model.ncitas"
+                            placeholder="Número de  citas del tratamiento" />
+                        </div>
+                </div>
+        </div>
+      
+      
+          <!-- Fraccionamiento -->
+        <div class="form-group offset-md-4">
+          <label class="col-md-4 control-label" for="descripcion">Descripcion</label>
+             <div class="col-md-8 inputGroupContainer">
+                   <div class="input-group">
+                     <span class="input-group-addon">
+                       <i class="glyphicon glyphicon-home"></i>
+                     </span>
+                     <input 
+                        type="text" 
+                        name="descripcion"
+                        required
+                        class="form-control"
+                        id="descripcion"
+                        [(ngModel)]="model.descripcion"
+                        placeholder="Descripción breve tratamiento" />
+                   </div>
+             </div>
+         </div>
+           <!-- Genero -->
+           <div class="form-group offset-md-4">
+              <label class="col-md-4 control-label" for="modalidadpago">Modalidad de pago</label>
+                <div class="col-md-8 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+                      <select class="selectpicker form-control"
+                              type="text" 
+                              name="modalidadpago"
+                              required
+                              id="modalidadpago"
+                              [(ngModel)]="model.modalidadpago"
+                              placeholder="Genero del personal">
+                        <option>Contado</option>
+                        <option>Plazos</option>
+                      </select>
+                    </div>
+                 </div>
+              </div>
+         <!-- Numero -->
+         <div class="form-group offset-md-4" for="pagos">
+             <label class="col-md-4 control-label">pagos</label>
+                 <div class="col-md-8 inputGroupContainer">
+                     <div class="input-group">
+                       <span class="input-group-addon">
+                         <i class="glyphicon glyphicon-earphone"></i>
+                       </span>
+                       <input 
+                           type="pagos" 
+                           name="pagos"
+                           required
+                           class="form-control"
+                           id="pagos"
+                           [(ngModel)]="model.pagos"
+                           placeholder="Precio de la consulta" />
+                     </div>
+                 </div>
+         </div>
+    
+      <!-- boton -->
+      <div class="boton offset-md-4">
+        <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+      </div>
+      
+      <!--<button type="submit">Registrar</button>-->
+  
+      
+  
+    </form>
+  
+    <div class="pre">
+      <h2>Modelo:</h2>
+      {{currentregistro}}
+    </div>
+  
+  </div>

@@ -18,7 +18,7 @@
                           class="form-control"
                           id="name"
                           [(ngModel)]="model.name"
-                          placeholder="Nombre del médico" />
+                          placeholder="Nombre del personal" />
                 </div>
           </div>
     </div>
@@ -34,7 +34,7 @@
                                class="form-control"
                                id="ap"
                                [(ngModel)]="model.ap"
-                               placeholder="Apellido paterno del médico"/>
+                               placeholder="Apellido paterno del personal"/>
                   </div>
              </div>
     </div>
@@ -54,7 +54,7 @@
                         class="form-control"
                         id="am"
                         [(ngModel)]="model.am"
-                        placeholder="Apellido materno del médico" />
+                        placeholder="Apellido materno del personal" />
                     </div>
             </div>
     </div>
@@ -71,7 +71,7 @@
                       required
                       id="genere"
                       [(ngModel)]="model.genere"
-                      placeholder="Genero del médico">
+                      placeholder="Genero del personal">
                 <option>Mujer</option>
                 <option>Hombre</option>
               </select>
@@ -93,7 +93,7 @@
                     class="form-control"
                     id="neighborhood"
                     [(ngModel)]="model.neighborhood"
-                    placeholder="Fraccionamiento del paciente" />
+                    placeholder="Fraccionamiento del personal" />
                </div>
          </div>
      </div>
@@ -171,7 +171,7 @@
                   class="form-control"
                   id="phone"
                   [(ngModel)]="model.phone"
-                  placeholder="telefono del médico celular/fijo" />
+                  placeholder="telefono del personal celular/fijo" />
            </div>
           </div>
     </div>
@@ -191,10 +191,29 @@
                   class="form-control"
                   id="email"
                   [(ngModel)]="model.email"
-                   placeholder="correo electronico del médico, de tipo: email@email.com"/>
+                   placeholder="correo electronico del personal, de tipo: email@email.com"/>
                 </div>
           </div>
     </div>
+     <!-- email -->
+     <div class="form-group offset-md-4" for="email">
+      <label class="col-md-4 control-label">N cédula</label>
+         <div class="col-md-8 inputGroupContainer">
+              <div class="input-group">
+               <span class="input-group-addon">
+                 <i class="glyphicon glyphicon-envelope"></i>
+               </span>
+               <input 
+                 type="text" 
+                 name="ncedula"
+                 required
+                 class="form-control"
+                 id="ncedula"
+                 [(ngModel)]="model.ncedula"
+                  placeholder="Número de cédula del personal"/>
+               </div>
+         </div>
+   </div>
   
   <!-- iddepartamento -->
   <div class="form-group offset-md-4" for="iddeptart">
@@ -233,7 +252,7 @@
                  class="form-control"
                  id="sueldo"
                  [(ngModel)]="model.sueldo"
-                  placeholder="Sueldo del médico"/>
+                  placeholder="Sueldo del personal"/>
                </div>
          </div>
    </div>

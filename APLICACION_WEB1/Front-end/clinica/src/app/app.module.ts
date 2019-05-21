@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 // Paquete para procesar formularios con angular
 import { FormsModule } from '@angular/forms';
+// tslint:disable-next-line: import-spacing
+import { MatInputModule } from '@angular/material';
 // Se importa atm, el componente que creamos desde la consola con ng g component nombre-componenete
 import { RegistroFormComponent } from './registro-form/registro-form.component';
 
@@ -45,7 +47,8 @@ import { RegistrohorarioComponent } from './registrohorario/registrohorario.comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

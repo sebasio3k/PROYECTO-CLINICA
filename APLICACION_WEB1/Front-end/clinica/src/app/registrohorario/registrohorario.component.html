@@ -1,3 +1,82 @@
-<p>
-  registrohorario works!
-</p>
+<div class="container fondo" >
+  <h1 align="center">Registrar Horario</h1>
+
+  <form id="formulario ">
+    <!-- Doctor -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="iddoctor">id Doctor</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="iddoctor"
+                          size="100"
+                          required
+                          class="form-control"
+                          id="iddoctor"
+                          [(ngModel)]="model.iddoctor"
+                          placeholder="ID doctor" />
+                </div>
+          </div>
+    </div>
+      
+    <!-- Ap -->
+    <div class="form-group offset-md-4">
+        <label class="col-md-4 control-label" for="nconsultorio">N Consultorio</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
+                               type="text" 
+                               name="nconsultorio"
+                               required
+                               class="form-control"
+                               id="nconsultorio"
+                               [(ngModel)]="model.nconsultorio"
+                               placeholder="Número de consultorio"/>
+                  </div>
+             </div>
+    </div>
+
+   <!-- Am -->
+   <div class="form-group offset-md-4">
+     <label class="col-md-4 control-label" for="horadia">Horario</label>
+            <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input 
+                        type="time" 
+                        name="horadia"
+                        required
+                        class="form-control"
+                        id="horadia"
+                        [(ngModel)]="model.horadia"
+                        placeholder="Horario" />
+                    </div>
+            </div>
+    </div>
+  
+    
+    
+   
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

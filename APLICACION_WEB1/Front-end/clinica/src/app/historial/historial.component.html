@@ -1,3 +1,73 @@
-<p>
-  historial works!
-</p>
+<div class="container fondo" >
+  <h1 align="center">Registrar Historial</h1>
+ <br><br><br>
+  <form id="formulario ">
+    <!-- descripcion -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="desc">Descripcion de la cita</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="desc"
+                          size="500"
+                          required
+                          class="form-control"
+                          id="desc"
+                          [(ngModel)]="model.desc"
+                          placeholder="Descrpción de la cita" />
+                          
+                </div>
+          </div>
+    </div>
+      
+    <!-- observaciones -->
+    <div class="form-group offset-md-4">
+        <label class="col-md-4 control-label" for="obs">Observaciones al paciente:</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
+                               type="text" 
+                               name="obs"
+                               required
+                               class="form-control"
+                               id="obs"
+                               [(ngModel)]="model.obs"
+                               placeholder="Observaciones al paciente"/>
+                  </div>
+             </div>
+    </div>
+
+   
+                         
+       
+    
+   
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+  </form>
+ 
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

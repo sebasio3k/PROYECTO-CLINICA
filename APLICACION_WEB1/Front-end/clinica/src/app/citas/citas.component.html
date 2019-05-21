@@ -1,3 +1,143 @@
-<p>
-  citas works!
-</p>
+<div class="container fondo" >
+  <h1 align="center">Registrar cita</h1>
+
+  <form id="formulario ">
+    <!-- hora -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="hora">Hora</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="time" 
+                          name="hora"
+                          size="100"
+                          required
+                          class="form-control"
+                          id="hora"
+                          [(ngModel)]="model.hora"
+                          placeholder="Hora de la cita" />
+                </div>
+          </div>
+    </div>
+      
+    <!-- fecha -->
+    <div class="form-group offset-md-4">
+        <label class="col-md-4 control-label" for="fecha">Fecha de la cita:</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
+                               type="date" 
+                               name="fecha"
+                               required
+                               class="form-control"
+                               id="fecha"
+                               [(ngModel)]="model.fecha"
+                               placeholder="Fecha de la cita"/>
+                  </div>
+             </div>
+    </div>
+
+   <!-- iddoctor -->
+   <div class="form-group offset-md-4">
+     <label class="col-md-4 control-label" for="iddoc">Id doctor</label>
+            <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                      </span>
+                      <input 
+                        type="text" 
+                        name="iddcotor"
+                        required
+                        class="form-control"
+                        id="iddcotor"
+                        [(ngModel)]="model.iddcotor"
+                        placeholder="Id del doctor" />
+                    </div>
+            </div>
+    </div>
+  
+    <!-- nconsultorio -->
+    <div class="form-group offset-md-4">
+      <label class="col-md-4 control-label" for="nconsultorio">Número de consultorio</label>
+        <div class="col-md-8 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+              <select class="selectpicker form-control"
+                      type="text" 
+                      name="nconsultorio"
+                      required
+                      id="nconsultorio"
+                      [(ngModel)]="model.nconsultorio"
+                      placeholder="Número del consultorio">
+                <option>31-A</option>
+                <option>33-A</option>
+              </select>
+            </div>
+         </div>
+      </div>
+
+    <!-- Precio -->
+    <div class="form-group offset-md-4">
+     <label class="col-md-4 control-label" for="precio">Precio cita $</label>
+        <div class="col-md-8 inputGroupContainer">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-home"></i>
+                </span>
+                <input 
+                   type="text" 
+                   name="precio"
+                   required
+                   class="form-control"
+                   id="precio"
+                   [(ngModel)]="model.precio"
+                   placeholder="Precio de la cita con formato 0000.00" />
+              </div>
+        </div>
+    </div>
+    
+ <!-- Estatus -->
+ <div class="form-group offset-md-4">
+  <label class="col-md-4 control-label" for="estatus">Estatus</label>
+    <div class="col-md-8 inputGroupContainer">
+      <div class="input-group">
+        <span class="input-group-addon" style="max-width: 100%;"><i class="glyphicon glyphicon-list"></i></span>
+          <select class="selectpicker form-control"
+                  type="text" 
+                  name="Estatus"
+                  required
+                  id="Estatus"
+                  [(ngModel)]="model.Estatus"
+                  placeholder="Estatus de la cita">
+            <option>Próxima</option>
+            <option>Cancelada</option>
+            <option>Realizada</option>
+          </select>
+        </div>
+     </div>
+  </div>
+                         
+       
+    
+   
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

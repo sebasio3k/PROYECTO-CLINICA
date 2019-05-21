@@ -14,20 +14,20 @@ import { RegistrohorarioComponent } from './registrohorario/registrohorario.comp
 import { HistorialComponent } from './historial/historial.component';
 
 const routes: Routes = [
-  {path:'login',component:LoginComponent},
-  {path:'registro',component:RegistroFormComponent},
-  {path:'registrodoctores',component:RegistrodoctoresComponent},
-  {path:'registropersonal',component:RegistropersonalComponent},
-  {path:'registrodepartamento',component:RegistrodepartamentoComponent},
-  {path : 'registrotratamiento',component:TratamientoComponent},
-  {path : 'registrocitas',component:CitasComponent},
-  {path : 'registrotratamientopaciente',component:TratamientopacienteComponent},
-  {path : 'registrotipopersonal',component:TipopersonalComponent},
-  {path : 'registropromociones',component:RegistropromocionesComponent},
-  {path : 'registrohorarios',component:RegistrohorarioComponent},
-  {path : 'registrohistorial',component:HistorialComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'registro', component: RegistroFormComponent},
+  {path: 'registrodoctores', component: RegistrodoctoresComponent},
+  {path: 'registropersonal', component: RegistropersonalComponent},
+  {path: 'registrodepartamento', component: RegistrodepartamentoComponent},
+  {path: 'registrotratamiento', component: TratamientoComponent},
+  {path: 'registrocitas', component: CitasComponent},
+  {path: 'registrotratamientopaciente', component: TratamientopacienteComponent},
+  {path: 'registrotipopersonal', component: TipopersonalComponent},
+  {path: 'registropromociones', component: RegistropromocionesComponent},
+  {path: 'registrohorarios', component: RegistrohorarioComponent},
+  {path: 'registrohistorial', component: HistorialComponent},
 
-  {path:'**',pathMatch:'full',redirectTo:'login'}
+  {path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];
 
 @NgModule({

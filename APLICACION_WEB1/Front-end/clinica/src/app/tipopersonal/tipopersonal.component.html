@@ -1,3 +1,44 @@
-<p>
-  tipopersonal works!
-</p>
+<div class="container fondo" >
+  <h1 align="center">Registrar tipo personal</h1>
+ <br><br><br>
+  <form id="formulario ">
+    <!-- descripcion -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="name">Nombre</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="nombre"
+                          size="500"
+                          required
+                          class="form-control"
+                          id="nombre"
+                          [(ngModel)]="model.nombre"
+                          placeholder="Descripción del tipo personal" />
+                          
+                </div>
+          </div>
+    </div>
+      
+   
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

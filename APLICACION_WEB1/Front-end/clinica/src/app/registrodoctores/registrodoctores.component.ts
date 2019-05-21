@@ -17,3 +17,5 @@ export class RegistrodoctoresComponent implements OnInit {
   }
 
 }
+
+

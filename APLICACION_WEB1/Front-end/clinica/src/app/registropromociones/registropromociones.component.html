@@ -1,3 +1,61 @@
-<p>
-  registropromociones works!
-</p>
+<div class="container fondo" >
+  <h1 align="center">Registro de Promociones</h1>
+
+  <form id="formulario ">
+    <!-- Nombre -->
+    <div class="form-group offset-md-4 ">
+      <label class="col-md-4  control-label" for="name">Descripcion</label>
+          <div class="col-md-8 inputGroupContainer">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                  <i class="glyphicon glyphicon-user"></i>
+                  </span>
+                  <input 
+                         type="text" 
+                          name="name"
+                          size="100"
+                          required
+                          class="form-control"
+                          id="name"
+                          [(ngModel)]="model.name"
+                          placeholder="Descripcion de la promocion" />
+                </div>
+          </div>
+    </div>
+      
+    <!-- Ap -->
+    <div class="form-group offset-md-4">
+        <label class="col-md-4 control-label" for="porcentaje">Porcentaje de descuento</label>
+             <div class="col-md-8 inputGroupContainer">
+                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
+                               type="text" 
+                               name="porcentaje"
+                               required
+                               class="form-control"
+                               id="porcentaje"
+                               [(ngModel)]="model.porcentaje"
+                               placeholder="Porcentaje de descuento"/>
+                  </div>
+             </div>
+    </div>
+
+   
+    
+
+    <!-- boton -->
+    <div class="boton offset-md-4">
+      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+    </div>
+    
+    <!--<button type="submit">Registrar</button>-->
+
+    
+
+  </form>
+
+  <div class="pre">
+    <h2>Modelo:</h2>
+    {{currentregistro}}
+  </div>
+
+</div>

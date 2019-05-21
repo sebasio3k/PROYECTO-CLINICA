@@ -2,8 +2,9 @@ export class agregartratamiento {
 	
 	constructor(
 		public id : number,
+		public nombre : string,
 		public descripcion:string,
-		public porcentaje : number,
+		public precio : number,
 	
 		
 		) {
