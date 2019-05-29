@@ -1,0 +1,19 @@
+[
+    {
+        "idpersonal" : "01",
+        "idtipo" :"01",
+        "nombre" : "Jose",
+        "apaterno" :"Ramos",
+        "amaterno" : "Lopez",
+        "genero" :"Masculino",
+        "fracc" : "San francisco",
+        "num" :"156",
+        "calle" : "Luis angel",
+        "edad" :"22",
+        "telefono" : "6181564534",
+        "correoe" :"admin@gmail.com",
+        "cedula" : "123456B",
+        "iddepartamento" :"02",
+        "sueldo" : "4500.00"
+    }
+]

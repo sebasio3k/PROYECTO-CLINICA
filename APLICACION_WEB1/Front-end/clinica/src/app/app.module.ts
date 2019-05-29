@@ -24,6 +24,7 @@ import { TipopersonalComponent } from './tipopersonal/tipopersonal.component';
 import { RegistropromocionesComponent } from './registropromociones/registropromociones.component';
 import { HistorialComponent } from './historial/historial.component';
 import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -48,7 +49,8 @@ import { RegistrohorarioComponent } from './registrohorario/registrohorario.comp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

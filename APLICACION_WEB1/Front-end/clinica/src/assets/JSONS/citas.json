@@ -1,0 +1,12 @@
+[
+    {
+        "idcita" : "01",
+        "idpaciente" :"01",
+        "hora" : "12:20",
+        "fecha" :"2018-09-02",
+        "iddoctor" : "01",
+        "nconsultorio" :"1-A",
+        "precio" : "560.00",
+        "estatus" : "Activa"
+    }
+]

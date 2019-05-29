@@ -24,9 +24,12 @@ input{
 	font-family: "century gothic";
 	justify-content: center;
 	margin: 0 auto;
-	
 }
 
 .fondo {
 	background-color: #b0d9de;
+}
+div{
+	color:black;
+	
 }

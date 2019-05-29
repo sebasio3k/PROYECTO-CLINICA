@@ -1,0 +1,19 @@
+[{
+    "iddoctor" : "01",
+    "idtipo" :"01",
+    "nombre" : "Saul",
+    "apaterno" : "Rivera",
+    "amaterno" : "Arellano",
+    "genero" : "Masculino",
+    "fracc" : "San luis",
+    "num" : "124",
+    "calle" : "Gerardo garcia",
+    "edad" : "27",
+    "telefono" : "6181789898",
+    "correo" : "saulr@hotmail.com",
+    "cedula" : "12345678A",
+    "iddepartamento" : "01",
+    "especialidad" : "Pediatria",
+    "sueldo" : "6789.00"
+}
+]

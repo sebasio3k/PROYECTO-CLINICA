@@ -1,6 +1,8 @@
 // ======== Importar archivos requeridos ===============
 var express = require ('express');
-var bodyparser = require ('body-parser');
+
+console.log("mean app");
+/*var bodyparser = require ('body-parser');
 var cors = require ('cors');
 var jwt = require ('jsonwebtoken');
 // ============ Crear aplicación Express e inicializar a la variable de aplicación ========
@@ -19,4 +21,4 @@ res.send ({'status': true, 'msg': "Server Started."});
 // ====== Iniciar Servidor ===================
 app.listen (app.get ('puerto'), () => {
 console.log ('Servidor creado en' + app.get ('puerto') + "Puerto");
-}); 
+}); */

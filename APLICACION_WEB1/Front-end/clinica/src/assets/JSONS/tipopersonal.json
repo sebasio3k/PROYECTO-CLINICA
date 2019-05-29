@@ -1,0 +1,12 @@
+[
+    {
+        "idtipo" : "01",
+        "nombre" :"Médicos"
+        
+    },
+    {
+        "idtipo" : "02",
+        "nombre" :"Administrativo"
+        
+    }
+]

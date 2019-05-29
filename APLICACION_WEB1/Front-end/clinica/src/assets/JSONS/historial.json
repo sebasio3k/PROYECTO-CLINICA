@@ -1,0 +1,9 @@
+[
+    {
+        "idpaciente" : "01",
+        "idcita" :"01",
+        "descripcioncita" : "Cita por gripe",
+        "observaciones" :"Tomar paracetamol 8 días cada tres horas",
+        "iddoctor" : "01"
+    }
+    ]

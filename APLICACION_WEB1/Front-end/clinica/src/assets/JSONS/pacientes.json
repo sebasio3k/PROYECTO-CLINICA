@@ -1,0 +1,28 @@
+[
+    {
+        "idpaciente" : "01",
+        "nombre" :"Sebastian",
+        "apaterno" : "Hernandez",
+        "amaterno" : "Ochoa",
+        "genero" : "Masculino",
+        "fracc" : "Granja Graciela",
+        "num" : "202",
+        "calle" : "Justo Sierra",
+        "edad" : "22",
+        "telefono" : "6181982893",
+        "correo" : "elsebas@gmail.com"
+    },
+    {
+        "idpaciente" : "02",
+        "nombre" :"Idaly",
+        "apaterno" : "Campos",
+        "amaterno" : "Romero",
+        "genero" : "Femenino",
+        "fracc" : "Bosques",
+        "num" : "111",
+        "calle" : "Sin nombre",
+        "edad" : "22",
+        "telefono" : "6182955055",
+        "correo" : "pq.camposr@gmail.com"
+    }
+]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { registro } from 'src/app/registro.model';
+import { PacienteService } from '../services/paciente.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { registro } from 'src/app/registro.model';
 export class RegistroFormComponent implements OnInit {
 	model = new registro(1,'','','','','',null,'',null,null,'');
 
-  constructor() { }
+  constructor( public paciente2: PacienteService) { }
 
   ngOnInit() {
   }

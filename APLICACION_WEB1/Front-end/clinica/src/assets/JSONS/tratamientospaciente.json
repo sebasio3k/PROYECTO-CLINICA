@@ -1,0 +1,12 @@
+[
+    {
+        "idtratamiento" : "01",
+        "idpaciente" :"01",
+        "ncitas" : "4",
+        "idoctor" :"01",
+        "precio" : "1390.00",
+        "descripcion" :"tratamiento para gripe 8 días",
+        "modalidad" : "Pagos",
+        "pagos" :"1/8"
+    }
+    ]

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { agregardoctor } from 'src/app/agregardoctor.model';
-
+import { DoctorService } from '../services/doctores.service';
 @Component({
   selector: 'app-registrodoctores',
   templateUrl: './registrodoctores.component.html',
@@ -8,7 +8,7 @@ import { agregardoctor } from 'src/app/agregardoctor.model';
 })
 export class RegistrodoctoresComponent implements OnInit {
   model = new agregardoctor(1,'','','','','','',null,'',null,null,'','','',null,null);
-  constructor() { }
+  constructor( public doctor2: DoctorService) { }
 
   ngOnInit() {
   }
@@ -17,5 +17,6 @@ export class RegistrodoctoresComponent implements OnInit {
   }
 
 }
+
 
 
