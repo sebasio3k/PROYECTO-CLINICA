@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 // Paquete para procesar formularios con angular
 import { FormsModule } from '@angular/forms';
 // tslint:disable-next-line: import-spacing
-import { MatInputModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 // Se importa atm, el componente que creamos desde la consola con ng g component nombre-componenete
 import { RegistroFormComponent } from './registro-form/registro-form.component';
 
