@@ -12,6 +12,7 @@ import { TipopersonalComponent } from './tipopersonal/tipopersonal.component';
 import { RegistropromocionesComponent } from './registropromociones/registropromociones.component';
 import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
 import { HistorialComponent } from './historial/historial.component';
+import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'registropromociones', component: RegistropromocionesComponent},
   {path: 'registrohorarios', component: RegistrohorarioComponent},
   {path: 'registrohistorial', component: HistorialComponent},
+  {path: 'indexComponent', component: IndexComponent},
 
   {path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];

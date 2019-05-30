@@ -25,6 +25,7 @@ import { RegistropromocionesComponent } from './registropromociones/registroprom
 import { HistorialComponent } from './historial/historial.component';
 import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IndexComponent } from './index/index.component';
 
 
 
@@ -43,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     TipopersonalComponent,
     RegistropromocionesComponent,
     HistorialComponent,
-    RegistrohorarioComponent
+    RegistrohorarioComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
