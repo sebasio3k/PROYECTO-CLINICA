@@ -27,7 +27,7 @@ input{
 }
 
 .fondo {
-	background-color: #b0d9de;
+	background-color:url("fondo.jpg");
 }
 div{
 	color:black;

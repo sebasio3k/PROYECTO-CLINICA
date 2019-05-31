@@ -26,6 +26,9 @@ import { HistorialComponent } from './historial/historial.component';
 import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { IndexComponent } from './index/index.component';
+import { PruebamenuComponent } from './pruebamenu/pruebamenu.component';
+import { TablaComponent } from './tabla/tabla.component';
+import { PruebacrudComponent } from './pruebacrud/pruebacrud.component';
 
 
 
@@ -45,7 +48,10 @@ import { IndexComponent } from './index/index.component';
     RegistropromocionesComponent,
     HistorialComponent,
     RegistrohorarioComponent,
-    IndexComponent
+    IndexComponent,
+    PruebamenuComponent,
+    TablaComponent,
+    PruebacrudComponent
   ],
   imports: [
     BrowserModule,

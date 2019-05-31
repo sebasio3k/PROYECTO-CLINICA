@@ -1,0 +1,36 @@
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">nombre</th>
+      <th scope="col">apaterno</th>
+      <th scope="col">amaterno</th>
+      <th scope="col">genero</th>
+      <th scope="col">fracc</th>
+      <th scope="col">num</th>
+      <th scope="col">calle</th>
+      <th scope="col">edad</th>
+      <th scope="col">telefono</th>
+      <th scope="col">correo</th>
+      <th scope="col">borrar</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of datos">
+      <th scope="row">{{e.nombre}}</th>
+      <td>{{e.apellidop}}</td>
+      <td>{{e.apellidoa}}</td>
+      <td>{{e.genero}}</td>
+      <td>{{e.fracc}}</td>
+      <td>{{e.num}}</td>
+      <td>{{e.calle}}</td>
+      <td>{{e.edad}}</td>
+      <td>{{e.telefono}}</td>
+      <td>{{e.correo}}</td>
+      <td><a (click)="remove(e.id)"><i class="bote fas fa-trash"></i></a></td>
+      <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
+    </tr>
+
+  </tbody>
+</table>

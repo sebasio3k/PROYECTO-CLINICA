@@ -13,6 +13,10 @@ import { RegistropromocionesComponent } from './registropromociones/registroprom
 import { RegistrohorarioComponent } from './registrohorario/registrohorario.component';
 import { HistorialComponent } from './historial/historial.component';
 import { IndexComponent } from './index/index.component';
+import { PruebamenuComponent } from './pruebamenu/pruebamenu.component';
+import { TablaComponent } from './tabla/tabla.component';
+
+
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -28,6 +32,8 @@ const routes: Routes = [
   {path: 'registrohorarios', component: RegistrohorarioComponent},
   {path: 'registrohistorial', component: HistorialComponent},
   {path: 'indexComponent', component: IndexComponent},
+  {path: 'pruebamenu', component: PruebamenuComponent},
+  {path: 'tablauser', component: TablaComponent},
 
   {path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];

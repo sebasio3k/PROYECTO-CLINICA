@@ -7,12 +7,18 @@ import { Pacientes } from '../interfaces/pacientes';
   providedIn: 'root'
 })
 export class PacienteService {
-  paciente: Pacientes[]=[];
+  paciente: Pacientes[] = [];
 
-  constructor( private http:HttpClient) { this.pacientes(); } 
-  public pacientes(){
-    this.http.get('http://localhost:4200/assets/JSONS/pacientes.json').subscribe((resp: Pacientes[]) => {
-      this.paciente = resp;
+  constructor( private http: HttpClient) { }
+  // public pacientes(){
+  //   this.http.get('http://localhost:4200/assets/JSONS/pacientes.json').subscribe((resp: Pacientes[]) => {
+  //     this.paciente = resp;
+  //   });
+  // }
+  public agregar(data) {
+    this.http.post('http://localhost:3000/users/insertar', data).subscribe((resp: Pacientes[]) => {
+      alert('datos agregados');
+      location.reload();
     });
   }
 }

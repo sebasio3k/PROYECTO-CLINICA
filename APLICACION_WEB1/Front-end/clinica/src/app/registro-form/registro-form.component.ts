@@ -9,14 +9,35 @@ import { PacienteService } from '../services/paciente.service';
   styleUrls: ['./registro-form.component.css']
 })
 export class RegistroFormComponent implements OnInit {
-	model = new registro(1,'','','','','',null,'',null,null,'');
+// model = new registro(1,'','','','','',null,'',null,null,'');
+
+  data = {
+    nombre:	'',
+    apaterno:	'',
+    amaterno:	'',
+    genero:	'',
+    fracc:	'',
+    num:	'',
+    calle:	'',
+    edad:	'',
+    telefono:	'',
+    correo:	''
+  };
 
   constructor( public paciente2: PacienteService) { }
 
   ngOnInit() {
   }
-  get currentregistro(){
-    return JSON.stringify(this.model);
+
+
+
+  agregar() {
+    this.paciente2.agregar(this.data);
+
   }
+  // get currentregistro(){
+  //   return JSON.stringify(this.model);
+  // }
+
 
 }

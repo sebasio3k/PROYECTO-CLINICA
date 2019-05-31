@@ -1,4 +1,5 @@
 var mysql = require('mysql');
+var router = express.Router();
 var connection = mysql.createConnection({
    host: 'localhost',
    user: 'root',
@@ -6,6 +7,8 @@ var connection = mysql.createConnection({
    database: 'clinica',
    port: 3306
 });
+
+/*
 connection.connect(function(error){
    if(error){
       throw error;
@@ -14,7 +17,9 @@ connection.connect(function(error){
    }
 });
 
-var query = connection.query('INSERT INTO tratamientos(Nombre,descripcion,precio) VALUES(?,?,?)', ['Depilación laser', 'Depilación total de todo el cuerpo', '2567.90'], function(error, result){
+*/
+
+/*var query = connection.query('INSERT INTO tratamientos(Nombre,descripcion,precio) VALUES(?,?,?)', ['Depilación laser', 'Depilación total de todo el cuerpo', '2567.90'], function(error, result){
     if(error){
        throw error;
     }else{
@@ -22,4 +27,4 @@ var query = connection.query('INSERT INTO tratamientos(Nombre,descripcion,precio
     }
   }
  );
-connection.end();
+connection.end();*/

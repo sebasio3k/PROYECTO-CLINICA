@@ -1,115 +1,278 @@
-<body >
-    <!-- onload="revisa_compras();revisa_ventas();pone_gastos();pone_users();genera_grafica();genera_grafica_existe();revisa_caducidades();" -->
-  <div class="wrapper">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <!-- Main Header -->
-    <header class="main-header">
+<!DOCTYPE html>
+<html lang="en">
 
-      <!-- Logo -->
-      <!-- <?php
-      include('class_lib/nav_header.php');
-      ?> -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+    <title>Sidebar template</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+ 
 
-    </header>
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
+</head>
 
-      <!-- sidebar: style can be found in sidebar.less -->
-      <!-- <?php
-      include('class_lib/sidebar.php');
-      include('class_lib/class_conecta_mysql.php');
-      $dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","S�bado");
-      $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-      $fecha=$dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
-      $db=new ConexionMySQL();
-      $consulta=$db->consulta("Select nombre_empresa from parametros");
-      while($sw=$db->buscar_array($consulta)){
-        $name_empresa=$sw['nombre_empresa'];
-      }
-      ?> -->
-      <!-- /.sidebar -->
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-        <!-- <?php
-        echo $name_empresa;
-        ?> -->
-          <small><?php echo $fecha; ?></small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="inicio.php"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Inicio</li>
-        </ol>
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class='row'>
-        <div id='pone_compras'></div>
-        <div id='pone_ventas'></div>
-        <div id='pone_gastos'></div>
-        <div id='pone_users'></div>
-        <div class='col-md-6'>
-        <!-- solid sales graph -->
-            <div class="box box-solid">
-              <div class="box-header">
-                <i class="fa fa-th"></i>
-                <h3 class="box-title">Grafica de ventas por lineas ($).</h3>
-                <div class="box-tools pull-right">
-                  <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                </div>
-              </div>
-              <div class="box-body border-radius-none">
-                <div class="chart" id="line-chart-ventas" style="height: 250px;"></div>
-              </div><!-- /.box-body -->
-              <div class="box-footer no-border">
-
-              </div><!-- /.box-footer -->
-            </div><!-- /.box -->
+<body>
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div class="sidebar-brand">
+        <a href="#">pro sidebar</a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
         </div>
-
-        <div class='col-md-6'>
-        <!-- solid sales graph -->
-            <div class="box box-solid">
-              <div class="box-header">
-                <i class="fa fa-th"></i>
-                <h3 class="box-title">Grafica de existencias por lineas ($).</h3>
-                <div class="box-tools pull-right">
-                  <button class="btn bg-teal btn-sm" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                </div>
-              </div>
-              <div class="box-body border-radius-none">
-                <div class="chart" id="line-chart-existe" style="height: 250px;"></div>
-              </div><!-- /.box-body -->
-              <div class="box-footer no-border">
-
-              </div><!-- /.box-footer -->
-            </div><!-- /.box -->
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
         </div>
-
+        <div class="user-info">
+          <span class="user-name">Jhon
+            <strong>Smith</strong>
+          </span>
+          <span class="user-role">Administrator</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
         </div>
+      </div>
+      <!-- sidebar-header  -->
+      <div class="sidebar-search">
+        <div>
+          <div class="input-group">
+            <input type="text" class="form-control search-menu" placeholder="Search...">
+            <div class="input-group-append">
+              <span class="input-group-text">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-tachometer-alt"></i>
+              <span>Dashboard</span>
+              <span class="badge badge-pill badge-warning">New</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Dashboard 1
+                    <span class="badge badge-pill badge-success">Pro</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 2</a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-shopping-cart"></i>
+              <span>E-commerce</span>
+              <span class="badge badge-pill badge-danger">3</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Products
 
-      </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Orders</a>
+                </li>
+                <li>
+                  <a href="#">Credit cart</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="far fa-gem"></i>
+              <span>Components</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">General</a>
+                </li>
+                <li>
+                  <a href="#">Panels</a>
+                </li>
+                <li>
+                  <a href="#">Tables</a>
+                </li>
+                <li>
+                  <a href="#">Icons</a>
+                </li>
+                <li>
+                  <a href="#">Forms</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-chart-line"></i>
+              <span>Charts</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Pie chart</a>
+                </li>
+                <li>
+                  <a href="#">Line chart</a>
+                </li>
+                <li>
+                  <a href="#">Bar chart</a>
+                </li>
+                <li>
+                  <a href="#">Histogram</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a href="#">
+              <i class="fa fa-globe"></i>
+              <span>Maps</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Google maps</a>
+                </li>
+                <li>
+                  <a href="#">Open street map</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header-menu">
+            <span>Extra</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-book"></i>
+              <span>Documentation</span>
+              <span class="badge badge-pill badge-primary">Beta</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-folder"></i>
+              <span>Examples</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a href="#">
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">3</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">7</span>
+      </a>
+      <a href="#">
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a href="#">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+      <h2>Pro Sidebar</h2>
+      <hr>
+      <div class="row">
+        <div class="form-group col-md-12">
+          <p>This is a responsive sidebar template with dropdown menu based on bootstrap 4 framework.</p>
+          <p> You can find the complete code on <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">
+              Github</a>, it contains more themes and background image option</p>
+        </div>
+        <div class="form-group col-md-12">
+          <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=large"
+            frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+          <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=large"
+            frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
+        </div>
+      </div>
+      <h5>More templates</h5>
+      <hr>
+        <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
+          <div class="card rounded-0 p-0 shadow-sm">
+            <img src="https://user-images.githubusercontent.com/25878302/58369568-a49b2480-7efc-11e9-9ca9-2be44afacda1.png" class="card-img-top rounded-0" alt="Angular pro sidebar">
+            <div class="card-body text-center">
+                <h6 class="card-title">Angular Pro Sidebar</h6>
+                <a href="https://github.com/azouaoui-med/angular-pro-sidebar" target="_blank" class="btn btn-primary btn-sm">Github</a>
+                <a href="https://azouaoui-med.github.io/angular-pro-sidebar/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
+            </div>
+          </div>          
+        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">          
+          <div class="card rounded-0 p-0 shadow-sm">
+            <img src="https://user-images.githubusercontent.com/25878302/58369258-33f20900-7ef8-11e9-8ff3-b277cb7ed7b4.PNG" class="card-img-top rounded-0" alt="Angular pro sidebar">
+            <div class="card-body text-center">
+                <h6 class="card-title">Angular Dashboard</h6>
+                <a href="https://github.com/azouaoui-med/lightning-admin-angular" target="_blank" class="btn btn-primary btn-sm">Github</a>
+                <a href="https://azouaoui-med.github.io/lightning-admin-angular/demo/" target="_blank" class="btn btn-success btn-sm">Preview</a>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
 
-    <!-- Main Footer -->
-    <!-- <?php include('./class_lib/main_fotter.php'); ?> -->
-    <!-- Add the sidebar's background. This div must be placed
-         immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-  </div><!-- ./wrapper -->
-
-  <div class="MsjAjaxForm"></div>
-  <!-- <?php include "./class_lib/scripts.php"; ?> -->
-  <script src="plugins/morris/morris.min.js"></script>
-  <script src="plugins/morris/raphael-min.js"></script>
-  <script src="dist/js/source_init.js"></script>
+  </main>
+  <!-- page-content" -->
+</div>
+<!-- page-wrapper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
 </body>
 
-<p>
-
-</p>
+</html>

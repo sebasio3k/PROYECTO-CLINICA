@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// import * as $ from 'jquery';
+declare var jQuery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-index',
@@ -9,7 +12,11 @@ export class IndexComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit() {
   }
 
 }
+
+
