@@ -33,7 +33,6 @@ export class RegistroFormComponent implements OnInit {
 
   agregar() {
     this.paciente2.agregar(this.data);
-
   }
   // get currentregistro(){
   //   return JSON.stringify(this.model);

@@ -29,6 +29,10 @@ import { IndexComponent } from './index/index.component';
 import { PruebamenuComponent } from './pruebamenu/pruebamenu.component';
 import { TablaComponent } from './tabla/tabla.component';
 import { PruebacrudComponent } from './pruebacrud/pruebacrud.component';
+import { IndexsecretariaComponent } from './indexsecretaria/indexsecretaria.component';
+import { IndexdoctorComponent } from './indexdoctor/indexdoctor.component';
+import { IndexcontadorComponent } from './indexcontador/indexcontador.component';
+import { IndexadminComponent } from './indexadmin/indexadmin.component';
 
 
 
@@ -51,7 +55,11 @@ import { PruebacrudComponent } from './pruebacrud/pruebacrud.component';
     IndexComponent,
     PruebamenuComponent,
     TablaComponent,
-    PruebacrudComponent
+    PruebacrudComponent,
+    IndexsecretariaComponent,
+    IndexdoctorComponent,
+    IndexcontadorComponent,
+    IndexadminComponent
   ],
   imports: [
     BrowserModule,
