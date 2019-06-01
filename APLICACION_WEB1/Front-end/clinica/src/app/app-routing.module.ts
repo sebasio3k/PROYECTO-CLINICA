@@ -15,12 +15,15 @@ import { HistorialComponent } from './historial/historial.component';
 import { IndexComponent } from './index/index.component';
 import { PruebamenuComponent } from './pruebamenu/pruebamenu.component';
 import { TablaComponent } from './tabla/tabla.component';
+import { IndexadminComponent } from './indexadmin/indexadmin.component';
+import { MenuadminComponent } from './menuadmin/menuadmin.component';
 
 
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroFormComponent},
+  {path: 'indexadmin', component: IndexadminComponent},
   {path: 'registrodoctores', component: RegistrodoctoresComponent},
   {path: 'registropersonal', component: RegistropersonalComponent},
   {path: 'registrodepartamento', component: RegistrodepartamentoComponent},
@@ -34,6 +37,7 @@ const routes: Routes = [
   {path: 'indexComponent', component: IndexComponent},
   {path: 'pruebamenu', component: PruebamenuComponent},
   {path: 'tablauser', component: TablaComponent},
+  {path: 'menuadmin', component: MenuadminComponent},
 
   {path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];

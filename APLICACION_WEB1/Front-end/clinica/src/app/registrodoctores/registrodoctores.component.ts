@@ -7,12 +7,12 @@ import { DoctorService } from '../services/doctores.service';
   styleUrls: ['./registrodoctores.component.css']
 })
 export class RegistrodoctoresComponent implements OnInit {
-  model = new agregardoctor(1,'','','','','','',null,'',null,null,'','','',null,null);
+  model = new agregardoctor(1, '', '', '', '', '', '', null, '', null, null, '', '', '', null, null);
   constructor( public doctor2: DoctorService) { }
 
   ngOnInit() {
   }
-  get currentregistro(){
+  get currentregistro() {
     return JSON.stringify(this.model);
   }
 

@@ -33,6 +33,14 @@ import { IndexsecretariaComponent } from './indexsecretaria/indexsecretaria.comp
 import { IndexdoctorComponent } from './indexdoctor/indexdoctor.component';
 import { IndexcontadorComponent } from './indexcontador/indexcontador.component';
 import { IndexadminComponent } from './indexadmin/indexadmin.component';
+import { MenuadminComponent } from './menuadmin/menuadmin.component';
+import { AdmintratamientosComponent } from './admintratamientos/admintratamientos.component';
+import { AdmindoctoresComponent } from './admindoctores/admindoctores.component';
+import { AdminpromocionesComponent } from './adminpromociones/adminpromociones.component';
+import { AdminpersonalComponent } from './adminpersonal/adminpersonal.component';
+import { AdminhorariosComponent } from './adminhorarios/adminhorarios.component';
+import { AdmindepartamentosComponent } from './admindepartamentos/admindepartamentos.component';
+import { AdmintipopersonalComponent } from './admintipopersonal/admintipopersonal.component';
 
 
 
@@ -59,7 +67,15 @@ import { IndexadminComponent } from './indexadmin/indexadmin.component';
     IndexsecretariaComponent,
     IndexdoctorComponent,
     IndexcontadorComponent,
-    IndexadminComponent
+    IndexadminComponent,
+    MenuadminComponent,
+    AdmintratamientosComponent,
+    AdmindoctoresComponent,
+    AdminpromocionesComponent,
+    AdminpersonalComponent,
+    AdminhorariosComponent,
+    AdmindepartamentosComponent,
+    AdmintipopersonalComponent
   ],
   imports: [
     BrowserModule,

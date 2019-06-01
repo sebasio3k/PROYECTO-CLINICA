@@ -1,6 +1,37 @@
-body{
+
+/* body{
 	background-color: #b0d9de;
+} */
+
+/* .fondo {
+	background-image: url("../assets/f7.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+  } */
+
+  header{
+    background-color: #02111b;
 }
+
 footer{
-	background-color: #b0d9de;
+    background-color: #02111b;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    font-family: 'Pontano Sans', sans-serif;
 }
+
+.colo{
+    color: white;
+}
+
+.fondo {
+	background-image: url("../assets/f7.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* padding: 10px; */
+  }

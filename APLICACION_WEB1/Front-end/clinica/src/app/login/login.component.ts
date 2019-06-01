@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   inicioSesion() {
     if (this.usr === 'admin' && this.pass === '1234') {
       alert('Datos Correctos');
-      document.location.href = 'registrodoctores';
+      document.location.href = 'indexadmin';
     } else {
       alert('Datos incorrectos');
     }

@@ -1,12 +1,11 @@
 /* CODIGO BY : https://bootsnipp.com/snippets/ZXz3x */
-
-.fondo {
-  background-image: url("../../assets/f7.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding: 10px;
-}
+/* .fondo {
+	background-image: url("../../assets/f7.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	padding: 10px;
+  } */
 
 .form-heading {
   color: #fff;

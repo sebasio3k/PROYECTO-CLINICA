@@ -1,29 +1,27 @@
- <!-- CODIGO BY : https://bootsnipp.com/snippets/ZXz3x  -->
 
-<div class="container fondo">
-  <h1 class="form-heading">login Form</h1>
-  <div class="login-form">
-    <div class="main-div">
-      <div class="panel">
-        <h2>Admin Login</h2>
-        <p>Please enter your email and password</p>
+  <br><br><br><br>
+  <!-- CODIGO BY : https://bootsnipp.com/snippets/ZXz3x  -->
+  <div class="container">
+    <div class="login-form">
+      <div class="main-div">
+        <div class="panel">
+          <h2>Iniciar Sesión</h2>
+          <p>Para ingresar escriba su usuario y contraseña.</p>
+        </div>
+        <form id="Login">
+          <div class="form-group">
+            <input type="text" name="usr" class="form-control" id="inputEmail" placeholder="Correo Electronico" [(ngModel)]="usr">
+          </div>
+          <div class="form-group">
+            <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Contraseña" [(ngModel)]="pass">
+          </div>
+          <!-- <div class="forgot">
+            <a href="reset.html">Forgot password?</a>
+          </div> -->
+          <button type="submit" class="btn btn-primary" (click)="inicioSesion()">Iniciar Sesión</button>
+        </form>
       </div>
-      <form id="Login">
-        <div class="form-group">
-          <input type="text" name="usr" class="form-control" id="inputEmail" placeholder="Email Address" [(ngModel)]="usr">
-        </div>
-        <div class="form-group">
-          <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Password" [(ngModel)]="pass">
-        </div>
-        <!-- <div class="forgot">
-          <a href="reset.html">Forgot password?</a>
-        </div> -->
-        <button type="submit" class="btn btn-primary" (click)="inicioSesion()">Login</button>
-      </form>
     </div>
-    <p class="botto-text"> Designed by Sunil Rajput</p>
   </div>
-</div>
-<p>
-  login works!
-</p>
+  <br><br><br>
+
