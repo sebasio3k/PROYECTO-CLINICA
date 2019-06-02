@@ -41,6 +41,17 @@ import { AdminpersonalComponent } from './adminpersonal/adminpersonal.component'
 import { AdminhorariosComponent } from './adminhorarios/adminhorarios.component';
 import { AdmindepartamentosComponent } from './admindepartamentos/admindepartamentos.component';
 import { AdmintipopersonalComponent } from './admintipopersonal/admintipopersonal.component';
+import { MenusecretariaComponent } from './menusecretaria/menusecretaria.component';
+import { MenucontadorComponent } from './menucontador/menucontador.component';
+import { MenudoctorComponent } from './menudoctor/menudoctor.component';
+import { SecretariacitasComponent } from './secretariacitas/secretariacitas.component';
+import { SecretariapacientesComponent } from './secretariapacientes/secretariapacientes.component';
+import { SecretariapromocionesComponent } from './secretariapromociones/secretariapromociones.component';
+import { ContadoringresosComponent } from './contadoringresos/contadoringresos.component';
+import { ContadorreportesComponent } from './contadorreportes/contadorreportes.component';
+import { DoctorhistorialComponent } from './doctorhistorial/doctorhistorial.component';
+import { DoctortpacienteComponent } from './doctortpaciente/doctortpaciente.component';
+import { DoctorcitasComponent } from './doctorcitas/doctorcitas.component';
 
 
 
@@ -75,7 +86,18 @@ import { AdmintipopersonalComponent } from './admintipopersonal/admintipopersona
     AdminpersonalComponent,
     AdminhorariosComponent,
     AdmindepartamentosComponent,
-    AdmintipopersonalComponent
+    AdmintipopersonalComponent,
+    MenusecretariaComponent,
+    MenucontadorComponent,
+    MenudoctorComponent,
+    SecretariacitasComponent,
+    SecretariapacientesComponent,
+    SecretariapromocionesComponent,
+    ContadoringresosComponent,
+    ContadorreportesComponent,
+    DoctorhistorialComponent,
+    DoctortpacienteComponent,
+    DoctorcitasComponent
   ],
   imports: [
     BrowserModule,

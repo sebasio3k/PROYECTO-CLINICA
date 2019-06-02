@@ -40,7 +40,7 @@ const routes: Routes = [
   {path: 'adminpersonal', component: AdmintratamientosComponent},
   {path: 'admintratamientos', component: AdmintratamientosComponent},
   {path: 'adminpromociones', component: AdminpromocionesComponent},
- 
+  // {path: 'menuadmin', component: MenuadminComponent},
 
   {path: 'registrodoctores', component: RegistrodoctoresComponent},
   {path: 'registropersonal', component: RegistropersonalComponent},
@@ -55,7 +55,7 @@ const routes: Routes = [
   {path: 'indexComponent', component: IndexComponent},
   {path: 'pruebamenu', component: PruebamenuComponent},
   {path: 'tablauser', component: TablaComponent},
-  
+
 
   {path: '**', pathMatch: 'full', redirectTo: 'login'}
 ];
