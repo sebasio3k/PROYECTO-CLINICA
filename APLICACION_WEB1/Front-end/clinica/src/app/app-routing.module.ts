@@ -24,6 +24,20 @@ import { AdmindoctoresComponent } from './admindoctores/admindoctores.component'
 import { AdminhorariosComponent } from './adminhorarios/adminhorarios.component';
 import { AdmintratamientosComponent } from './admintratamientos/admintratamientos.component';
 import { AdminpromocionesComponent } from './adminpromociones/adminpromociones.component';
+import { MenusecretariaComponent } from './menusecretaria/menusecretaria.component';
+import { SecretariacitasComponent } from './secretariacitas/secretariacitas.component';
+import { SecretariapacientesComponent } from './secretariapacientes/secretariapacientes.component';
+import { SecretariapromocionesComponent } from './secretariapromociones/secretariapromociones.component';
+import { IndexsecretariaComponent } from './indexsecretaria/indexsecretaria.component';
+import { IndexcontadorComponent } from './indexcontador/indexcontador.component';
+import { MenucontadorComponent } from './menucontador/menucontador.component';
+import { ContadoringresosComponent } from './contadoringresos/contadoringresos.component';
+import { ContadorreportesComponent } from './contadorreportes/contadorreportes.component';
+import { IndexdoctorComponent } from './indexdoctor/indexdoctor.component';
+import { MenudoctorComponent } from './menudoctor/menudoctor.component';
+import { DoctorhistorialComponent } from './doctorhistorial/doctorhistorial.component';
+import { DoctortpacienteComponent } from './doctortpaciente/doctortpaciente.component';
+import { DoctorcitasComponent } from './doctorcitas/doctorcitas.component';
 
 
 
@@ -31,17 +45,29 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroFormComponent},
   {path: 'indexadmin', component: IndexadminComponent},
-  {path: 'menuadmin', component: MenuadminComponent},
-  {path: 'adminpersonal', component: AdminpersonalComponent},
-  {path: 'admintipopersonal', component: AdmintipopersonalComponent},
-  {path: 'admindepartamentos', component: AdmindepartamentosComponent},
-  {path: 'admindoctores', component: AdmindoctoresComponent},
-  {path: 'adminhorarios', component: AdminhorariosComponent},
-  {path: 'adminpersonal', component: AdmintratamientosComponent},
-  {path: 'admintratamientos', component: AdmintratamientosComponent},
-  {path: 'adminpromociones', component: AdminpromocionesComponent},
-  // {path: 'menuadmin', component: MenuadminComponent},
-
+    {path: 'menuadmin', component: MenuadminComponent},
+      {path: 'adminpersonal', component: AdminpersonalComponent},
+      {path: 'admintipopersonal', component: AdmintipopersonalComponent},
+      {path: 'admindepartamentos', component: AdmindepartamentosComponent},
+      {path: 'admindoctores', component: AdmindoctoresComponent},
+      {path: 'adminhorarios', component: AdminhorariosComponent},
+      {path: 'adminpersonal', component: AdmintratamientosComponent},
+      {path: 'admintratamientos', component: AdmintratamientosComponent},
+      {path: 'adminpromociones', component: AdminpromocionesComponent},
+  {path: 'indexsecretaria', component: IndexsecretariaComponent},
+    {path: 'menusecretaria', component: MenusecretariaComponent},
+      {path: 'secretariacitas', component: SecretariacitasComponent},
+      {path: 'secretariapacientes', component: SecretariapacientesComponent},
+      {path: 'secretariapromociones', component: SecretariapromocionesComponent},
+  {path: 'indexcontador', component: IndexcontadorComponent},
+    {path: 'menucontador', component: MenucontadorComponent},
+      {path: 'contadoringresos', component: ContadoringresosComponent},
+      {path: 'contadorreportes', component: ContadorreportesComponent},
+  {path: 'indexdoctor', component: IndexdoctorComponent},
+    {path: 'menudoctor', component: MenudoctorComponent},
+      {path: 'doctorhistorial', component: DoctorhistorialComponent},
+      {path: 'doctortpacientes', component: DoctortpacienteComponent},
+      {path: 'doctorcitas', component: DoctorcitasComponent},
   {path: 'registrodoctores', component: RegistrodoctoresComponent},
   {path: 'registropersonal', component: RegistropersonalComponent},
   {path: 'registrodepartamento', component: RegistrodepartamentoComponent},

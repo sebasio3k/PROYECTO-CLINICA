@@ -1,0 +1,17 @@
+.fondo {
+	background-image: url("../../assets/12.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	/* padding: 10px; */
+  }
+  h1 {
+	text-align: center;
+	margin: 40px 0 40px;
+	text-align: center;
+	font-size: 30px;
+	color: black;
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-family: 'Candal', sans-serif;
+	/* font-family: 'Cherry Swash', cursive; */
+}
