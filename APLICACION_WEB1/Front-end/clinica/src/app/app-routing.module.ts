@@ -43,7 +43,6 @@ import { DoctorcitasComponent } from './doctorcitas/doctorcitas.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'registro', component: RegistroFormComponent},
   {path: 'indexadmin', component: IndexadminComponent},
     {path: 'menuadmin', component: MenuadminComponent},
       {path: 'adminpersonal', component: AdminpersonalComponent},
@@ -68,6 +67,7 @@ const routes: Routes = [
       {path: 'doctorhistorial', component: DoctorhistorialComponent},
       {path: 'doctortpacientes', component: DoctortpacienteComponent},
       {path: 'doctorcitas', component: DoctorcitasComponent},
+  {path: 'registro', component: RegistroFormComponent},
   {path: 'registrodoctores', component: RegistrodoctoresComponent},
   {path: 'registropersonal', component: RegistropersonalComponent},
   {path: 'registrodepartamento', component: RegistrodepartamentoComponent},

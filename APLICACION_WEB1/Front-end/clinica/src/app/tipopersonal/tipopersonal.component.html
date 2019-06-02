@@ -1,44 +1,52 @@
-<div class="container fondo" >
-  <h1 align="center">Registrar tipo personal</h1>
- <br><br><br>
-  <form id="formulario ">
-    <!-- descripcion -->
-    <div class="form-group offset-md-4 ">
-      <label class="col-md-4  control-label" for="name">Nombre</label>
-          <div class="col-md-8 inputGroupContainer">
+<div class=" fondo">
+    <app-menuadmin></app-menuadmin>
+
+    <!-- <div *ngFor="let item of doctor2.doctor">
+        <br> {{item.iddoctor}}
+        <br> {{item.nombre}}
+        <br> {{item.apaterno}}
+    </div> -->
+
+    <h1>Registrar tipo personal</h1>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-6 col-auto text-center">
+          <form id="formulario ">
+            <!-- Descripcion del tipo persnl -->
+            <div class="row justify-content-center">
+              <div class="form-group col-xs-12 col-8">
+                <label for="Descripcion del tipo persnl" class="textcolorw">Descripción del tipo personal</label>
                 <div class="input-group">
-                  <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-user"></i>
-                  </span>
-                  <input 
-                         type="text" 
-                          name="nombre"
-                          size="500"
-                          required
-                          class="form-control"
-                          id="nombre"
-                          [(ngModel)]="model.nombre"
-                          placeholder="Descripción del tipo personal" />
-                          
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-prescription-bottle"></i>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    name="nombre"
+                    size="500"
+                    required
+                    class="form-control"
+                    id="nombre"
+                    [(ngModel)]="model.nombre"
+                    placeholder="Descripción del tipo personal" />
                 </div>
+              </div>
+            </div>
+            <!-- boton -->
+            <div class="row justify-content-center">
+              <div class="form-group col-xs-12 col-4 align-self-center text-center">
+                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+              </div>
+            </div>
+          </form>
+          <div class="pre">
+            <h2>Modelo:</h2>
+            {{currentregistro}}
           </div>
+        </div>
+      </div>
     </div>
-      
-   
-    <!-- boton -->
-    <div class="boton offset-md-4">
-      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
-    </div>
-    
-    <!--<button type="submit">Registrar</button>-->
-
-    
-
-  </form>
-
-  <div class="pre">
-    <h2>Modelo:</h2>
-    {{currentregistro}}
+    <br><br><br><br><br><br><br><br>
   </div>
-
-</div>

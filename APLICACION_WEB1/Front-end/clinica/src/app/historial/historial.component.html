@@ -1,73 +1,73 @@
-<div class="container fondo" >
-  <h1 align="center">Registrar Historial</h1>
- <br><br><br>
-  <form id="formulario ">
-    <!-- descripcion -->
-    <div class="form-group offset-md-4 ">
-      <label class="col-md-4  control-label" for="desc">Descripcion de la cita</label>
-          <div class="col-md-8 inputGroupContainer">
+<div class=" fondo">
+    <app-menudoctor></app-menudoctor>
+
+    <!-- <div *ngFor="let item of doctor2.doctor">
+        <br> {{item.iddoctor}}
+        <br> {{item.nombre}}
+        <br> {{item.apaterno}}
+    </div> -->
+
+    <h1>Registrar Historial</h1>
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-6 col-auto text-center">
+          <form id="formulario ">
+            <!-- Observaciones al paciente -->
+            <div class="row justify-content-center">
+              <div class="form-group col-xs-12 col-8">
+                <label for="Observaciones al paciente" class="textcolorw">Observaciones al paciente</label>
                 <div class="input-group">
-                  <span class="input-group-addon">
-                  <i class="glyphicon glyphicon-user"></i>
-                  </span>
-                  <input 
-                         type="text" 
-                          name="desc"
-                          size="500"
-                          required
-                          class="form-control"
-                          id="desc"
-                          [(ngModel)]="model.desc"
-                          placeholder="Descrpción de la cita" />
-                          
-                </div>
-          </div>
-    </div>
-      
-    <!-- observaciones -->
-    <div class="form-group offset-md-4">
-        <label class="col-md-4 control-label" for="obs">Observaciones al paciente:</label>
-             <div class="col-md-8 inputGroupContainer">
-                 <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span><input 
-                               type="text" 
-                               name="obs"
-                               required
-                               class="form-control"
-                               id="obs"
-                               [(ngModel)]="model.obs"
-                               placeholder="Observaciones al paciente"/>
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
                   </div>
-             </div>
+                  <input
+                    type="text"
+                    name="obs"
+                    required
+                    class="form-control"
+                    id="obs"
+                    [(ngModel)]="model.obs"
+                    placeholder="Observaciones al paciente"/>
+                </div>
+              </div>
+            </div>
+            <!-- Descripcion de Cita -->
+            <div class="row justify-content-center">
+              <div class="form-group col-xs-12 col-8">
+                <label for="Descripcion de Cita" class="textcolorw">Descripción de Cita</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    name="desc"
+                    size="500"
+                    required
+                    class="form-control"
+                    id="desc"
+                    [(ngModel)]="model.desc"
+                    placeholder="Descripción de la cita" />
+                </div>
+              </div>
+            </div>
+            <!-- boton -->
+            <div class="row justify-content-center">
+              <div class="form-group col-xs-12 col-4 align-self-center text-center">
+                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+              </div>
+            </div>
+          </form>
+          <div class="pre">
+            <h2>Modelo:</h2>
+            {{currentregistro}}
+          </div>
+        </div>
+      </div>
     </div>
-
-   
-                         
-       
-    
-   
-
-    <!-- boton -->
-    <div class="boton offset-md-4">
-      <button type="submit" class="btn btn-outline-primary ">Registrar</button>
-    </div>
-    
-    <!--<button type="submit">Registrar</button>-->
-
-    
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
-  </form>
- 
-  <div class="pre">
-    <h2>Modelo:</h2>
-    {{currentregistro}}
+    <br><br><br><br>
   </div>
-
-</div>

@@ -1,32 +1,58 @@
-h1{
-	background: #aaaa;
-	font-family: "century gothic";
-	margin: 0 auto;
-	font-weight: bold;
-	
+.fondo {
+	background-image: url("../../assets/f8.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-size: cover; */
+	/* padding: 10px; */
+	}
+
+  h1 {
+	text-align: center;
+	margin: 40px 0 40px;
+	text-align: center;
+	font-size: 30px;
+	color: black;
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-family: 'Candal', sans-serif;
+	/* font-family: 'Cherry Swash', cursive; */
 }
-label{
-	font-family: "century gothic";
+
+.blurb{
+	background: rgba(0,0,0,0.6);
+	/* width: auto; */
+	/* position: absolute; */
+  color: #FFFFFF;
+  border-radius: 100px 100px 100px 100px;
+  -moz-border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  border: 0px solid #000000;
 }
-.formulario{
-	margin: 0 auto;
-    text-align: center;
+
+.blurw{
+	background: rgba(0,0,0,0.1);
+  /* background: rgba(255,255,255,0.4); */
+	color: #000000;
+	border-radius: 100px 100px 100px 100px;
+  -moz-border-radius: 100px 100px 100px 100px;
+  -webkit-border-radius: 100px 100px 100px 100px;
+  border: 0px solid #000000;
 }
-option{
-	font-family: "century gothic";
+
+.colo{
+	color: black;
 }
-.boton{
-  width: 400px;
-  display: flex;
-  justify-content: center;
-}
+
 input{
 	font-family: "century gothic";
 	justify-content: center;
 	margin: 0 auto;
-	
+
 }
 
 .fondo {
-	background-color: #b0d9de;
-}
+	background-image: url("../../assets/f8.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	/* background-size: cover; */
+	/* padding: 10px; */
+	}
