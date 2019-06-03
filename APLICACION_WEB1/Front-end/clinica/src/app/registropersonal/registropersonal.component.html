@@ -6,16 +6,40 @@
         <br> {{item.nombre}}
         <br> {{item.apaterno}}
     </div> -->
+    	
 
     <h1>Registro de Personal</h1>
+    
+
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-6 col-auto text-center">
           <form id="formulario ">
+              <div class="row justify-content-center">
+                  <div class="form-group col-xs-12 col-8">
+                    <label for="idtipo" class="textcolorw">Id tipo</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">
+                          <i class="fas fa-user-nurse"></i>
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        name="idtipo"
+                        size="100"
+                        required
+                        class="form-control"
+                        id="idtipo"
+                        [(ngModel)]="data.idtipo"
+                        placeholder="Tipo " />
+                    </div>
+                  </div>
+                </div>
             <!-- Nombre -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="name" class="textcolorw">Nombre</label>
+                <label for="nombre" class="textcolorw">Nombre</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -24,20 +48,20 @@
                   </div>
                   <input
                     type="text"
-                    name="name"
+                    name="nombre"
                     size="100"
                     required
                     class="form-control"
-                    id="name"
-                    [(ngModel)]="model.name"
+                    id="nombre"
+                    [(ngModel)]="data.nombre"
                     placeholder="Nombre del personal" />
                 </div>
               </div>
             </div>
-            <!-- ap -->
+            <!-- apaterno -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="ap" class="textcolorw">Apellido Paterno</label>
+                <label for="apaterno" class="textcolorw">Apellido Paterno</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -46,10 +70,10 @@
                   </div>
                   <input
                     type="text"
-                    name="ap"
+                    name="apaterno"
                     required
                     class="form-control"
-                    id="ap"
+                    id="apaterno"
                     [(ngModel)]="data.apaterno"
                     placeholder="Apellido paterno del personal"/>
                 </div>
@@ -58,7 +82,7 @@
             <!-- am -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="am" class="textcolorw">Apellido Materno</label>
+                <label for="amaterno" class="textcolorw">Apellido Materno</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -67,10 +91,10 @@
                   </div>
                   <input
                     type="text"
-                    name="am"
+                    name="amaterno"
                     required
                     class="form-control"
-                    id="am"
+                    id="amaterno"
                     [(ngModel)]="data.amaterno"
                     placeholder="Apellido materno del personal" />
                 </div>
@@ -79,7 +103,7 @@
             <!-- Genero -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Genero" class="textcolorw">Genero</label>
+                <label for="genero" class="textcolorw">Genero</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -88,9 +112,9 @@
                   </div>
                   <select class="selectpicker form-control"
                     type="text"
-                    name="genere"
+                    name="genero"
                     required
-                    id="genere"
+                    id="genero"
                     [(ngModel)]="data.genero"
                     placeholder="Genero del personal">
                     <option>Mujer</option>
@@ -102,7 +126,7 @@
             <!-- fracc -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Fraccionamiento" class="textcolorw">Fraccionamiento</label>
+                <label for="fracc" class="textcolorw">Fraccionamiento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -111,10 +135,10 @@
                   </div>
                   <input
                     type="text"
-                    name="neighborhood"
+                    name="fracc"
                     required
                     class="form-control"
-                    id="neighborhood"
+                    id="fracc"
                     [(ngModel)]="data.fracc"
                     placeholder="Fraccionamiento donde vive el personal" />
                 </div>
@@ -131,12 +155,12 @@
                     </div>
                   </div>
                   <input
-                    type="number"
-                    name="number"
+                    type="Num"
+                    name="Num"
                     required
                     class="form-control"
-                    id="number"
-                    [(ngModel)]="data.num"
+                    id="Num"
+                    [(ngModel)]="data.Num"
                     placeholder="Número de casa/Hogar" />
                 </div>
               </div>
@@ -144,7 +168,7 @@
             <!-- Calle-->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Calle" class="textcolorw">Calle</label>
+                <label for="calle" class="textcolorw">Calle</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -153,10 +177,10 @@
                   </div>
                   <input
                     type="text"
-                    name="streat"
+                    name="calle"
                     required
                     class="form-control"
-                    id="streat"
+                    id="calle"
                     [(ngModel)]="data.calle"
                     placeholder="Calle" />
                 </div>
@@ -165,7 +189,7 @@
             <!-- Edad -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Edad" class="textcolorw">Edad</label>
+                <label for="edad" class="textcolorw">Edad</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -174,10 +198,10 @@
                   </div>
                   <input
                     type="text"
-                    name="age"
+                    name="edad"
                     required
                     class="form-control"
-                    id="age"
+                    id="edad"
                     [(ngModel)]="data.edad"/>
                 </div>
               </div>
@@ -185,7 +209,7 @@
             <!-- Telefono-->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Telefono" class="textcolorw">Teléfono</label>
+                <label for="telefono" class="textcolorw">Teléfono</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -194,10 +218,10 @@
                   </div>
                   <input
                     type="tel"
-                    name="phone"
+                    name="telefono"
                     required
                     class="form-control"
-                    id="phone"
+                    id="telefono"
                     [(ngModel)]="data.telefono"
                     placeholder="telefono del personal celular/fijo" />
                 </div>
@@ -206,7 +230,7 @@
             <!-- Email -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Email" class="textcolorw">Email</label>
+                <label for="correo" class="textcolorw">Email</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -215,10 +239,10 @@
                   </div>
                   <input
                     type="email"
-                    name="email"
+                    name="correo"
                     required
                     class="form-control"
-                    id="email"
+                    id="correo"
                     [(ngModel)]="data.correo"
                     placeholder="correo electronico del personal, de tipo: email@email.com"/>
                 </div>
@@ -227,7 +251,7 @@
             <!-- No cedula -->
             <div class="row justify-content-center">
                 <div class="form-group col-xs-12 col-8">
-                  <label for="ncedula" class="textcolorw">N. Cédula</label>
+                  <label for="cedula" class="textcolorw">N. Cédula</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -236,11 +260,11 @@
                     </div>
                     <input
                       type="text"
-                      name="ncedula"
+                      name="cedula"
                       required
                       class="form-control"
-                      id="ncedula"
-                      [(ngModel)]="model.ncedula"
+                      id="cedula"
+                      [(ngModel)]="data.cedula"
                       placeholder="Número de cédula del personal"/>
                   </div>
                 </div>
@@ -248,7 +272,7 @@
             <!-- Id-Departamento -->
             <div class="row justify-content-center">
                 <div class="form-group col-xs-12 col-8">
-                  <label for="Id-Departamento" class="textcolorw">Id-Departamento</label>
+                  <label for="iddepartamento" class="textcolorw">Id-Departamento</label>
                   <div class="input-group">
                     <div class="input-group-prepend">
                       <div class="input-group-text">
@@ -257,11 +281,11 @@
                     </div>
                     <input
                       type="text"
-                      name="iddepart"
+                      name="iddepartamento"
                       required
                       class="form-control"
-                      id="iddepart"
-                      [(ngModel)]="model.iddepart"
+                      id="iddepartamento"
+                      [(ngModel)]="data.iddepartamento"
                       placeholder="Ingresa el Id del departamento"/>
                   </div>
                 </div>
@@ -269,7 +293,7 @@
             <!-- Sueldo -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Sueldo" class="textcolorw">Sueldo</label>
+                <label for="sueldo" class="textcolorw">Sueldo</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -282,7 +306,7 @@
                     required
                     class="form-control"
                     id="sueldo"
-                    [(ngModel)]="model.sueldo"
+                    [(ngModel)]="data.sueldo"
                     placeholder="Sueldo del personal"/>
                 </div>
               </div>
@@ -290,7 +314,7 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

@@ -7,16 +7,38 @@ import { DoctorService } from '../services/doctores.service';
   styleUrls: ['./registrodoctores.component.css']
 })
 export class RegistrodoctoresComponent implements OnInit {
-  model = new agregardoctor(1, '', '', '', '', '', '', null, '', null, null, '', '', '', null, null);
-  constructor( public doctor2: DoctorService) { }
+ // model = new agregardoctor(1, '', '', '', '', '', '', null, '', null, null, '', '', '', null, null);
+ data = {
+
+    Nombre : '',
+    apaterno :'',
+    amaterno : '',
+    genero : '',  
+  cedula : '',
+  fracc : '',
+  num : '',
+  calle : '',
+  edad : '',
+  telefono : '',
+  correo : '',
+  especialidad : '',
+  nconsultorio :'',
+  sueldo :'',
+  iddepartamento :''
+  };
+
+constructor( public doctor2: DoctorService) { }
 
   ngOnInit() {
   }
+  /*
   get currentregistro() {
     return JSON.stringify(this.model);
+  }*/
+  agregar() {
+    this.doctor2.agregar(this.data);
   }
 
 }
-
 
 

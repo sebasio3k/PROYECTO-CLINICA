@@ -12,10 +12,54 @@
       <div class="row justify-content-center">
         <div class="col-6 col-auto text-center">
           <form id="formulario ">
+            <!--idpaciente-->
+            <!-- Observaciones al paciente -->
+            <div class="row justify-content-center">
+                <div class="form-group col-xs-12 col-8">
+                  <label for="idpaciente" class="textcolorw">Id paciente</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <i class="fas fa-bookmark"></i>
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      name="idpaciente"
+                      required
+                      class="form-control"
+                      id="idpaciente"
+                      [(ngModel)]="data.idpaciente"
+                      placeholder="Observaciones al paciente"/>
+                  </div>
+                </div>
+              </div>
+              <!--idcita-->
+              <!-- Observaciones al paciente -->
+            <div class="row justify-content-center">
+                <div class="form-group col-xs-12 col-8">
+                  <label for="idcita" class="textcolorw">id cita</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <i class="fas fa-bookmark"></i>
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      name="idcita"
+                      required
+                      class="form-control"
+                      id="idcita"
+                      [(ngModel)]="data.idcita"
+                      placeholder="Observaciones al paciente"/>
+                  </div>
+                </div>
+              </div>
             <!-- Observaciones al paciente -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Observaciones al paciente" class="textcolorw">Observaciones al paciente</label>
+                <label for="descripcioncita" class="textcolorw">Descripción de la cita</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -24,11 +68,11 @@
                   </div>
                   <input
                     type="text"
-                    name="obs"
+                    name="descripcioncita"
                     required
                     class="form-control"
-                    id="obs"
-                    [(ngModel)]="model.obs"
+                    id="descripcioncita"
+                    [(ngModel)]="data.descripcioncita"
                     placeholder="Observaciones al paciente"/>
                 </div>
               </div>
@@ -36,7 +80,7 @@
             <!-- Descripcion de Cita -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Descripcion de Cita" class="textcolorw">Descripción de Cita</label>
+                <label for="observaciones" class="textcolorw">Observaciones al paciente</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -45,20 +89,41 @@
                   </div>
                   <input
                     type="text"
-                    name="desc"
+                    name="observaciones"
                     size="500"
                     required
                     class="form-control"
-                    id="desc"
-                    [(ngModel)]="model.desc"
+                    id="observaciones"
+                    [(ngModel)]="data.observaciones"
                     placeholder="Descripción de la cita" />
                 </div>
               </div>
             </div>
+            <!-- Observaciones al paciente -->
+            <div class="row justify-content-center">
+                <div class="form-group col-xs-12 col-8">
+                  <label for="iddoctor" class="textcolorw">id Doctor</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                          <i class="fas fa-bookmark"></i>
+                      </div>
+                    </div>
+                    <input
+                      type="text"
+                      name="iddoctor"
+                      required
+                      class="form-control"
+                      id="iddoctor"
+                      [(ngModel)]="data.iddoctor"
+                      placeholder="Observaciones al paciente"/>
+                  </div>
+                </div>
+              </div>
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

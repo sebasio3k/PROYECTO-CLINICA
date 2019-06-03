@@ -9,19 +9,19 @@
           <!-- Nombre -->
           <div class="row justify-content-center">
             <div class="form-group col-xs-12 col-11">
-              <label for="name" class="textcolorw">Nombre</label>
+              <label for="nombre" class="textcolorw">Nombre</label>
               <div class="input-group">
                 <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fas fa-signature"></i></div>
                 </div>
                 <input
                   type="text"
-                  name="name"
+                  name="nombre"
                   size="100"
                   required
                   class="form-control"
-                  id="name"
-                  [(ngModel)]="model.name"
+                  id="nombre"
+                  [(ngModel)]="data.nombre"
                   placeholder="Nombre del departamento" />
               </div>
             </div>
@@ -40,7 +40,7 @@
                   required
                   class="form-control"
                   id="ubicacion"
-                  [(ngModel)]="model.ubicacion"
+                  [(ngModel)]="data.ubicacion"
                   placeholder="Ubicación del departamento (direccion del edificio)" />
               </div>
             </div>
@@ -48,7 +48,7 @@
           <!-- boton -->
           <div class="row justify-content-center">
             <div class="form-group col-xs-12 col-4 align-self-center text-center">
-              <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+              <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
             </div>
           </div>
         </form>

@@ -7,12 +7,18 @@ import { Citas } from '../interfaces/citas';
   providedIn: 'root'
 })
 export class CitasService {
-  cita: Citas[]=[];
+  cita: Citas[] = [];
 
-  constructor( private http:HttpClient) { this.citas(); }
-  public citas(){
+  constructor( private http: HttpClient) { }
+  /*public citas(){
     this.http.get('http://localhost:4200/assets/JSONS/citas.json').subscribe((resp: Citas[]) => {
       this.cita = resp;
+    });
+  }*/
+  public agregar(data) {
+    this.http.post('http://localhost:3000/citas/insertar', data).subscribe((resp: Citas[]) => {
+      alert('datos agregados');
+      location.reload();
     });
   }
 }

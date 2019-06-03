@@ -10,7 +10,7 @@
         </div>
         <form id="Login">
           <div class="form-group">
-            <input type="text" name="usr" class="form-control" id="inputEmail" placeholder="Correo Electronico" [(ngModel)]="usr">
+            <input type="text" name="usr" class="form-control is-valid" id="inputEmail" placeholder="Correo Electronico" [(ngModel)]="usr">
           </div>
           <div class="form-group">
             <input type="password" name="pass" class="form-control" id="inputPassword" placeholder="Contraseña" [(ngModel)]="pass">
@@ -18,7 +18,7 @@
           <!-- <div class="forgot">
             <a href="reset.html">Forgot password?</a>
           </div> -->
-          <button type="submit" class="btn btn-primary" (click)="inicioSesion()">Iniciar Sesión</button>
+          <button type="submit" class="btn btn-primary" (click)="validarLogin()">Iniciar Sesión</button>
         </form>
       </div>
     </div>

@@ -8,6 +8,7 @@ import { Pacientes } from '../interfaces/pacientes';
 })
 export class PacienteService {
   paciente: Pacientes[] = [];
+  usuario1:Pacientes[]=[];
 
   constructor( private http: HttpClient) { }
   // public pacientes(){
@@ -20,5 +21,16 @@ export class PacienteService {
       alert('datos agregados');
       location.reload();
     });
+  }
+  public buscar1(usuario){
+    this.http.get("http://localhost:3000/users/mostrar1/"+usuario).subscribe((resp:Pacientes[])=>{
+      this.usuario1=resp;
+    });
+  }
+  public actualizarPaciente(paciente2){
+    this.http.post("http://localhost:3000/users/actualizar",paciente2).subscribe((resp: Pacientes[])=>{
+      alert("Datos actualizados correctamente");
+      document.location.reload();
+     });
   }
 }

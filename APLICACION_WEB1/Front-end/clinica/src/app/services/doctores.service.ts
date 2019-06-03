@@ -9,10 +9,18 @@ import { Doctores } from '../interfaces/doctores';
 export class DoctorService {
   doctor: Doctores[]=[];
 
-  constructor( private http:HttpClient) { this.doctores(); }
-  public doctores(){
+  constructor( private http:HttpClient) { }
+  /*public doctores(){
     this.http.get('http://localhost:4200/assets/JSONS/doctores.json').subscribe((resp: Doctores[]) => {
       this.doctor = resp;
     });
+  }*/
+
+  public agregar(data) {
+    this.http.post('http://localhost:3000/doctores/insertar', data).subscribe((resp: Doctores[]) => {
+      alert('datos agregados');
+      location.reload();
+    });
   }
 }
+

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PacienteService } from '../services/paciente.service';
 
 @Component({
   selector: 'app-rudsecretariapacientes',
@@ -8,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class RudsecretariapacientesComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public paciente:PacienteService) { }
+  paciente2 = {
+        nombre:	'',
+        apaterno:	'',
+        amaterno:	'',
+        genero:	'',
+        fracc:	'',
+        num:	'',
+        calle:	'',
+        edad:	'',
+        telefono:	'',
+        correo:	''
+};
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -45,6 +57,12 @@ export class RudsecretariapacientesComponent implements OnInit {
 
     ];
     console.log(this.datos);
+  }
+  buscar1(usuario){
+    this.paciente.buscar1(usuario);
+  }
+  actualizarPaciente(paciente2){
+    this.paciente.actualizarPaciente(paciente2);
   }
 
   remove(id) {
