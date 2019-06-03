@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TablaComponent implements OnInit {
 
-  datos = []
+  datos = [];
   constructor() { }
 
   ngOnInit() {
     this.testBuildDatas();
   }
 
-  testBuildDatas(){
+  testBuildDatas() {
     this.datos = [
       {
         id: '1',
@@ -45,21 +45,14 @@ export class TablaComponent implements OnInit {
 
     ];
     console.log(this.datos);
-
-
-
-
   }
 
-  remove(id)
-  {
-    this.datos = this.datos.filter(item =>{
-      if(item.id !== id)
-      {
+  remove(id) {
+    this.datos = this.datos.filter(item => {
+      if (item.id !== id) {
         return item;
       }
     });
-
   }
 
 }

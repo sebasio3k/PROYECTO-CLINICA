@@ -52,6 +52,18 @@ import { ContadorreportesComponent } from './contadorreportes/contadorreportes.c
 import { DoctorhistorialComponent } from './doctorhistorial/doctorhistorial.component';
 import { DoctortpacienteComponent } from './doctortpaciente/doctortpaciente.component';
 import { DoctorcitasComponent } from './doctorcitas/doctorcitas.component';
+import { RudadminpersonalComponent } from './rudadminpersonal/rudadminpersonal.component';
+import { RudadmintipopersonalComponent } from './rudadmintipopersonal/rudadmintipopersonal.component';
+import { RudadmindepartamentosComponent } from './rudadmindepartamentos/rudadmindepartamentos.component';
+import { RudadmindoctoresComponent } from './rudadmindoctores/rudadmindoctores.component';
+import { RudadminhorariosComponent } from './rudadminhorarios/rudadminhorarios.component';
+import { RudadmintratamientosComponent } from './rudadmintratamientos/rudadmintratamientos.component';
+import { RudadminpromocionesComponent } from './rudadminpromociones/rudadminpromociones.component';
+import { RudsecretariacitasComponent } from './rudsecretariacitas/rudsecretariacitas.component';
+import { RudsecretariapacientesComponent } from './rudsecretariapacientes/rudsecretariapacientes.component';
+import { RudsecretariapromocionesComponent } from './rudsecretariapromociones/rudsecretariapromociones.component';
+import { RuddoctorhistorialComponent } from './ruddoctorhistorial/ruddoctorhistorial.component';
+import { RuddoctorcitasComponent } from './ruddoctorcitas/ruddoctorcitas.component';
 
 
 
@@ -97,7 +109,19 @@ import { DoctorcitasComponent } from './doctorcitas/doctorcitas.component';
     ContadorreportesComponent,
     DoctorhistorialComponent,
     DoctortpacienteComponent,
-    DoctorcitasComponent
+    DoctorcitasComponent,
+    RudadminpersonalComponent,
+    RudadmintipopersonalComponent,
+    RudadmindepartamentosComponent,
+    RudadmindoctoresComponent,
+    RudadminhorariosComponent,
+    RudadmintratamientosComponent,
+    RudadminpromocionesComponent,
+    RudsecretariacitasComponent,
+    RudsecretariapacientesComponent,
+    RudsecretariapromocionesComponent,
+    RuddoctorhistorialComponent,
+    RuddoctorcitasComponent
   ],
   imports: [
     BrowserModule,
