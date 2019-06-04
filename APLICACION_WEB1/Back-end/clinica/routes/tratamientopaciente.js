@@ -37,7 +37,6 @@ router.post('/insertar',function (req,res,next) {
     iddoctor = req.body.iddoctor;
     modalidadpago = req.body.modalidadpago;
     pagos = req.body.pagos;
-    
 
   // tomar los parametros y asignarlos a variable output
   //output=req.params.id;

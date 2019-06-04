@@ -158,7 +158,6 @@
                       [(ngModel)]="data.estatus"
                       placeholder="Estatus de la cita">
                       <option>Próxima</option>
-                      
                     </select>
                   </div>
                 </div>
@@ -166,7 +165,8 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary "  (click)="agregar()">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="validarCita()" >Registrar</button>
+                <!-- (mouseover)="validarCita()" (click)="agregar()" -->
               </div>
             </div>
           </form>

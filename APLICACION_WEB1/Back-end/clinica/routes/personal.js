@@ -28,7 +28,6 @@ router.get('/mostrar1/:id',function (req,res,next) {
     });
   })
 
-
 // trae 1 solo dato
 router.post('/insertar',function (req,res,next) {
     idtipo = req.body.idtipo;
@@ -46,8 +45,6 @@ router.post('/insertar',function (req,res,next) {
     iddepartamento = req.body.iddepartamento;
     sueldo = req.body.sueldo;
 
-    
-   
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   output=req.params.id;
