@@ -8,14 +8,15 @@ import { DepartamentosService } from '../services/departamentos.service';
 export class RudadmindepartamentosComponent implements OnInit {
 
   datos = [];
-  constructor(public departamentos:DepartamentosService) { }
-  dep2 ={
 
+  constructor(public departamentos: DepartamentosService) { }
+
+  dep2 = {
     iddepartamento : '',
     nombre  : '',
     ubicacion  : '',
-   
-  }
+  };
+
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -36,19 +37,18 @@ export class RudadmindepartamentosComponent implements OnInit {
     ];
     console.log(this.datos);
   }
-//BUSCAR
-buscar1(depa){
-  this.departamentos.buscar1(depa);
-}
-//ACTUALIZAR
-actualizarDep(dep2){
-  this.departamentos.actualizarDep(dep2);
-}
-//ELIMINAR
-eliminarDep(dep2){
-
-  this.departamentos.eliminarDep(dep2);
-}
+  // BUSCAR
+  buscar1(depa) {
+    this.departamentos.buscar1(depa);
+  }
+  // ACTUALIZAR
+  actualizarDep(dep2) {
+    this.departamentos.actualizarDep(dep2);
+  }
+  // ELIMINAR
+  eliminarDep(dep2) {
+    this.departamentos.eliminarDep(dep2);
+  }
 
  /* remove(id) {
     this.datos = this.datos.filter(item => {
@@ -57,5 +57,42 @@ eliminarDep(dep2){
       }
     });
   }*/
+
+  validarDep(dep2) {
+
+    if ((this.dep2.iddepartamento === '') || (this.dep2.nombre === '') || (this.dep2.ubicacion === '') ) {
+      alert('Se requiere que todos los campos esten llenos!');
+
+    } else {
+      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
+      if (/^([0-9]{1,4})+$/.test(this.dep2.iddepartamento)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.dep2.nombre)) {
+          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.dep2.ubicacion)) {
+            alert('Datos Correctos');
+            this.departamentos.actualizarDep(dep2);
+          } else {
+              alert('Formato de Ubicación inválido, por favor verificalo');
+              return false;
+          }
+        } else {
+          alert('Formato de Nombre inválido, por favor verificalo');
+          return false;
+        }
+      } else {
+        alert('Formato de Id departamento inválido, por favor verificalo');
+        return false;
+      }
+    }
+  }
+
+  validarId(depa) {
+    if (/^([0-9]{1,4})+$/.test(depa)) {
+      alert('Datos Correctos');
+      this.departamentos.buscar1(depa);
+    } else {
+      alert('Formato de Id Departamento inválido, por favor verificalo');
+      return false;
+    }
+  }
 
 }

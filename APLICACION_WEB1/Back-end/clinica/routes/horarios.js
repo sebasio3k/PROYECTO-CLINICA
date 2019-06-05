@@ -30,10 +30,10 @@ router.get('/mostrar1/:id',function (req,res,next) {
 //Eliminar datos metodos
 router.post('/eliminar',function (req,res,next) {
   idhorario= req.body.idhorario;
-  
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('DELETE from horarios  WHERE idhorario = "'+idhorario+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
@@ -42,7 +42,7 @@ router.post('/eliminar',function (req,res,next) {
       }
       });
     });
-//actualizar datos método  
+//actualizar datos método
 
 router.post('/actualizar',function (req,res,next) {
   idhorario= req.body.idhorario;
@@ -63,11 +63,11 @@ hora = req.body.hora;
 
 // trae 1 solo dato
 router.post('/insertar',function (req,res,next) {
-    
+
 iddoctor =	req.body.iddoctor;
 nconsultorio =	req.body.nconsultorio;
 hora = req.body.hora;
-    
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   //output=req.params.id;

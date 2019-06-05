@@ -51,14 +51,15 @@
         </table>
 <!---AQUI COMIENZAN LOS MÉTODOS--------------------------------------------------------------------------------->
 <h1>Actualizar</h1>
-<form class="form-group" (ngSubmit)="buscar1(doc)">
+<form class="form-group" (ngSubmit)="validarId(doc)">
+    <!-- (ngSubmit)="buscar1(doc)" -->
   <h2>1 Buscar Usuario</h2>
-  <br><input type="text" [(ngModel)]="doc" name="id" placeholder="Ingresa el usuario">
+  <br><input type="number" min="1" [(ngModel)]="doc" name="id" placeholder="Ingresa el usuario">
   <br><input type="submit" value="buscar">
 </form>
         <form action="">
           <h2>2 Modificar datos</h2>
-          <div *ngFor="let doctor2 of doctor.doctor1"> 
+          <div *ngFor="let doctor2 of doctor.doctor1">
             <br> <input type="text" [(ngModel)] = "doctor2.Nombre" name="nombre">
             <br> <input type="text" [(ngModel)] = "doctor2.apaterno" name="apaterno">
             <br> <input type="text" [(ngModel)] = "doctor2.amaterno" name="amaterno">
@@ -74,15 +75,15 @@
             <br> <input type="text" [(ngModel)] = "doctor2.sueldo" name="sueldo">
             <br> <input type="text" [(ngModel)] = "doctor2.especialidad" name="especialidad">
             <br> <input type="text" [(ngModel)] = "doctor2.nconsultorio" name="nconsultorio">
-            <br> <input type="submit" value="Actualizar" (click)="actualizarDoctor(doctor2)">
+            <br> <input type="submit" value="Actualizar" (click)="validarDoctor(doctor2)">
+            <!-- (click)="actualizarDoctor(doctor2)" -->
             <br><input type="submit" value="Eliminar" (click)="eliminarDoctor(doctor2)">
             <br>
             <br>
             <br>
             <br>
             <br>
-
-          </div> 
+          </div>
         </form>
       </div>
     </div>

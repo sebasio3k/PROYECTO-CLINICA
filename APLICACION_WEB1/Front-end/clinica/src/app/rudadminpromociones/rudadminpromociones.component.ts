@@ -66,6 +66,42 @@ eliminarPromocion(promo2) {
     });
   }*/
 
+  validarPromociones(promo2) {
 
+    // Si estan vacios:
+    if ((this.promocion2.idpromocion === '') || (this.promocion2.descripcion === '') || (this.promocion2.porcentajerebaja === '') ) {
+      alert('Se requiere que todos los campos esten llenos!');
+
+    } else {
+      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
+      if (/^([0-9]{1,4})+$/.test(this.promocion2.idpromocion)) {
+        if (/^([0-9]{1,4})+$/.test(this.promocion2.descripcion)) {
+          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.promocion2.porcentajerebaja)) {
+            alert('Datos Correctos');
+            this.promocion.actualizarPromocion(promo2);
+          } else {
+            alert('Formato de Porcentaje inválido, por favor verificalo');
+            return false;
+          }
+        } else {
+          alert('Formato de Descripcion inválido, por favor verificalo');
+          return false;
+        }
+      } else {
+        alert('Formato de Id Promoción inválido, por favor verificalo');
+        return false;
+      }
+    }
+  }
+
+  validarId(promo) {
+    if (/^([0-9]{1,4})+$/.test(promo)) {
+      alert('Datos Correctos');
+      this.promocion.buscar1(promo);
+    } else {
+      alert('Formato de Id Promocion inválido, por favor verificalo');
+      return false;
+    }
+  }
 
 }

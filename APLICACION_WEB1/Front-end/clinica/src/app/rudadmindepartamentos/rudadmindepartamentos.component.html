@@ -2,7 +2,6 @@
 
     <app-menuadmin></app-menuadmin>
 
-
   <h1>Operaciones de Departamento</h1>
   <div class="container text-center">
     <div class="row justify-content-center">
@@ -27,29 +26,27 @@
           </tbody>
         </table>
         <h1>Actualizar</h1>
-        <form class="form-group" (ngSubmit)="buscar1(dep)">
+        <form class="form-group" (ngSubmit)="validarId(dep)">
+            <!-- (ngSubmit)="buscar1(dep)" -->
           <h2>1 Buscar Usuario</h2>
-          <br><input type="text" [(ngModel)]="dep" name="id" placeholder="Ingresa el num de dep">
+          <br><input type="number" min="1" [(ngModel)]="dep" name="id" placeholder="Ingresa el num de dep">
           <br><input type="submit" value="buscar">
         </form>
         <form action="">
           <h2>2 Modificar datos</h2>
           <!--/primero del typescript y el 2do resultado del servicio-->
-          <div *ngFor="let dep2 of departamentos.departamento1"> 
-
+          <div *ngFor="let dep2 of departamentos.departamento1">
             <br> <input type="text" [(ngModel)] = "dep2.nombre" name="nombre">
             <br> <input type="text" [(ngModel)] = "dep2.ubicacion" name="ubicacion">
-            
-     
-            <br> <input type="submit" value="Actualizar" (click)="actualizarDep(dep2)">
+            <br> <input type="submit" value="Actualizar" (click)="validarDep(dep2)">
+            <!-- (click)="actualizarDep(dep2)" -->
             <br><input type="submit" value="Eliminar" (click)="eliminarDep(dep2)">
             <br>
             <br>
             <br>
             <br>
             <br>
-
-          </div> 
+          </div>
         </form>
         <br><br><br><br><br><br>
       </div>

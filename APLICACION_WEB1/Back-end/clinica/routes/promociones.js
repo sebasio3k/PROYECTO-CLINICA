@@ -31,10 +31,10 @@ router.get('/mostrar1/:id',function (req,res,next) {
 //Eliminar datos metodos
 router.post('/eliminar',function (req,res,next) {
   idpromocion= req.body.idpromocion;
-  
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('DELETE from promociones  WHERE idpromocion = "'+idpromocion+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
@@ -43,7 +43,7 @@ router.post('/eliminar',function (req,res,next) {
       }
       });
     });
-//actualizar datos método  
+//actualizar datos método
 
 router.post('/actualizar',function (req,res,next) {
   idpromocion=req.body.idpromocion;
@@ -65,7 +65,7 @@ router.post('/actualizar',function (req,res,next) {
 
 // trae 1 solo dato
 router.post('/insertar',function (req,res,next) {
-    
+
 descripcion	= req.body.descripcion;
 porcentajerebaja = req.body.porcentajerebaja;
   // conn.connect();

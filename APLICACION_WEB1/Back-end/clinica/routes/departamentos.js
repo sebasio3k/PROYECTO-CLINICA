@@ -34,7 +34,7 @@ router.post('/eliminar',function (req,res,next) {
   iddepartamento=req.body.iddepartamento;
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('DELETE from departamentos  WHERE iddepartamento = "'+iddepartamento+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
@@ -43,8 +43,8 @@ router.post('/eliminar',function (req,res,next) {
       }
       });
     });
-    
-//actualizar datos método  
+
+//actualizar datos método
 
 router.post('/actualizar',function (req,res,next) {
   iddepartamento=req.body.iddepartamento;

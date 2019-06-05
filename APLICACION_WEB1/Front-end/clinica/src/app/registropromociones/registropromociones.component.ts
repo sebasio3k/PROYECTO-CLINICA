@@ -26,11 +26,10 @@ export class RegistropromocionesComponent implements OnInit {
   }
 
   validarPromociones() {
-
     // Si estan vacios:
     if ( (this.data.descripcion === '') || (this.data.porcentajerebaja === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
-
+      return false;
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
       if (/^([0-9]{1,4})+$/.test(this.data.descripcion)) {

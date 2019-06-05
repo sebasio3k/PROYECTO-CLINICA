@@ -32,10 +32,10 @@ router.get('/mostrar1/:id',function (req,res,next) {
 //Eliminar datos metodos
 router.post('/eliminar',function (req,res,next) {
   idtipo= req.body.idtipo;
-  
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('DELETE from tipopersonal  WHERE idtipo = "'+idtipo+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
@@ -44,7 +44,7 @@ router.post('/eliminar',function (req,res,next) {
       }
       });
     });
-//actualizar datos método  
+//actualizar datos método
 
 router.post('/actualizar',function (req,res,next) {
   idtipo = req.body.idtipo;
@@ -63,10 +63,10 @@ router.post('/actualizar',function (req,res,next) {
 
 // trae 1 solo dato
 router.post('/insertar',function (req,res,next) {
-    
+
 nombretipo =	req.body.nombretipo;
 
-    
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   //output=req.params.id;

@@ -31,10 +31,10 @@ router.get('/mostrar1/:id',function (req,res,next) {
 //Eliminar datos metodos
 router.post('/eliminar',function (req,res,next) {
   idpaciente= req.body.idpaciente;
-  
+
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('DELETE from tratamientos_pacientes  WHERE idpaciente = "'+idpaciente+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
@@ -43,7 +43,7 @@ router.post('/eliminar',function (req,res,next) {
       }
       });
     });
-//actualizar datos método  
+//actualizar datos método
 
 router.post('/actualizar',function (req,res,next) {
   idtratamiento = req.body.idtratamiento;
