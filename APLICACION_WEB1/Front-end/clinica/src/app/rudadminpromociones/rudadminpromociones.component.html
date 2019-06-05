@@ -1,51 +1,31 @@
 <div class=" fondo">
     <app-menuadmin></app-menuadmin>
-    <h1>Operaciones de </h1>
+    <h1>A D M I N I S T R A D O R</h1>
+    <h1>Operaciones de Promociones</h1>
     <div class="container text-center">
       <div class="row justify-content-center">
         <div class="col-auto text-center">
-          <table class="table table-dark table-responsive">
-            <thead>
-              <tr>
-                <th scope="col">idpromocion</th>
-                <th scope="col">descripcion</th>
-                <th scope="col">porcentajerebaja</th>
-                <th scope="col">Borrar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let e of datos">
-                <th scope="row">{{e.idpromocion}}</th>
-                <td>{{e.descripcion}}</td>
-                <td>{{e.porcentajerebaja}}</td>
-                <td><a (click)="remove(e.id)"><i class="bote fas fa-trash"></i></a></td>
-                <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
-              </tr>
-            </tbody>
-          </table>
           <h1>Actualizar</h1>
           <form class="form-group" (ngSubmit)="validarId(promo)">
               <!-- (ngSubmit)="buscar1(promo)" -->
-            <h2>1 Buscar Usuario</h2>
-            <br><input type="number" min="1" [(ngModel)]="promo" name="id" placeholder="Ingresa el num de dep">
-            <br><input type="submit" value="buscar">
+            <h2>Buscar Promocion</h2>
+            <br><input class="form-control" type="number" min="1" [(ngModel)]="promo" name="id" placeholder="Ingresa el num de dep">
+            <br><input class="form-control" type="submit" value="buscar">
           </form>
           <form action="">
-            <h2>2 Modificar datos</h2>
+            <h2>Modificar datos</h2>
             <!--/primero del typescript y el 2do resultado del servicio-->
             <div *ngFor="let promocion2 of promocion.promocion1">
-              <br> <input type="text" [(ngModel)] = "promocion2.descripcion" name="descripcion">
-              <br> <input type="text" [(ngModel)] = "promocion2.porcentajerebaja" name="porcentajerebaja">
-              <br> <input type="submit" value="Actualizar" (click)="validarPromocion(promocion2)">
+              <br> <label for="nombre" class="textcolorw">Descripción</label>
+              <input class="form-control" type="text" [(ngModel)] = "promocion2.descripcion" name="descripcion">
+              <br> <label for="nombre" class="textcolorw">Monto Rebaja</label>
+              <input class="form-control" type="text" [(ngModel)] = "promocion2.porcentajerebaja" name="porcentajerebaja">
+              <br> <input class="form-control" type="submit" value="Actualizar" (click)="validarPromocion(promocion2)">
               <!-- (click)="actualizarPromocion(promocion2)" -->
-              <br><input type="submit" value="Eliminar" (click)="eliminarPromocion(promocion2)">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
+              <br> <input class="form-control" type="submit" value="Eliminar" (click)="eliminarPromocion(promocion2)">
             </div>
           </form>
+          <br><br><br><br><br>
         </div>
       </div>
     </div>

@@ -100,32 +100,32 @@ export class RudadmindoctoresComponent implements OnInit {
 
   validarDoctor(doc2) {
     // Si estan vacios:
-    if ( (this.doctor2.Nombre === '') || (this.doctor2.apaterno === '') || (this.doctor2.amaterno === '')
-      || (this.doctor2.genero === '') || (this.doctor2.cedula === '') || (this.doctor2.fracc === '')
-      || (this.doctor2.num === '') || (this.doctor2.calle === '') || (this.doctor2.edad === '')
-      || (this.doctor2.telefono === '') || (this.doctor2.correo === '') || (this.doctor2.especialidad === '')
-      || (this.doctor2.nconsultorio === '') || (this.doctor2.sueldo === '') || (this.doctor2.iddepartamento === '')
-      || (this.doctor2.iddoctores === '') ) {
+    if ( (doc2.Nombre === '') || (doc2.apaterno === '') || (doc2.amaterno === '')
+      || (doc2.genero === '') || (doc2.cedula === '') || (doc2.fracc === '')
+      || (doc2.num === '') || (doc2.calle === '') || (doc2.edad === '')
+      || (doc2.telefono === '') || (doc2.correo === '') || (doc2.especialidad === '')
+      || (doc2.nconsultorio === '') || (doc2.sueldo === '') || (doc2.iddepartamento === '')
+      || (doc2.iddoctores === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.doctor2.iddoctores)) {
-      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.Nombre)) {
-        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.apaterno)) {
-          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.amaterno)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.genero)) {
-              if (/^([A-Za-z\sáéíóú]{2,16})+$/.test(this.doctor2.cedula)) {
-                if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(this.doctor2.fracc)) {
-                  if (/^([0-9]{3,4})+$/.test(this.doctor2.num)) {
-                    if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.calle)) {
-                      if (/^([0-9]{2})+$/.test(this.doctor2.edad)) {
-                        if (/^([0-9]{10})+$/.test(this.doctor2.telefono)) {
-                          if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(this.doctor2.correo)) {
-                            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.especialidad)) {
-                              // if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.doctor2.nconsultorio)) {
-                                if (/^([0-9]{1,4})+$/.test(this.doctor2.sueldo)) {
-                                  if (/^([0-9]{1,4})+$/.test(this.doctor2.iddepartamento)) {
+      if (/^([0-9]{1,4})+$/.test(doc2.iddoctores)) {
+      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.Nombre)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.apaterno)) {
+          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.amaterno)) {
+            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.genero)) {
+              if (/^([0-9]{16})+$/.test(doc2.cedula)) {
+                if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(doc2.fracc)) {
+                  if (/^([0-9]{3,4})+$/.test(doc2.num)) {
+                    if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.calle)) {
+                      if (/^([0-9]{2})+$/.test(doc2.edad)) {
+                        if (/^([0-9]{10})+$/.test(doc2.telefono)) {
+                          if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(doc2.correo)) {
+                            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.especialidad)) {
+                              // if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.nconsultorio)) {
+                                if (/^([0-9]{1,4})+$/.test(doc2.sueldo)) {
+                                  if (/^([0-9]{1,4})+$/.test(doc2.iddepartamento)) {
                                     alert('Datos Correctos');
                                     this.doctor.actualizarDoctor(doc2);
                                   } else {

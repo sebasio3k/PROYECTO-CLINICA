@@ -65,16 +65,16 @@ export class RudadminhorariosComponent implements OnInit {
   validarHorario(horario2) {
 
     // Si estan vacios:
-    if ((this.horario2.idhorario === '') || (this.horario2.iddoctor === '') || (this.horario2.nconsultorio === '')
-    || (this.horario2.hora === '')) {
+    if ((horario2.idhorario === '') || (horario2.iddoctor === '') || (horario2.nconsultorio === '')
+    || (horario2.hora === '')) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
-      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.horario2.idhorario)) {
-        if (/^([0-9]{1,4})+$/.test(this.horario2.iddoctor)) {
-          if (/^([A-Za-z\sáéíóú]{1,4})+$/.test(this.horario2.nconsultorio)) {
-            if (/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(this.horario2.hora)) {
+      /*VALIDA QUE EL formato de usr SEA VALIDO*/
+      if (/^([0-9]{1,4})+$/.test(horario2.idhorario)) {
+        if (/^([0-9]{1,4})+$/.test(horario2.iddoctor)) {
+          if (/^([A-Za-z\sáéíóú\-\0-9]{2,10})+$/.test(horario2.nconsultorio)) {
+            if (/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(horario2.hora)) {
               alert('Datos Correctos');
               this.horario.actualizarHorario(horario2);
             } else {

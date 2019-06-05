@@ -66,17 +66,17 @@ eliminarPromocion(promo2) {
     });
   }*/
 
-  validarPromociones(promo2) {
+  validarPromocion(promo2) {
 
     // Si estan vacios:
-    if ((this.promocion2.idpromocion === '') || (this.promocion2.descripcion === '') || (this.promocion2.porcentajerebaja === '') ) {
+    if ((promo2.idpromocion === '') || (promo2.descripcion === '') || (promo2.porcentajerebaja === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.promocion2.idpromocion)) {
-        if (/^([0-9]{1,4})+$/.test(this.promocion2.descripcion)) {
-          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.promocion2.porcentajerebaja)) {
+      if (/^([0-9]{1,4})+$/.test(promo2.idpromocion)) {
+        if (/^([A-Za-z\sáéíóú\0-9]{1,30})+$/.test(promo2.descripcion)) {
+          if (/^([0-9]{2,4})+$/.test(promo2.porcentajerebaja)) {
             alert('Datos Correctos');
             this.promocion.actualizarPromocion(promo2);
           } else {

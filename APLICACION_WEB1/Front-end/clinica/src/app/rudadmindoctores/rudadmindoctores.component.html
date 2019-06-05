@@ -1,90 +1,57 @@
 <div class=" fondo">
   <app-menuadmin></app-menuadmin>
+  <h1>A D M I N I S T R A D O R</h1>
   <h1>Operaciones de Doctores</h1>
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-auto text-center">
-        <table class="table table-dark table-responsive">
-          <thead>
-            <tr>
-              <th scope="col">iddoctores</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">apaterno</th>
-              <th scope="col">amaterno</th>
-              <th scope="col">genero</th>
-              <th scope="col">cedula</th>
-              <th scope="col">fracc</th>
-              <th scope="col">num</th>
-              <th scope="col">calle</th>
-              <th scope="col">edad</th>
-              <th scope="col">telefono</th>
-              <th scope="col">correo</th>
-              <th scope="col">especialidad</th>
-              <th scope="col">nconsultorio</th>
-              <th scope="col">sueldo</th>
-              <th scope="col">iddepartamento</th>
-              <th scope="col">Borrar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let e of datos">
-              <th scope="row">{{e.iddoctores}}</th>
-              <td>{{e.Nombre}}</td>
-              <td>{{e.apaterno}}</td>
-              <td>{{e.amaterno}}</td>
-              <td>{{e.genero}}</td>
-              <td>{{e.cedula}}</td>
-              <td>{{e.fracc}}</td>
-              <td>{{e.num}}</td>
-              <td>{{e.calle}}</td>
-              <td>{{e.edad}}</td>
-              <td>{{e.telefono}}</td>
-              <td>{{e.correo}}</td>
-              <td>{{e.especialidad}}</td>
-              <td>{{e.nconsultorio}}</td>
-              <td>{{e.sueldo}}</td>
-              <td>{{e.iddepartamento}}</td>
-              <td><a (click)="remove(e.id)"><i class="bote fas fa-trash"></i></a></td>
-              <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
-            </tr>
-          </tbody>
-        </table>
+
 <!---AQUI COMIENZAN LOS MÉTODOS--------------------------------------------------------------------------------->
 <h1>Actualizar</h1>
 <form class="form-group" (ngSubmit)="validarId(doc)">
     <!-- (ngSubmit)="buscar1(doc)" -->
-  <h2>1 Buscar Usuario</h2>
-  <br><input type="number" min="1" [(ngModel)]="doc" name="id" placeholder="Ingresa el usuario">
-  <br><input type="submit" value="buscar">
+  <h2>Buscar Doctor</h2>
+  <br><input class="form-control" type="number" min="1" [(ngModel)]="doc" name="id" placeholder="Ingresa el usuario">
+  <br><input class="form-control" type="submit" value="buscar">
 </form>
         <form action="">
-          <h2>2 Modificar datos</h2>
+          <h2>Modificar datos</h2>
           <div *ngFor="let doctor2 of doctor.doctor1">
-            <br> <input type="text" [(ngModel)] = "doctor2.Nombre" name="nombre">
-            <br> <input type="text" [(ngModel)] = "doctor2.apaterno" name="apaterno">
-            <br> <input type="text" [(ngModel)] = "doctor2.amaterno" name="amaterno">
-            <br> <input type="text" [(ngModel)] = "doctor2.genero" name="genero">
-            <br> <input type="text" [(ngModel)] = "doctor2.fracc" name="frac">
-            <br> <input type="text" [(ngModel)] = "doctor2.num" name="num">
-            <br> <input type="text" [(ngModel)] = "doctor2.calle" name="calle">
-            <br> <input type="text" [(ngModel)] = "doctor2.edad" name="edad">
-            <br> <input type="text" [(ngModel)] = "doctor2.telefono" name="telefono">
-            <br> <input type="text" [(ngModel)] = "doctor2.correo" name="correo">
-            <br> <input type="text" [(ngModel)] = "doctor2.cedula" name="cedula">
-            <br> <input type="text" [(ngModel)] = "doctor2.iddepartamento" name="iddepartamento">
-            <br> <input type="text" [(ngModel)] = "doctor2.sueldo" name="sueldo">
-            <br> <input type="text" [(ngModel)] = "doctor2.especialidad" name="especialidad">
-            <br> <input type="text" [(ngModel)] = "doctor2.nconsultorio" name="nconsultorio">
-            <br> <input type="submit" value="Actualizar" (click)="validarDoctor(doctor2)">
+            <br> <label for="nombre" class="textcolorw">Nombre</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.Nombre" name="nombre">
+            <br> <label for="nombre" class="textcolorw">Apellido Paterno</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.apaterno" name="apaterno">
+            <br> <label for="nombre" class="textcolorw">Apellido Materno</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.amaterno" name="amaterno">
+            <br> <label for="nombre" class="textcolorw">Género</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.genero" name="genero">
+            <br> <label for="nombre" class="textcolorw">Fraccionamiento</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.fracc" name="frac">
+            <br> <label for="nombre" class="textcolorw">Número</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.num" name="num">
+            <br> <label for="nombre" class="textcolorw">Calle</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.calle" name="calle">
+            <br> <label for="nombre" class="textcolorw">Edad</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.edad" name="edad">
+            <br> <label for="nombre" class="textcolorw">Teléfono</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.telefono" name="telefono">
+            <br> <label for="nombre" class="textcolorw">Correo</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.correo" name="correo">
+            <br> <label for="nombre" class="textcolorw">Cédula</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.cedula" name="cedula">
+            <br> <label for="nombre" class="textcolorw">Id Departamento</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.iddepartamento" name="iddepartamento">
+            <br> <label for="nombre" class="textcolorw">Sueldo</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.sueldo" name="sueldo">
+            <br> <label for="nombre" class="textcolorw">Especialidad</label>
+            <input class="form-control" type="text" [(ngModel)] = "doctor2.especialidad" name="especialidad">
+            <br> <input class="form-control" type="text" [(ngModel)] = "doctor2.nconsultorio" name="nconsultorio">
+            <br> <input class="form-control" type="submit" value="Actualizar" (click)="validarDoctor(doctor2)">
             <!-- (click)="actualizarDoctor(doctor2)" -->
-            <br><input type="submit" value="Eliminar" (click)="eliminarDoctor(doctor2)">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <br><input class="form-control" type="submit" value="Eliminar" (click)="eliminarDoctor(doctor2)">
           </div>
         </form>
+        <br><br><br><br><br><br>
       </div>
     </div>
   </div>

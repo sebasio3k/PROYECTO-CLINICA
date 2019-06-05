@@ -60,14 +60,14 @@ export class RudadmindepartamentosComponent implements OnInit {
 
   validarDep(dep2) {
 
-    if ((this.dep2.iddepartamento === '') || (this.dep2.nombre === '') || (this.dep2.ubicacion === '') ) {
+    if ((dep2.iddepartamento === '') || (dep2.nombre === '') || (dep2.ubicacion === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
-      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.dep2.iddepartamento)) {
-        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.dep2.nombre)) {
-          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.dep2.ubicacion)) {
+      /*VALIDA QUE EL formato de usr SEA VALIDO*/
+      if (/^([0-9]{1,4})+$/.test(dep2.iddepartamento)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(dep2.nombre)) {
+          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(dep2.ubicacion)) {
             alert('Datos Correctos');
             this.departamentos.actualizarDep(dep2);
           } else {

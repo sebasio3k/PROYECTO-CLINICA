@@ -1,10 +1,11 @@
 <div class=" fondo">
   <app-menuadmin></app-menuadmin>
-  <h1>Operaciones de </h1>
+  <h1>A D M I N I S T R A D O R</h1>
+  <h1 class="">Operaciones de Personal</h1>
   <div class="container text-center">
     <div class="row justify-content-center">
       <div class="col-auto text-center">
-        <table class="table table-dark table-responsive">
+        <!-- <table class="table table-dark table-responsive">
           <thead>
             <tr>
               <th scope="col">Id Personal</th>
@@ -45,44 +46,55 @@
               <td>{{e.sueldo}}</td>
               <td><a (click)="remove(e.id)"><i class="bote fas fa-trash"></i></a></td>
               <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
-            </tr>
-          </tbody>
-        </table>
+            <!-- </tr> -->
+          <!-- </tbody> -->
+        <!-- </table>  -->
 <!---AQUI COMIENZAN LOS MÉTODOS--------------------------------------------------------------------------------->
         <h1>Actualizar</h1>
         <form class="form-group" (ngSubmit)="validarId(pers)">
             <!-- (ngSubmit)="buscar1(pers)" -->
-          <h2>1 Buscar Usuario</h2>
-          <br><input type="number" min="1" [(ngModel)]="pers" name="id" placeholder="Ingresa el usuario">
-          <br><input type="submit" value="buscar">
+          <h2>Busca Personal</h2>
+          <br><input class="form-control" type="number"  min="1" [(ngModel)]="pers" name="id" placeholder="Ingresa el usuario">
+          <br><input class="form-control" type="submit" value="buscar">
         </form>
+        <br> <br>
         <form action="">
-          <h2>2 Modificar datos</h2>
+          <h2>Modificar datos</h2>
           <div *ngFor="let personal2 of personal.personal1">
-            <br> <input type="text" [(ngModel)] = "personal2.idtipo" name="idtipo">
-            <br> <input type="text" [(ngModel)] = "personal2.nombre" name="nombre">
-            <br> <input type="text" [(ngModel)] = "personal2.apaterno" name="apaterno">
-            <br> <input type="text" [(ngModel)] = "personal2.amaterno" name="amaterno">
-            <br> <input type="text" [(ngModel)] = "personal2.genero" name="genero">
-            <br> <input type="text" [(ngModel)] = "personal2.fracc" name="frac">
-            <br> <input type="text" [(ngModel)] = "personal2.Num" name="Num">
-            <br> <input type="text" [(ngModel)] = "personal2.calle" name="calle">
-            <br> <input type="text" [(ngModel)] = "personal2.edad" name="edad">
-            <br> <input type="text" [(ngModel)] = "personal2.telefono" name="telefono">
-            <br> <input type="text" [(ngModel)] = "personal2.correo" name="correo">
-            <br> <input type="text" [(ngModel)] = "personal2.cedula" name="cedula">
-            <br> <input type="text" [(ngModel)] = "personal2.iddepartamento" name="iddepartamento">
-            <br> <input type="text" [(ngModel)] = "personal2.sueldo" name="sueldo">
+            <br> <label for="nombre" class="textcolorw">Id Tipo</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.idtipo" name="idtipo" id="idtipo">
+            <br> <label for="nombre" class="textcolorw">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.nombre" name="nombre" id="nombre">
+            <br> <label for="nombre" class="textcolorw">Apellido Paterno</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.apaterno" name="apaterno" id="apaterno">
+            <br> <label for="nombre" class="textcolorw">Apellido Materno</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.amaterno" name="amaterno" id="amaterno">
+            <br> <label for="nombre" class="textcolorw">Género</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.genero" name="genero" id="genero">
+            <br> <label for="nombre" class="textcolorw">Fraccionamiento</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.fracc" name="frac" id="frac">
+            <br> <label for="nombre" class="textcolorw">Número</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.Num" name="Num" is="Num">
+            <br> <label for="nombre" class="textcolorw">Calle</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.calle" name="calle" id="calle">
+            <br> <label for="nombre" class="textcolorw">Edad</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.edad" name="edad" id="edad">
+            <br> <label for="nombre" class="textcolorw">Teléfono</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.telefono" name="telefono" id="telefono">
+            <br> <label for="nombre" class="textcolorw">Correo</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.correo" name="correo" id="correo">
+            <br> <label for="nombre" class="textcolorw">Cédula</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.cedula" name="cedula" id="cedula">
+            <br> <label for="nombre" class="textcolorw">Id Departamento</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.iddepartamento" name="iddepartamento" id="iddepartamento">
+            <br> <label for="nombre" class="textcolorw">Sueldo</label>
+            <input type="text" class="form-control" [(ngModel)] = "personal2.sueldo" name="sueldo" id="sueldo">
             <br> <input type="submit" value="Actualizar" (click)="validarPersonal(personal2)">
             <!-- (click)="actualizarPersonal(personal2)" -->
-            <br><input type="submit" value="Eliminar" (click)="eliminarPersonal(personal2)">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            <br><input class="form-control" type="submit" value="Eliminar" (click)="eliminarPersonal(personal2)">
           </div>
         </form>
+        <br><br><br>
       </div>
     </div>
   </div>

@@ -58,12 +58,12 @@ export class RudadmintipopersonalComponent implements OnInit {
 
   validarTipopersonal(tper2) {
     // Si estan vacios:
-    if ((this.tipopersonal2.idtipo === '') || (this.tipopersonal2.nombretipo === '') ) {
+    if ((tper2.idtipo === '') || (tper2.nombretipo === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.tipopersonal2.idtipo)) {
-        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.tipopersonal2.nombretipo)) {
+      if (/^([0-9]{1,4})+$/.test(tper2.idtipo)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(tper2.nombretipo)) {
           alert('Datos Correctos');
           this.tipopersonal.actualizarTipopersonal(tper2);
         } else {
