@@ -55,4 +55,14 @@ export class RuddoctorhistorialComponent implements OnInit {
     });
   }
 
+  validarId(his) {
+    if (/^([0-9]{1,4})+$/.test(his)) {
+      alert('Datos Correctos');
+      this.historial.buscar1(his);
+    } else {
+      alert('Formato de Id Historial inválido, por favor verificalo');
+      return false;
+    }
+  }
+
 }

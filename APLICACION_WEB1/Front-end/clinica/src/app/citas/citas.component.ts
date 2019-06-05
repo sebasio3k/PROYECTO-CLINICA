@@ -29,7 +29,6 @@ export class CitasComponent implements OnInit {
   }
 
   validarCita() {
-
     // Si estan vacios:
     if ((this.data.idpaciente === '') || (this.data.hora === '')  || (this.data.fecha === '')
     || (this.data.iddoctor === '') || (this.data.nconsultorio === '')  || (this.data.precio === '')

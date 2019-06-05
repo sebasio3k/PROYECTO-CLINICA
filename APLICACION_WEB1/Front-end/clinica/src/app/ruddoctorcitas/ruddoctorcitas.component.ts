@@ -62,4 +62,14 @@ export class RuddoctorcitasComponent implements OnInit {
     });
   }
 
+  validarId(his) {
+    if (/^([0-9]{1,4})+$/.test(his)) {
+      alert('Datos Correctos');
+      this.citas.buscar2(his);
+    } else {
+      alert('Formato de Id Cita inválido, por favor verificalo');
+      return false;
+    }
+  }
+
 }

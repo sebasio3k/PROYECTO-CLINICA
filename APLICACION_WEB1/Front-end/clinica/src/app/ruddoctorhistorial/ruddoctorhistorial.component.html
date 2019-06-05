@@ -4,10 +4,10 @@
 
   <div class="container text-center">
       <h1>Consultar Registros</h1>
-
       <div class="row justify-content-center">
         <div class="col-auto text-center">
-            <form class="form-group" (ngSubmit)="buscar1(trat)">
+            <form class="form-group" (ngSubmit)="validarId(trat)">
+                <!-- (ngSubmit)="buscar1(trat)" -->
                 <h2>1 Buscar Usuario</h2>
                 <br><input type="text" [(ngModel)]="trat" name="id" placeholder="Ingresa el num de dep">
                 <br><input type="submit" value="buscar">
@@ -16,12 +16,11 @@
             <table class="table table-dark table-responsive">
               <thead>
                 <tr>
-                    <th scope="col">idpaciente</th>
-                    <th scope="col">idcita</th>
-                <th scope="col">descripcioncita</th>
-                <th scope="col">observaciones</th>
-                <th scope="col">iddoctor</th>
-               
+                  <th scope="col">idpaciente</th>
+                  <th scope="col">idcita</th>
+                  <th scope="col">descripcioncita</th>
+                  <th scope="col">observaciones</th>
+                  <th scope="col">iddoctor</th>
                 </tr>
               </thead>
               <tbody>
@@ -31,7 +30,6 @@
                   <td>{{historial2.descripcioncita}}</td>
                   <td>{{historial2.observaciones}}</td>
                   <td>{{historial2.iddoctor}}</td>
-                  
                   <!-- <br><br><br><br> -->
                   <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
                 </tr>
@@ -50,4 +48,3 @@
     </div>
 <br><br><br>
 </div>
-   

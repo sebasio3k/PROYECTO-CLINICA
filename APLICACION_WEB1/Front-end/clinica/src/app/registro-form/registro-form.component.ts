@@ -49,7 +49,6 @@ export class RegistroFormComponent implements OnInit {
   // }
 
   validarUsuario() {
-
     if ((this.name === '') || (this.ap === '') || (this.am === '')
      || (this.genere === '') || (this.neighborhood === '') || (this.number === '')
      || (this.streat === '') || (this.age === '') || (this.phone === '') || (this.email === '')) {

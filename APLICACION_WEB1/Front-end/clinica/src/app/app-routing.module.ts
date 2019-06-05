@@ -99,7 +99,7 @@ const routes: Routes = [
         {path: 'rudsecretariapacientes', component: RudsecretariapacientesComponent},
       {path: 'secretariapromociones', component: SecretariapromocionesComponent},
         // CRUD PROMOCIONES
-        {path: 'registrocitas', component: RudsecretariapromocionesComponent},
+        {path: 'rudsecretariapromociones', component: RudsecretariapromocionesComponent},
   // CONTADOR
   {path: 'indexcontador', component: IndexcontadorComponent},
     {path: 'menucontador', component: MenucontadorComponent},

@@ -28,7 +28,6 @@ export class HistorialComponent implements OnInit {
   }
 
   validarHistorial() {
-
     // Si estan vacios:
     if ((this.data.idpaciente === '') || (this.data.idcita === '')  || (this.data.descripcioncita === '')
     || (this.data.observaciones === '') || (this.data.iddoctor === '') ) {
@@ -68,7 +67,6 @@ export class HistorialComponent implements OnInit {
       }
     }
   }
-
 
 }
 
