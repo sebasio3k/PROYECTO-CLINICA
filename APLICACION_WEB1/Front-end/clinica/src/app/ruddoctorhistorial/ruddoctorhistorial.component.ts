@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HistorialService } from '../services/historial.service';
 
 @Component({
   selector: 'app-ruddoctorhistorial',
@@ -8,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class RuddoctorhistorialComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public historial: HistorialService) { }
+  historial1 = {
+    idpaciente : '',
+    idcita : '',
+    descripcioncita  : '',
+    observaciones  : '',
+    iddoctores  : ''
+  };
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -34,7 +41,12 @@ export class RuddoctorhistorialComponent implements OnInit {
     ];
     console.log(this.datos);
   }
-
+  buscar() {
+    this.historial.buscar();
+  }
+  buscar1(his) {
+    this.historial.buscar1(his);
+  }
   remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {

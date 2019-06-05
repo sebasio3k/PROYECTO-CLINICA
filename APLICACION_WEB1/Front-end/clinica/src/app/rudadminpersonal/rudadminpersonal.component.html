@@ -48,6 +48,41 @@
             </tr>
           </tbody>
         </table>
+<!---AQUI COMIENZAN LOS MÉTODOS--------------------------------------------------------------------------------->
+<h1>Actualizar</h1>
+<form class="form-group" (ngSubmit)="buscar1(pers)">
+  <h2>1 Buscar Usuario</h2>
+  <br><input type="text" [(ngModel)]="pers" name="id" placeholder="Ingresa el usuario">
+  <br><input type="submit" value="buscar">
+</form>
+        <form action="">
+          <h2>2 Modificar datos</h2>
+          <div *ngFor="let personal2 of personal.personal1"> 
+ 
+            <br> <input type="text" [(ngModel)] = "personal2.idtipo" name="idtipo">
+            <br> <input type="text" [(ngModel)] = "personal2.nombre" name="nombre">
+            <br> <input type="text" [(ngModel)] = "personal2.apaterno" name="apaterno">
+            <br> <input type="text" [(ngModel)] = "personal2.amaterno" name="amaterno">
+            <br> <input type="text" [(ngModel)] = "personal2.genero" name="genero">
+            <br> <input type="text" [(ngModel)] = "personal2.fracc" name="frac">
+            <br> <input type="text" [(ngModel)] = "personal2.Num" name="Num">
+            <br> <input type="text" [(ngModel)] = "personal2.calle" name="calle">
+            <br> <input type="text" [(ngModel)] = "personal2.edad" name="edad">
+            <br> <input type="text" [(ngModel)] = "personal2.telefono" name="telefono">
+            <br> <input type="text" [(ngModel)] = "personal2.correo" name="correo">
+            <br> <input type="text" [(ngModel)] = "personal2.cedula" name="cedula">
+            <br> <input type="text" [(ngModel)] = "personal2.iddepartamento" name="iddepartamento">
+            <br> <input type="text" [(ngModel)] = "personal2.sueldo" name="sueldo">
+            <br> <input type="submit" value="Actualizar" (click)="actualizarPersonal(personal2)">
+            <br><input type="submit" value="Eliminar" (click)="eliminarPersonal(personal2)">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+          </div> 
+        </form>
       </div>
     </div>
   </div>

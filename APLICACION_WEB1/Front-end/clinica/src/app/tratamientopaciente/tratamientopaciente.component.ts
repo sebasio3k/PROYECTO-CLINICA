@@ -8,6 +8,8 @@ import {TratamientospacienteService } from '../services/tratamientopaciente.serv
 }) 
 export class TratamientopacienteComponent implements OnInit {
  // model = new agregartratamientopaciente(1,null,null,null,null,'','',null);
+ datos = [];
+ constructor( public tratamiento: TratamientospacienteService) { }
  data = {
     idtratamiento : '',
     idpaciente	:	'',
@@ -18,8 +20,9 @@ export class TratamientopacienteComponent implements OnInit {
    
 
 };
-  constructor( public tratamientop2: TratamientospacienteService) { }
 
+
+ 
   ngOnInit() {
   }
   /*
@@ -27,9 +30,11 @@ export class TratamientopacienteComponent implements OnInit {
     return JSON.stringify(this.model);
   }*/
   agregar() {
-    this.tratamientop2.agregar(this.data);
+    this.tratamiento.agregar(this.data);
   }
-
+  buscar() {
+    this.tratamiento.buscar();
+  }
 }
 
 

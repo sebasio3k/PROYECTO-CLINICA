@@ -12,6 +12,10 @@ var personalRouter = require('./routes/personal');
 var doctorRouter = require('./routes/Doctores');
 var tratamientopacienteRouter = require('./routes/tratamientopaciente');
 var historialRouter = require ('./routes/Historial');
+var horariosRouter = require('./routes/horarios');
+var tipopersonalRouter = require('./routes/tipopersonal');
+var promocionesRouter = require('./routes/promociones');
+var tratamientosRouter = require('./routes/tratamientos');
 var connectionBD =  require('./routes/conexion');
 
 var app = express();
@@ -45,6 +49,10 @@ app.use('/citas',citasRouter);
 app.use('/personal',personalRouter);
 app.use('/Doctores',doctorRouter);
 app.use('/Historial',historialRouter);
+app.use('/horarios',horariosRouter);
+app.use('/tipopersonal',tipopersonalRouter);
+app.use('/promociones',promocionesRouter);
+app.use('/tratamientos',tratamientosRouter);
 app.use('/tratamientopaciente',tratamientopacienteRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

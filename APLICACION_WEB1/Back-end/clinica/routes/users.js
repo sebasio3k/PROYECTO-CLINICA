@@ -14,6 +14,7 @@ router.get('/mostrar',function(req,res,next){
 });
 
 // trae 1 solo dato
+//mostrar datos METODO
 router.get('/mostrar1/:id',function (req,res,next) {
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
@@ -27,9 +28,26 @@ router.get('/mostrar1/:id',function (req,res,next) {
     }
     });
   });
+//Eliminar datos metodos
+  router.post('/eliminar',function (req,res,next) {
+    idpaciente= req.body.idpaciente;
+    
+    // conn.connect();
+    // tomar los parametros y asignarlos a variable output
+    
+      conn.query('DELETE from pacientes  WHERE idpaciente = "'+idpaciente+'";',function (error,result,fields) {
+        if (error){
+          res.status(422).json(["Error"]);
+        }else{
+          res.status(200).json(result);
+        }
+        });
+      });
+//actualizar datos método  
 
   router.post('/actualizar',function (req,res,next) {
-    nombre = req.body.nombre;
+  idpaciente= req.body.idpaciente;
+  nombre = req.body.nombre;
   apaterno = req.body.apaterno;
   amaterno = req.body.amaterno;
   genero = req.body.genero;
@@ -43,7 +61,7 @@ router.get('/mostrar1/:id',function (req,res,next) {
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   
-    conn.query('UDPDATE * FROM pacientes WHERE idpaciente = '+output+';',function (error,result,fields) {
+    conn.query('UPDATE pacientes SET nombre="'+nombre+'", apaterno = "'+apaterno+'", amaterno = "'+amaterno+'",genero= "'+genero+'",fracc="'+fracc+'",num="'+num+'",calle="'+calle+'",edad="'+edad+'",telefono="'+telefono+'",correo="'+correo+'" WHERE idpaciente = "'+idpaciente+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
       }else{
@@ -52,7 +70,7 @@ router.get('/mostrar1/:id',function (req,res,next) {
       });
     });
 
-
+//Insertar datos metodo
 // trae 1 solo dato
 router.post('/insertar',function (req,res,next) {
   nombre = req.body.nombre;
@@ -78,16 +96,5 @@ router.post('/insertar',function (req,res,next) {
     }
     });
   })
-//   idpaciente	1
-// nombre	"Sebastian"
-// apaterno	"Hernandez"
-// amaterno	"Ochoa"
-// genero	"Masculino"
-// fracc	"Granja Graciela"
-// num	"167"
-// calle	"Bosques"
-// edad	22
-// telefono	61817892893
-// correo	"hola@gmail.com"
 
 module.exports = router;

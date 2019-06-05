@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PacienteService } from '../services/paciente.service';
+import { PersonalService } from '../services/personal.service';
 
 @Component({
   selector: 'app-rudsecretariapacientes',
@@ -9,8 +9,9 @@ import { PacienteService } from '../services/paciente.service';
 export class RudsecretariapacientesComponent implements OnInit {
 
   datos = [];
-  constructor(public paciente:PacienteService) { }
+  constructor(public paciente:PersonalService) { }
   paciente2 = {
+        idpaciente: '',
         nombre:	'',
         apaterno:	'',
         amaterno:	'',
@@ -58,19 +59,27 @@ export class RudsecretariapacientesComponent implements OnInit {
     ];
     console.log(this.datos);
   }
+
+  //BUSCAR
   buscar1(usuario){
     this.paciente.buscar1(usuario);
   }
+  //ACTUALIZAR
   actualizarPaciente(paciente2){
     this.paciente.actualizarPaciente(paciente2);
   }
+  //ELIMINAR
+ eliminarPaciente(paciente2){
 
-  remove(id) {
+    this.paciente.eliminarPaciente(paciente2);
+  }
+
+  /*remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {
         return item;
       }
     });
-  }
+  }*/
 
 }

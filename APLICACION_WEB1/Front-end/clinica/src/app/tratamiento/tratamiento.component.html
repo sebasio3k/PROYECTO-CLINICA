@@ -15,7 +15,7 @@
             <!-- Nombre Tratamiento -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Nombre Tratamiento" class="textcolorw">Nombre Tratamiento</label>
+                <label for="Nombre" class="textcolorw">Nombre Tratamiento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -24,12 +24,12 @@
                   </div>
                   <input
                     type="text"
-                    name="nombre"
+                    name="Nombre"
                     size="100"
                     required
                     class="form-control"
-                    id="nombre"
-                    [(ngModel)]="model.nombre"
+                    id="Nombre"
+                    [(ngModel)]="data.Nombre"
                     placeholder="Nombre del tratamiento" />
                 </div>
               </div>
@@ -37,7 +37,7 @@
             <!-- Descripcion de Tratamiento -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Descripcion de Tratamiento" class="textcolorw">Descripción de Tratamiento</label>
+                <label for="descripcion" class="textcolorw">Descripción de Tratamiento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -51,7 +51,7 @@
                     required
                     class="form-control"
                     id="descripcion"
-                    [(ngModel)]="model.descripcion"
+                    [(ngModel)]="data.descripcion"
                     placeholder="Descripcion del tratamiento" />
                 </div>
               </div>
@@ -59,7 +59,7 @@
             <!-- Precio -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Precio" class="textcolorw">Precio</label>
+                <label for="precio" class="textcolorw">Precio</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -72,7 +72,7 @@
                     required
                     class="form-control"
                     id="precio"
-                    [(ngModel)]="model.precio"
+                    [(ngModel)]="data.precio"
                     placeholder="Precio del tratamiento"/>
                 </div>
               </div>
@@ -80,7 +80,7 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

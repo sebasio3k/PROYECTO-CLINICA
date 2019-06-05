@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DoctorService } from '../services/doctores.service';
 @Component({
   selector: 'app-rudadmindoctores',
   templateUrl: './rudadmindoctores.component.html',
@@ -8,7 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class RudadmindoctoresComponent implements OnInit {
 
   datos = [];
-  constructor() { }
+  constructor(public doctor:DoctorService) { }
+  doctor2 = {
+iddoctores : '',
+Nombre : '',
+apaterno : '',
+amaterno : '',
+genero : '',
+cedula : '',
+fracc : '',
+num : '',
+calle : '',
+edad : '',
+telefono : '',
+correo : '',
+especialidad : '',
+nconsultorio : '',
+sueldo : '',
+iddepartamento : ''
+  };
 
   ngOnInit() {
     this.testBuildDatas();
@@ -56,6 +74,22 @@ export class RudadmindoctoresComponent implements OnInit {
     ];
     console.log(this.datos);
   }
+  
+  //BUSCAR
+  buscar1(doc){
+    this.doctor.buscar1(doc);
+  }
+  //ACTUALIZAR
+  actualizarDoctor(doc2){
+    this.doctor.actualizarDoctor(doc2);
+  }
+  //ELIMINAR
+ eliminarDoctor(doc2){
+
+    this.doctor.eliminarDoctor(doc2);
+  }
+
+
 
   remove(id) {
     this.datos = this.datos.filter(item => {
@@ -64,6 +98,5 @@ export class RudadmindoctoresComponent implements OnInit {
       }
     });
   }
-
 
 }

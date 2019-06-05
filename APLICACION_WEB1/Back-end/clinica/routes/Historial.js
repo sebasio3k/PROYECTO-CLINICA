@@ -19,7 +19,7 @@ router.get('/mostrar1/:id',function (req,res,next) {
   // tomar los parametros y asignarlos a variable output
   output=req.params.id;
   // si es string se ponen "" AQUI HAY MAS DUDAS PORQUE TAMPOCO TIENE ID principal
-  conn.query('SELECT * FROM historial WHERE iddepartamento = '+output+';',function (error,result,fields) {
+  conn.query('SELECT * FROM historial WHERE idpaciente = '+output+';',function (error,result,fields) {
     if (error){
       res.status(422).json(["Error"]);
     }else{

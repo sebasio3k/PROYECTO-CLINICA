@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HorarioService } from '../services/horarios.service';
 
 @Component({
   selector: 'app-rudadminhorarios',
@@ -8,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class RudadminhorariosComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public horario:HorarioService) { }
+  horario2 ={
+    idhorario : '',
+    iddoctor : '',
+    nconsultorio  : '',
+    hora  : '',
+   
+  }
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -33,12 +40,26 @@ export class RudadminhorariosComponent implements OnInit {
     console.log(this.datos);
   }
 
-  remove(id) {
+  //BUSCAR
+buscar1(horario){
+  this.horario.buscar1(horario);
+}
+//ACTUALIZAR
+actualizarHorario(horario2){
+  this.horario.actualizarHorario(horario2);
+}
+//ELIMINAR
+eliminarHorario(horario2){
+
+  this.horario.eliminarHorario(horario2);
+}
+
+ /* remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {
         return item;
       }
     });
-  }
+  }*/
 
 }

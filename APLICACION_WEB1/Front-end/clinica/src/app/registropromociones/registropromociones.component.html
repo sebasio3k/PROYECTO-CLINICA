@@ -24,12 +24,12 @@
                   </div>
                   <input
                     type="text"
-                    name="name"
+                    name="descripcion"
                     size="100"
                     required
                     class="form-control"
-                    id="name"
-                    [(ngModel)]="model.name"
+                    id="descripcion"
+                    [(ngModel)]="data.descripcion"
                     placeholder="Descripcion de la promocion" />
                 </div>
               </div>
@@ -37,7 +37,7 @@
             <!-- Porcentaje de dcto -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="% dcto" class="textcolorw">Porcentaje de Descuento</label>
+                <label for="porcentajerebaja" class="textcolorw">Porcentaje de Descuento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -46,11 +46,11 @@
                   </div>
                   <input
                     type="text"
-                    name="porcentaje"
+                    name="porcentajerebaja"
                     required
                     class="form-control"
-                    id="porcentaje"
-                    [(ngModel)]="model.porcentaje"
+                    id="porcentajerebaja"
+                    [(ngModel)]="data.porcentajerebaja"
                     placeholder="Porcentaje de descuento"/>
                 </div>
               </div>
@@ -58,7 +58,7 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

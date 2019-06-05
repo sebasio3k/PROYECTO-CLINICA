@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TratamientosService } from '../services/tratamientos.service';
 
 @Component({
   selector: 'app-rudadmintratamientos',
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class RudadmintratamientosComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public tratamiento: TratamientosService) { }
+  tratamiento2 = {
+    idtratamiento : '',
+    nombre : '',
+    descripcion  : '',
+    precio  : '',
+  };
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -32,14 +38,28 @@ export class RudadmintratamientosComponent implements OnInit {
     ];
     console.log(this.datos);
   }
+// BUSCAR
+buscar1(trat) {
+  this.tratamiento.buscar1(trat);
+}
+// ACTUALIZAR
+actualizarTratamiento(trat2) {
+  this.tratamiento.actualizarTratamiento(trat2);
+}
+// ELIMINAR
+eliminarTratamiento(trat2) {
 
-  remove(id) {
+  this.tratamiento.eliminarTratamiento(trat2);
+}
+
+ /* remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {
         return item;
       }
     });
-  }
+  }*/
+
 
 }
 

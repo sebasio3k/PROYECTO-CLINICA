@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TipopersonalService } from '../services/tipopersonal.service';
 
 @Component({
   selector: 'app-rudadmintipopersonal',
@@ -8,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class RudadmintipopersonalComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public tipopersonal:TipopersonalService) { }
+  tipopersonal2 ={
+    idtipo: '',
+    nombretipo : ''
+   
+   
+  }
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -29,12 +35,26 @@ export class RudadmintipopersonalComponent implements OnInit {
     console.log(this.datos);
   }
 
-  remove(id) {
+  //BUSCAR
+buscar1(tper){
+  this.tipopersonal.buscar1(tper);
+}
+//ACTUALIZAR
+actualizarTipopersonal(tper2){
+  this.tipopersonal.actualizarTipopersonal(tper2);
+}
+//ELIMINAR
+eliminarTipopersonal(tper2){
+
+  this.tipopersonal.eliminarTipopersonal(tper2);
+}
+
+ /* remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {
         return item;
       }
     });
-  }
+  }*/
 
 }

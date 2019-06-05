@@ -1,0 +1,45 @@
+<h1>Operaciones de </h1>
+  
+  
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-auto text-center">
+            
+          <form action="">
+          <table class="table table-dark table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">idtratamiento</th>
+                <th scope="col">idpaciente</th>
+                <th scope="col">Númerocitas</th>
+                <th scope="col">iddoctor</th>
+                <th scope="col">Modadlidad de pago</th>
+                <th scope="col">pagos</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+              <tr *ngFor="let tratamiento2 of tratamiento.tratamiento1">
+                <th scope="row">{{tratamiento2.idtratamiento}}</th>
+                <td>{{tratamiento2.idpaciente}}</td>
+                <td>{{tratamiento2.ncitas}}</td>
+                <td>{{tratamiento2.iddoctor}}</td>
+                <td>{{tratamiento2.modalidadpago}}</td>
+                <td>{{tratamiento2.pagos}}</td>
+                
+              <br><br><br><br>
+              
+                <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
+              </tr>
+              
+            </tbody>
+          </table>
+          <br>
+          <br>
+          
+          <input type="submit" value="Consultar" (click)="buscar()">
+          <br>
+          <br>
+          <br>
+          <br>
+        </form>

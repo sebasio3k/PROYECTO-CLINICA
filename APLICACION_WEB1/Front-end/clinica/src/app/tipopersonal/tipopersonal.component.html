@@ -15,7 +15,7 @@
             <!-- Descripcion del tipo persnl -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Descripcion del tipo persnl" class="textcolorw">Descripción del tipo personal</label>
+                <label for="nombretipo" class="textcolorw">Descripción del tipo personal</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -24,12 +24,12 @@
                   </div>
                   <input
                     type="text"
-                    name="nombre"
+                    name="nombretipo"
                     size="500"
                     required
                     class="form-control"
-                    id="nombre"
-                    [(ngModel)]="model.nombre"
+                    id="nombretipo"
+                    [(ngModel)]="data.nombretipo"
                     placeholder="Descripción del tipo personal" />
                 </div>
               </div>
@@ -37,7 +37,7 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary "(click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

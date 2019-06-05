@@ -1,11 +1,11 @@
 <div class=" fondo">
     <app-menuadmin></app-menuadmin>
 
-    <div *ngFor="let item of doctor2.doctor">
+   <!--div *ngFor="let item of doctor2.doctor">
         <br> {{item.iddoctor}}
         <br> {{item.nombre}}
         <br> {{item.apaterno}}
-    </div>
+    </!---->
 
     <h1>Registrar Horario</h1>
     <div class="container text-center">
@@ -15,7 +15,7 @@
             <!-- Id Doctor -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="id doctor" class="textcolorw">Id Doctor</label>
+                <label for="iddoctor" class="textcolorw">Id Doctor</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -29,7 +29,7 @@
                     required
                     class="form-control"
                     id="iddoctor"
-                    [(ngModel)]="model.iddoctor"
+                    [(ngModel)]="data.iddoctor"
                     placeholder="ID doctor" />
                 </div>
               </div>
@@ -37,7 +37,7 @@
             <!-- N. Consultorio -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="N. Consultorio" class="textcolorw">N. Consultorio</label>
+                <label for="nconsultorio" class="textcolorw">N. Consultorio</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -50,7 +50,7 @@
                     required
                     class="form-control"
                     id="nconsultorio"
-                    [(ngModel)]="model.nconsultorio"
+                    [(ngModel)]="data.nconsultorio"
                     placeholder="Número de consultorio"/>
                 </div>
               </div>
@@ -58,7 +58,7 @@
             <!-- Horario -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-8">
-                <label for="Horario" class="textcolorw">Horario</label>
+                <label for="hora" class="textcolorw">Horario</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">
@@ -67,11 +67,11 @@
                   </div>
                   <input
                     type="time"
-                    name="horadia"
+                    name="hora"
                     required
                     class="form-control"
-                    id="horadia"
-                    [(ngModel)]="model.horadia"
+                    id="hora"
+                    [(ngModel)]="data.hora"
                     placeholder="Horario" />
                 </div>
               </div>
@@ -79,7 +79,7 @@
             <!-- boton -->
             <div class="row justify-content-center">
               <div class="form-group col-xs-12 col-4 align-self-center text-center">
-                <button type="submit" class="btn btn-outline-primary ">Registrar</button>
+                <button type="submit" class="btn btn-outline-primary " (click)="agregar()">Registrar</button>
               </div>
             </div>
           </form>

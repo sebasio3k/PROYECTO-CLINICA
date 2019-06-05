@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitasService } from '../services/citas.service';
 
 @Component({
   selector: 'app-ruddoctorcitas',
@@ -8,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class RuddoctorcitasComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public citas: CitasService) { }
+  citas2 = {
+    
+idcita : '',
+idpaciente : '',
+hora : '',
+fecha : '',
+iddoctor : '',
+nconsultorio : '',
+precio : '',
+estatus : ''
+    
+  };
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -38,7 +50,12 @@ export class RuddoctorcitasComponent implements OnInit {
     ];
     console.log(this.datos);
   }
-
+  buscar() {
+    this.citas.buscar();
+  }
+  buscar2(his) {
+    this.citas.buscar2(his);
+  }
   remove(id) {
     this.datos = this.datos.filter(item => {
       if (item.id !== id) {

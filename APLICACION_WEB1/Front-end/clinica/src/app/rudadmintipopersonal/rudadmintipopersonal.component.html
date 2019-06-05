@@ -21,6 +21,30 @@
               </tr>
             </tbody>
           </table>
+        <h1>Actualizar</h1>
+          <form class="form-group" (ngSubmit)="buscar1(tper)">
+            <h2>1 Buscar Usuario</h2>
+            <br><input type="text" [(ngModel)]="tper" name="id" placeholder="Ingresa el num de dep">
+            <br><input type="submit" value="buscar">
+          </form>
+          <form action="">
+            <h2>2 Modificar datos</h2>
+            <!--/primero del typescript y el 2do resultado del servicio-->
+            <div *ngFor="let tipopersonal2 of tipopersonal.tipopersonal1"> 
+  
+              <br> <input type="text" [(ngModel)] = "tipopersonal2.nombretipo" name="Nombre">
+       
+       
+              <br> <input type="submit" value="Actualizar" (click)="actualizarTipopersonal(tipopersonal2)">
+              <br><input type="submit" value="Eliminar" (click)="eliminarTipopersonal(tipopersonal2)">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+  
+            </div> 
+          </form>
         </div>
       </div>
     </div>

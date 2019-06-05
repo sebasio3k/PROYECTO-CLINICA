@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PersonalService } from '../services/personal.service';
 @Component({
   selector: 'app-rudadminpersonal',
   templateUrl: './rudadminpersonal.component.html',
@@ -8,8 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class RudadminpersonalComponent implements OnInit {
 
   datos = [];
-  constructor() { }
-
+  constructor(public personal:PersonalService) { }
+  personal2 = { 
+  idpersonal : '',
+  idtipo: '',
+  nombre: '',
+  apaterno: '',
+  amaterno: '',
+  genero: '',
+  fracc: '',
+  Num: '',
+  calle: '',
+  edad: '',
+  telefono: '', 
+  correo: '',
+  cedula: '',
+  iddepartamento: '',
+  sueldo : ''
+    
+};
   ngOnInit() {
     this.testBuildDatas();
   }
@@ -53,6 +70,20 @@ export class RudadminpersonalComponent implements OnInit {
 
     ];
     console.log(this.datos);
+  }
+
+  //BUSCAR
+  buscar1(personal){
+    this.personal.buscar1(personal);
+  }
+  //ACTUALIZAR
+  actualizarPersonal(personal2){
+    this.personal.actualizarPaciente(personal2);
+  }
+  //ELIMINAR
+ eliminarPersonal(personal2){
+
+    this.personal.eliminarPaciente(personal2);
   }
 
   remove(id) {
