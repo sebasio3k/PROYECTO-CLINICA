@@ -10,7 +10,6 @@ import { PromocionesService } from '../services/promociones.service';
 export class RegistropromocionesComponent implements OnInit {
  // model = new promociones(1,'',null);
  data = {
-   
   descripcion	:	'',
   porcentajerebaja	:	''
 };
@@ -24,6 +23,29 @@ export class RegistropromocionesComponent implements OnInit {
   }*/
   agregar() {
     this.promociones2.agregar(this.data);
+  }
+
+  validarPromociones() {
+
+    // Si estan vacios:
+    if ( (this.data.descripcion === '') || (this.data.porcentajerebaja === '') ) {
+      alert('Se requiere que todos los campos esten llenos!');
+
+    } else {
+      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
+      if (/^([0-9]{1,4})+$/.test(this.data.descripcion)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.porcentajerebaja)) {
+          alert('Datos Correctos');
+          this.promociones2.agregar(this.data);
+        } else {
+          alert('Formato de Porcentaje inválido, por favor verificalo');
+          return false;
+        }
+      } else {
+        alert('Formato de Nombre inválido, por favor verificalo');
+        return false;
+      }
+    }
   }
 
 }

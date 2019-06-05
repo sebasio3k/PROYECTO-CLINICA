@@ -48,16 +48,11 @@ export class RegistroFormComponent implements OnInit {
   //   return JSON.stringify(this.model);
   // }
 
-  // var regnom=/^([A-Za-z\sáéíóú]{2,15})+$/;
-	// var regap=/^([A-Za-z\sáéíóú]{2,30})+$/;
-	// var regam=/^([A-Za-z\sáéíóú]{2,30})+$/;
-	// var regcorreo=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/;
-	// var regtel=/^([0-9]{10})+$/;
-	// var regcontra=/^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
-
   validarUsuario() {
 
-    if ((this.name === '')||(this.ap === '')||(this.am === '')||(this.genere === '')||(this.neighborhood === '')||(this.number === '')||(this.streat === '')||(this.age === '')||(this.phone === '')||(this.email === '')) {
+    if ((this.name === '') || (this.ap === '') || (this.am === '')
+     || (this.genere === '') || (this.neighborhood === '') || (this.number === '')
+     || (this.streat === '') || (this.age === '') || (this.phone === '') || (this.email === '')) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
@@ -67,12 +62,13 @@ export class RegistroFormComponent implements OnInit {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.am)) {
             if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.genere)) {
               if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.neighborhood)) {
-                if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.number)) {
+                if (/^([0-9]{4})+$/.test(this.number)) {
                   if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.streat)) {
                     if (/^([0-9]{2})+$/.test(this.age)) {
                       if (/^([0-9]{10})+$/.test(this.phone)) {
                         if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(this.email)) {
                           alert('Datos Correctos');
+                          this.paciente2.agregar(this.data);
                         } else {
                           alert('Formato de Correo inválido, por favor verificalo');
                         }
@@ -104,7 +100,6 @@ export class RegistroFormComponent implements OnInit {
         alert('Formato de Nombre inválido, por favor verificalo');
       }
     }
-
   }
 
 }

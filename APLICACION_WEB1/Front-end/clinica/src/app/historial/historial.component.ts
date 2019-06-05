@@ -41,8 +41,8 @@ export class HistorialComponent implements OnInit {
           if (/^([A-Za-z\sáéíóú]{2,200})+$/.test(this.data.descripcioncita)) {
             if (/^([A-Za-z\sáéíóú]{2,1000})+$/.test(this.data.observaciones)) {
               if (/^([0-9]{1,4})+$/.test(this.data.iddoctor)) {
-
-                    this.historial2.agregar(this.data);
+                alert('Datos Correctos');
+                this.historial2.agregar(this.data);
               } else {
                 alert('Formato de Id Doctor Inválido');
                 return false;

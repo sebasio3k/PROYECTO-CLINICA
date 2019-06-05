@@ -9,7 +9,6 @@ import {HorarioService} from '../services/horarios.service';
 export class RegistrohorarioComponent implements OnInit {
  // model = new horarios(1,'','');
  data = {
-   
   iddoctor	:	'',
   nconsultorio	:	'',
   hora :	''
@@ -24,6 +23,29 @@ export class RegistrohorarioComponent implements OnInit {
   }*/
   agregar() {
     this.horario2.agregar(this.data);
+  }
+
+  validarHorario() {
+
+    // Si estan vacios:
+    if ( (this.data.iddoctor === '') || (this.data.nconsultorio === '') ) {
+      alert('Se requiere que todos los campos esten llenos!');
+
+    } else {
+      /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
+      if (/^([A-Za-z\sáéíóú]{1,4})+$/.test(this.data.iddoctor)) {
+        if (/^([A-Za-z\sáéíóú]{1,4})+$/.test(this.data.nconsultorio)) {
+          alert('Datos Correctos');
+          this.horario2.agregar(this.data);
+        } else {
+          alert('Formato de Apellido Paterno inválido, por favor verificalo');
+          return false;
+        }
+      } else {
+        alert('Formato de Nombre inválido, por favor verificalo');
+        return false;
+      }
+    }
   }
 
 }

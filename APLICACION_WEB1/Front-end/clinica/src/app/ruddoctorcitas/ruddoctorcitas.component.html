@@ -1,10 +1,7 @@
   <div class=" fondo">
       <app-menudoctor></app-menudoctor>
-  
-  
     <div class="container text-center">
         <h1>Consultar Citas</h1>
-  
         <div class="row justify-content-center">
           <div class="col-auto text-center">
               <form class="form-group" (ngSubmit)="buscar2(cit)">
@@ -24,8 +21,6 @@
                       <th scope="col">nconsultorio</th>
                       <th scope="col">precio</th>
                       <th scope="col">estatus</th>
-                  
-                 
                   </tr>
                 </thead>
                 <tbody>
@@ -38,7 +33,6 @@
                     <td>{{citas2.nconsultorio}}</td>
                     <td>{{citas2.precio}}</td>
                     <td>{{citas2.estatus}}</td>
-                    
                     <!-- <br><br><br><br> -->
                     <!-- <td><a (click)="remove(e.id)"><button>borrar</button></a></td> -->
                   </tr>
@@ -57,5 +51,3 @@
       </div>
   <br><br><br>
   </div>
-     
-  

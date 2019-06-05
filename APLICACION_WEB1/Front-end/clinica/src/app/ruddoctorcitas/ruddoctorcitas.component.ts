@@ -11,16 +11,14 @@ export class RuddoctorcitasComponent implements OnInit {
   datos = [];
   constructor(public citas: CitasService) { }
   citas2 = {
-    
-idcita : '',
-idpaciente : '',
-hora : '',
-fecha : '',
-iddoctor : '',
-nconsultorio : '',
-precio : '',
-estatus : ''
-    
+    idcita : '',
+    idpaciente : '',
+    hora : '',
+    fecha : '',
+    iddoctor : '',
+    nconsultorio : '',
+    precio : '',
+    estatus : ''
   };
   ngOnInit() {
     this.testBuildDatas();

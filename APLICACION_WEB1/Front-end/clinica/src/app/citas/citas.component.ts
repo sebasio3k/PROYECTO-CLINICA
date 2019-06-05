@@ -47,7 +47,7 @@ export class CitasComponent implements OnInit {
                 // if (tyc.test(this.estatus)) {
                 //   alert('Selecciona el estatus');
                 // } else {
-
+                    alert('Datos Correctos');
                     this.citas2.agregar(this.data);
 
                     // }
