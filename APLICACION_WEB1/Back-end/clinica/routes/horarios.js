@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var conn = require('./conexion');
-
+var conn2 = require('./conexion')
 //trae todos los datos
 router.get('/mostrar',function(req,res,next){
   conn.query('SELECT * FROM horarios',function(error,result,fields){
@@ -62,25 +62,32 @@ hora = req.body.hora;
   });
 
 // trae 1 solo dato
-router.post('/insertar',function (req,res,next) {
+router.post('/insertar',  function (req,res,next) {
 
 iddoctor =	req.body.iddoctor;
 nconsultorio =	req.body.nconsultorio;
 hora = req.body.hora;
 idhorario= req.body.idhorario;
 
-  
+conn2.query('SELECT * FROM horarios WHERE nconsultorio = "'+nconsultorio+'" and hora = "'+hora+'" ;'
+  ,function (error,result,fields) {
+    if (!result){
+      conn.query('INSERT INTO horarios (iddoctor,nconsultorio,hora) VALUES ("'+iddoctor+'","'+nconsultorio+'","'+hora+'");',function (error,result,fields) {
+        if (error){
+          res.status(422).json(["Error"]);
+        }else{
+          res.status(200).json(result);
+        }
+        });
+    } else res.status(422).json({
+      error : 'El horario ya esta registrado'
+    })
+  });
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   //output=req.params.id;
   // si es string se ponen ""
-  conn.query('INSERT INTO horarios (iddoctor,nconsultorio,hora) VALUES ("'+iddoctor+'","'+nconsultorio+'","'+hora+'");',function (error,result,fields) {
-    if (error){
-      res.status(422).json(["Error"]);
-    }else{
-      res.status(200).json(result);
-    }
-    });
+
   })
 
 module.exports = router;

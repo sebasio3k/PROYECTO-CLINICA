@@ -33,16 +33,16 @@ export class RegistrohorarioComponent implements OnInit {
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([A-Za-z\sáéíóú]{1,4})+$/.test(this.data.iddoctor)) {
-        if (/^([A-Za-z\sáéíóú]{1,4})+$/.test(this.data.nconsultorio)) {
+      if (/^([0-9]{1,4})+$/.test(this.data.iddoctor)) {
+        if (/^([A-Za-z\sáéíóú\-\0-9]{2,10})+$/.test(this.data.nconsultorio)) {
           alert('Datos Correctos');
           this.horario2.agregar(this.data);
         } else {
-          alert('Formato de Apellido Paterno inválido, por favor verificalo');
+          alert('Formato de N. Consultorio inválido, por favor verificalo');
           return false;
         }
       } else {
-        alert('Formato de Nombre inválido, por favor verificalo');
+        alert('Formato de Id Doctor inválido, por favor verificalo');
         return false;
       }
     }
