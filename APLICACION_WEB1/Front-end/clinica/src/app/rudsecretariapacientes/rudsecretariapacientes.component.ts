@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalService } from '../services/personal.service';
+import { PacienteService } from '../services/paciente.service';
 
 @Component({
   selector: 'app-rudsecretariapacientes',
@@ -9,7 +9,7 @@ import { PersonalService } from '../services/personal.service';
 export class RudsecretariapacientesComponent implements OnInit {
 
   datos = [];
-  constructor(public paciente: PersonalService) { }
+  constructor(public paciente: PacienteService) { }
   paciente2 = {
         idpaciente: '',
         nombre:	'',
@@ -28,41 +28,41 @@ export class RudsecretariapacientesComponent implements OnInit {
   }
 
   testBuildDatas() {
-    this.datos = [
-      {
-        idpaciente: '1',
-        nombre: 'Daniel Sebastian',
-        apellidop: 'Hernandez',
-        apellidom: 'Ochoa',
-        genero: 'Hombre',
-        fracc: 'Granja Graciela',
-        num: '202',
-        calle: 'Justo Sierra',
-        edad: '22',
-        telefono: '6188402944',
-        correo: 'bastianhdezo@gmail.com'
-     },
-     {
-      idpaciente: '2',
-      nombre: 'Deyanira',
-        apellidop: 'Campos',
-        apellidom: 'Romero',
-        genero: 'Hombre',
-        fracc: 'Granja Graciela',
-        num: '202',
-        calle: 'Justo Sierra',
-        edad: '22',
-        telefono: '6188402944',
-        correo: 'bastianhdezo@gmail.com'
-     }
+    // this.datos = [
+    //   {
+    //     idpaciente: '1',
+    //     nombre: 'Daniel Sebastian',
+    //     apellidop: 'Hernandez',
+    //     apellidom: 'Ochoa',
+    //     genero: 'Hombre',
+    //     fracc: 'Granja Graciela',
+    //     num: '202',
+    //     calle: 'Justo Sierra',
+    //     edad: '22',
+    //     telefono: '6188402944',
+    //     correo: 'bastianhdezo@gmail.com'
+    //  },
+    //  {
+    //   idpaciente: '2',
+    //   nombre: 'Deyanira',
+    //     apellidop: 'Campos',
+    //     apellidom: 'Romero',
+    //     genero: 'Hombre',
+    //     fracc: 'Granja Graciela',
+    //     num: '202',
+    //     calle: 'Justo Sierra',
+    //     edad: '22',
+    //     telefono: '6188402944',
+    //     correo: 'bastianhdezo@gmail.com'
+    //  }
 
-    ];
+    // ];
     console.log(this.datos);
   }
 
   // BUSCAR
-  buscar1(usuario) {
-    this.paciente.buscar1(usuario);
+  buscar1(us) {
+    this.paciente.buscar1(us);
   }
   // ACTUALIZAR
   actualizarPaciente(paciente2) {
@@ -81,27 +81,27 @@ export class RudsecretariapacientesComponent implements OnInit {
     });
   }*/
 
-  validarPaciente(paciente2) {
-    if ((this.paciente2.nombre === '') || (this.paciente2.apaterno === '') || (this.paciente2.amaterno === '')
-     || (this.paciente2.genero === '') || (this.paciente2.fracc === '') || (this.paciente2.num === '')
-     || (this.paciente2.calle === '') || (this.paciente2.edad === '') || (this.paciente2.telefono === '')
-     || (this.paciente2.correo === '') || (this.paciente2.idpaciente === '')) {
+  validarPaciente(paciente22) {
+    if ((paciente22.nombre === '') || (paciente22.apaterno === '') || (paciente22.amaterno === '')
+     || (paciente22.genero === '') || (paciente22.fracc === '') || (paciente22.num === '')
+     || (paciente22.calle === '') || (paciente22.edad === '') || (paciente22.telefono === '')
+     || (paciente22.correo === '') || (paciente22.idpaciente === '')) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
-      /*VALIDA QUE EL formato de this.paciente2.usr SEA VALIDO*/
-      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.nombre)) {
-        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.apaterno)) {
-          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.amaterno)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.genero)) {
-              if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.fracc)) {
-                if (/^([0-9]{4})+$/.test(this.paciente2.num)) {
-                  if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.paciente2.calle)) {
-                    if (/^([0-9]{2})+$/.test(this.paciente2.edad)) {
-                      if (/^([0-9]{10})+$/.test(this.paciente2.telefono)) {
-                        if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(this.paciente2.correo)) {
+      /*VALIDA QUE EL formato de paciente22.usr SEA VALIDO*/
+      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.nombre)) {
+        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.apaterno)) {
+          if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.amaterno)) {
+            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.genero)) {
+              if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.fracc)) {
+                if (/^([0-9]{1,4})+$/.test(paciente22.num)) {
+                  if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.calle)) {
+                    if (/^([0-9]{2})+$/.test(paciente22.edad)) {
+                      if (/^([0-9]{10})+$/.test(paciente22.telefono)) {
+                        if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(paciente22.correo)) {
                           alert('Datos Correctos');
-                          this.paciente.actualizarPaciente(paciente2);
+                          this.paciente.actualizarPaciente(paciente22);
                         } else {
                           alert('Formato de Correo inválido, por favor verificalo');
                         }

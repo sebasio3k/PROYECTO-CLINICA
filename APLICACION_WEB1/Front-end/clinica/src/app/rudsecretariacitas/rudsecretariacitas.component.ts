@@ -71,27 +71,27 @@ eliminarCita(cita2) {
     });
   }*/
 
-  validarCita(cita2) {
+  validarCita(cita22) {
     // Si estan vacios:
-    if ((this.cita2.idpaciente === '') || (this.cita2.hora === '')  || (this.cita2.fecha === '')
-    || (this.cita2.iddoctor === '') || (this.cita2.nconsultorio === '')  || (this.cita2.precio === '')
-    || (this.cita2.estatus === '') || (this.cita2.idcita === '') ) {
+    if ((cita22.idpaciente === '') || (cita22.hora === '')  || (cita22.fecha === '')
+    || (cita22.iddoctor === '') || (cita22.nconsultorio === '')  || (cita22.precio === '')
+    || (cita22.estatus === '') || (cita22.idcita === '') ) {
       alert('Se requiere que todos los campos esten llenos');
       return false;
     } else {// si no
       /*VALIDA QUE EL formato de correo SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.cita2.idcita)) {
-      if (/^([0-9]{1,4})+$/.test(this.cita2.idpaciente)) {
-        if (/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(this.cita2.hora)) {
-          if (/^\d{4}([\-/.])(0?[1-9]|1[1-2])\1(3[01]|[12][0-9]|0?[1-9])$/.test(this.cita2.fecha)) {
-            if (/^([0-9]{1,4})+$/.test(this.cita2.iddoctor)) {
-            // if (regcontra.test(this.nconsultorio)) {
-              if (/^\d{1,3}(\.\d{2})?$/.test(this.cita2.precio)) {
-                // if (tyc.test(this.estatus)) {
+      if (/^([0-9]{1,4})+$/.test(cita22.idcita)) {
+      if (/^([0-9]{1,4})+$/.test(cita22.idpaciente)) {
+        if (/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(cita22.hora)) {
+          if (/^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1]) (2[0-3]|[01][0-9]):[0-5][0-9]:[0-5][0-9]$/.test(cita22.fecha)) {
+            if (/^([0-9]{1,4})+$/.test(cita22.iddoctor)) {
+            // if (regcontra.test(nconsultorio)) {
+              if (/^\d{1,3}(\.\d{2})?$/.test(cita22.precio)) {
+                // if (tyc.test(estatus)) {
                 //   alert('Selecciona el estatus');
                 // } else {
                     alert('Datos Correctos');
-                    this.citas.actualizarCita(cita2);
+                    this.citas.actualizarCita(cita22);
 
                     // }
               } else {
@@ -127,7 +127,7 @@ eliminarCita(cita2) {
   validarId(his) {
     if (/^([0-9]{1,4})+$/.test(his)) {
       alert('Datos Correctos');
-      this.citas.buscar2(his);
+      this.citas.buscar1(his);
     } else {
       alert('Formato de Id Cita inválido, por favor verificalo');
       return false;

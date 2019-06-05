@@ -25,16 +25,17 @@ router.get('/mostrar1/:id',function (req,res,next) {
       res.status(422).json(["Error"]);
     }else{
       res.status(200).json(result);
+      console.log(res);
     }
     });
   });
 //Eliminar datos metodos
   router.post('/eliminar',function (req,res,next) {
     idpaciente= req.body.idpaciente;
-    
+
     // conn.connect();
     // tomar los parametros y asignarlos a variable output
-    
+
       conn.query('DELETE from pacientes  WHERE idpaciente = "'+idpaciente+'";',function (error,result,fields) {
         if (error){
           res.status(422).json(["Error"]);
@@ -43,7 +44,7 @@ router.get('/mostrar1/:id',function (req,res,next) {
         }
         });
       });
-//actualizar datos método  
+//actualizar datos método
 
   router.post('/actualizar',function (req,res,next) {
   idpaciente= req.body.idpaciente;
@@ -60,7 +61,7 @@ router.get('/mostrar1/:id',function (req,res,next) {
 
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
-  
+
     conn.query('UPDATE pacientes SET nombre="'+nombre+'", apaterno = "'+apaterno+'", amaterno = "'+amaterno+'",genero= "'+genero+'",fracc="'+fracc+'",num="'+num+'",calle="'+calle+'",edad="'+edad+'",telefono="'+telefono+'",correo="'+correo+'" WHERE idpaciente = "'+idpaciente+'";',function (error,result,fields) {
       if (error){
         res.status(422).json(["Error"]);
