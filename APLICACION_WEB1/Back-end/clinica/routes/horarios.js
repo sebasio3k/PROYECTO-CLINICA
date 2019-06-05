@@ -67,7 +67,9 @@ router.post('/insertar',function (req,res,next) {
 iddoctor =	req.body.iddoctor;
 nconsultorio =	req.body.nconsultorio;
 hora = req.body.hora;
+idhorario= req.body.idhorario;
 
+  
   // conn.connect();
   // tomar los parametros y asignarlos a variable output
   //output=req.params.id;
