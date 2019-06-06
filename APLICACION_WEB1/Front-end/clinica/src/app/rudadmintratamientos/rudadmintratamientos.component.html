@@ -16,11 +16,11 @@
             <!--/primero del typescript y el 2do resultado del servicio-->
             <div *ngFor="let tratamiento2 of tratamiento.tratamiento1">
               <br> <label for="nombre" class="textcolorw">Nombre</label>
-              <input class="form-control" type="text" [(ngModel)] = "tratamiento2.Nombre" name="Nombre">
+              <input class="form-control col-auto" type="text" [(ngModel)] = "tratamiento2.Nombre" name="Nombre">
               <br> <label for="nombre" class="textcolorw">Descripción</label>
-              <input class="form-control" type="text" [(ngModel)] = "tratamiento2.descripcion" name="descripcion">
+              <input class="form-control col-auto" type="text" [(ngModel)] = "tratamiento2.descripcion" name="descripcion">
               <br> <label for="nombre" class="textcolorw">Precio</label>
-              <input class="form-control" type="text" [(ngModel)] = "tratamiento2.precio" name="precio">
+              <input class="form-control col-auto" type="number" [(ngModel)] = "tratamiento2.precio" name="precio">
               <br>
               <input class="form-control" type="submit" value="Actualizar" (click)="validarTratamiento(tratamiento2)">
               <!-- (click)="actualizarTratamiento(tratamiento2)" -->

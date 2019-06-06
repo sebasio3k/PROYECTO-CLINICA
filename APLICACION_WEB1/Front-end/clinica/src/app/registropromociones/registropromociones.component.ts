@@ -32,16 +32,16 @@ export class RegistropromocionesComponent implements OnInit {
       return false;
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.data.descripcion)) {
-        if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.porcentajerebaja)) {
+      if (/^([A-Za-z\sáéíóú]{2,100})+$/.test(this.data.descripcion)) {
+        if (/^([0-9]{1,4})+$/.test(this.data.porcentajerebaja)) {
           alert('Datos Correctos');
           this.promociones2.agregar(this.data);
         } else {
-          alert('Formato de Porcentaje inválido, por favor verificalo');
+          alert('Formato de Monto inválido, por favor verificalo');
           return false;
         }
       } else {
-        alert('Formato de Nombre inválido, por favor verificalo');
+        alert('Formato de Descripción inválido, por favor verificalo');
         return false;
       }
     }

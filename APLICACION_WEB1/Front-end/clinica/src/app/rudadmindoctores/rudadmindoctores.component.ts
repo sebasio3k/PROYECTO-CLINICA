@@ -104,17 +104,16 @@ export class RudadmindoctoresComponent implements OnInit {
       || (doc2.genero === '') || (doc2.cedula === '') || (doc2.fracc === '')
       || (doc2.num === '') || (doc2.calle === '') || (doc2.edad === '')
       || (doc2.telefono === '') || (doc2.correo === '') || (doc2.especialidad === '')
-      || (doc2.nconsultorio === '') || (doc2.sueldo === '') || (doc2.iddepartamento === '')
-      || (doc2.iddoctores === '') ) {
+      || (doc2.nconsultorio === '') || (doc2.sueldo === '') || (doc2.iddepartamento === '')) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(doc2.iddoctores)) {
+      // if (/^([0-9]{1,4})+$/.test(doc2.iddoctores)) {
       if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.Nombre)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.apaterno)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.amaterno)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(doc2.genero)) {
+            if (/^(Masculono|Femenino|masculino|femenino)*$/.test(doc2.genero)) {
               if (/^([0-9]{16})+$/.test(doc2.cedula)) {
                 if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(doc2.fracc)) {
                   if (/^([0-9]{3,4})+$/.test(doc2.num)) {
@@ -187,15 +186,15 @@ export class RudadmindoctoresComponent implements OnInit {
         alert('Formato de Nombre inválido, por favor verificalo');
         return false;
       }
-      } else {
-        alert('Formato de Id Doctor inválido, por favor verificalo');
-        return false;
-      }
+      // } else {
+      //   alert('Formato de Id Doctor inválido, por favor verificalo');
+      //   return false;
+      // }
     }
   }
 
   validarId(doc) {
-    if (/^([0-9]{1,4})+$/.test(doc)) {
+    if (/^([0-9]{1,3})+$/.test(doc)) {
       alert('Datos Correctos');
       this.doctor.buscar1(doc);
     } else {

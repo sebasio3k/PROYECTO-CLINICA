@@ -59,7 +59,7 @@ export class RegistroFormComponent implements OnInit {
       if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.name)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.ap)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.am)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.genere)) {
+            if (/^(Masculono|Femenino|masculino|femenino)*$/.test(this.genere)) {
               if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.neighborhood)) {
                 if (/^([0-9]{4})+$/.test(this.number)) {
                   if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.streat)) {

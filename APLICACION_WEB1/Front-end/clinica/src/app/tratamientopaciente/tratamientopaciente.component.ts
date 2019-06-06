@@ -47,11 +47,11 @@ export class TratamientopacienteComponent implements OnInit {
           if (/^([0-9]{1,4})+$/.test(this.data.iddoctor)) {
             if (/^([0-9]{1,4})+$/.test(this.data.ncitas)) {
               // if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.modalidadpago)) {
-              if (/^([0-9]{1,4})+$/.test(this.data.pagos)) {
+              if (/^([0-9]{1}[/][0-9]{1})+$/.test(this.data.pagos)) {
                   alert('Datos Correctos');
                   this.tratamiento.agregar(this.data);
               } else {
-                alert('Formato de Precio inválido, por favor verificalo');
+                alert('Formato de Pago inválido, por favor verificalo');
                 return false;
               }
             } else {

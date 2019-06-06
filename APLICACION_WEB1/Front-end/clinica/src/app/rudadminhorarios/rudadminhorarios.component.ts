@@ -65,13 +65,13 @@ export class RudadminhorariosComponent implements OnInit {
   validarHorario(horario2) {
 
     // Si estan vacios:
-    if ((horario2.idhorario === '') || (horario2.iddoctor === '') || (horario2.nconsultorio === '')
+    if ( (horario2.iddoctor === '') || (horario2.nconsultorio === '')
     || (horario2.hora === '')) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(horario2.idhorario)) {
+      // if (/^([0-9]{1,3})+$/.test(horario2.idhorario)) {
         if (/^([0-9]{1,4})+$/.test(horario2.iddoctor)) {
           if (/^([A-Za-z\sáéíóú\-\0-9]{2,10})+$/.test(horario2.nconsultorio)) {
             if (/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(horario2.hora)) {
@@ -89,10 +89,10 @@ export class RudadminhorariosComponent implements OnInit {
           alert('Formato de Id Doctor inválido, por favor verificalo');
           return false;
         }
-      } else {
-            alert('Formato de Id Horario inválido, por favor verificalo');
-            return false;
-      }
+      // } else {
+      //       alert('Formato de Id Horario inválido, por favor verificalo');
+      //       return false;
+      // }
     }
   }
 

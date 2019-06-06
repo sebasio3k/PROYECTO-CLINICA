@@ -48,21 +48,21 @@ export class RegistropersonalComponent implements OnInit {
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(this.data.idtipo)) {
+      if (/^([0-9]{1,3})+$/.test(this.data.idtipo)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.nombre)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.apaterno)) {
             if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.amaterno)) {
               if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.genero)) {
-                if (/^([A-Za-z\sáéíóú]{2,16})+$/.test(this.data.cedula)) {
-                  if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(this.data.fracc)) {
-                    if (/^([0-9]{3,4})+$/.test(this.data.Num)) {
-                      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.calle)) {
-                        if (/^([0-9]{2})+$/.test(this.data.edad)) {
-                          if (/^([0-9]{10})+$/.test(this.data.telefono)) {
-                            if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(this.data.correo)) {
+                if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(this.data.fracc)) {
+                  if (/^([0-9]{3,4})+$/.test(this.data.Num)) {
+                    if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.calle)) {
+                      if (/^([0-9]{2})+$/.test(this.data.edad)) {
+                        if (/^([0-9]{10})+$/.test(this.data.telefono)) {
+                          if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.([a-zA-Z]{2,4})+$/.test(this.data.correo)) {
+                            if (/^([0-9]{16})+$/.test(this.data.cedula)) {
                               if (/^([0-9]{1,4})+$/.test(this.data.sueldo)) {
-                                if (/^([0-9]{1,4})+$/.test(this.data.iddepartamento)) {
-                                  alert('Datos Correctos');
+                                if (/^([0-9]{1,3})+$/.test(this.data.iddepartamento)) {
+                                  // alert('Datos Correctos');
                                   this.personal2.agregar(this.data);
                                 } else {
                                   alert('Formato de Id Departamento inválido, por favor verificalo');
@@ -73,35 +73,35 @@ export class RegistropersonalComponent implements OnInit {
                                 return false;
                               }
                             } else {
-                              alert('Formato de Correo inválido, por favor verificalo');
+                              alert('Formato de Cédula. inválido, por favor verificalo');
                               return false;
                             }
                           } else {
-                            alert('Formato de Teléfono inválido, por favor verificalo');
+                            alert('Formato de Correo inválido, por favor verificalo');
                             return false;
                           }
                         } else {
-                          alert('Formato de Edad inválido inválido, por favor verificalo');
+                          alert('Formato de Teléfono inválido, por favor verificalo');
                           return false;
                         }
                       } else {
-                        alert('Formato de Calle inválido, por favor verificalo');
+                        alert('Formato de Edad inválido inválido, por favor verificalo');
                         return false;
                       }
                     } else {
-                      alert('Formato de Número inválido, por favor verificalo');
+                      alert('Formato de Calle inválido, por favor verificalo');
                       return false;
                     }
                   } else {
-                    alert('Formato de Fracc. inválido, por favor verificalo');
+                    alert('Formato de Número inválido, por favor verificalo');
                     return false;
                   }
                 } else {
-                  alert('Formato de Cédula. inválido, por favor verificalo');
+                  alert('Formato de Fracc. inválido, por favor verificalo');
                   return false;
                 }
               } else {
-                alert('Formato de Génerp inválido, por favor verificalo');
+                alert('Formato de Género inválido, por favor verificalo');
                 return false;
               }
             } else {

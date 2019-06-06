@@ -28,24 +28,25 @@
             <br> <label for="nombre" class="textcolorw">Fraccionamiento</label>
             <input class="form-control" type="text" [(ngModel)] = "doctor2.fracc" name="frac">
             <br> <label for="nombre" class="textcolorw">Número</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.num" name="num">
+            <input class="form-control" type="number" [(ngModel)] = "doctor2.num" name="num">
             <br> <label for="nombre" class="textcolorw">Calle</label>
             <input class="form-control" type="text" [(ngModel)] = "doctor2.calle" name="calle">
             <br> <label for="nombre" class="textcolorw">Edad</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.edad" name="edad">
+            <input class="form-control" type="number" min="20" max="80" [(ngModel)] = "doctor2.edad" name="edad">
             <br> <label for="nombre" class="textcolorw">Teléfono</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.telefono" name="telefono">
+            <input class="form-control" type="tel" [(ngModel)] = "doctor2.telefono" name="telefono">
             <br> <label for="nombre" class="textcolorw">Correo</label>
             <input class="form-control" type="text" [(ngModel)] = "doctor2.correo" name="correo">
             <br> <label for="nombre" class="textcolorw">Cédula</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.cedula" name="cedula">
+            <input class="form-control" type="number" [(ngModel)] = "doctor2.cedula" name="cedula">
             <br> <label for="nombre" class="textcolorw">Id Departamento</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.iddepartamento" name="iddepartamento">
+            <input class="form-control" type="number" min="1" [(ngModel)] = "doctor2.iddepartamento" name="iddepartamento">
             <br> <label for="nombre" class="textcolorw">Sueldo</label>
-            <input class="form-control" type="text" [(ngModel)] = "doctor2.sueldo" name="sueldo">
+            <input class="form-control" type="number" [(ngModel)] = "doctor2.sueldo" name="sueldo">
             <br> <label for="nombre" class="textcolorw">Especialidad</label>
             <input class="form-control" type="text" [(ngModel)] = "doctor2.especialidad" name="especialidad">
-            <br> <input class="form-control" type="text" [(ngModel)] = "doctor2.nconsultorio" name="nconsultorio">
+            <br> <label for="nombre" class="textcolorw">N. Consultorio</label>
+            <input class="form-control" type="number" min="1" [(ngModel)] = "doctor2.nconsultorio" name="nconsultorio">
             <br> <input class="form-control" type="submit" value="Actualizar" (click)="validarDoctor(doctor2)">
             <!-- (click)="actualizarDoctor(doctor2)" -->
             <br><input class="form-control" type="submit" value="Eliminar" (click)="eliminarDoctor(doctor2)">

@@ -19,7 +19,7 @@
               <br> <label for="nombre" class="textcolorw">Descripción</label>
               <input class="form-control" type="text" [(ngModel)] = "promocion2.descripcion" name="descripcion">
               <br> <label for="nombre" class="textcolorw">Monto Rebaja</label>
-              <input class="form-control" type="text" [(ngModel)] = "promocion2.porcentajerebaja" name="porcentajerebaja">
+              <input class="form-control" type="number" [(ngModel)] = "promocion2.porcentajerebaja" name="porcentajerebaja">
               <br> <input class="form-control" type="submit" value="Actualizar" (click)="validarPromocion(promocion2)">
               <!-- (click)="actualizarPromocion(promocion2)" -->
               <br> <input class="form-control" type="submit" value="Eliminar" (click)="eliminarPromocion(promocion2)">

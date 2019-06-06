@@ -93,7 +93,7 @@ export class RudsecretariapacientesComponent implements OnInit {
       if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.nombre)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.apaterno)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.amaterno)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.genero)) {
+            if (/^(Masculono|Femenino|masculino|femenino)*$/.test(paciente22.genero)) {
               if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.fracc)) {
                 if (/^([0-9]{1,4})+$/.test(paciente22.num)) {
                   if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(paciente22.calle)) {

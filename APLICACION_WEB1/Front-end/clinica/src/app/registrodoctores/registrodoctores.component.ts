@@ -54,8 +54,8 @@ constructor( public doctor2: DoctorService) { }
       if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.Nombre)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.apaterno)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.amaterno)) {
-            if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.genero)) {
-              if (/^([A-Za-z\sáéíóú]{2,16})+$/.test(this.data.cedula)) {
+            if (/^(Masculono|Femenino|masculino|femenino)*$/.test(this.data.genero)) {
+              if (/^([0-9]{16})+$/.test(this.data.cedula)) {
                 if (/^([A-Za-z\sáéíóú]{2,20})+$/.test(this.data.fracc)) {
                   if (/^([0-9]{3,4})+$/.test(this.data.num)) {
                     if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.calle)) {

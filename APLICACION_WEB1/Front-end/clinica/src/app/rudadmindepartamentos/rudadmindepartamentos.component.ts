@@ -60,12 +60,12 @@ export class RudadmindepartamentosComponent implements OnInit {
 
   validarDep(dep2) {
 
-    if ((dep2.iddepartamento === '') || (dep2.nombre === '') || (dep2.ubicacion === '') ) {
+    if ( (dep2.nombre === '') || (dep2.ubicacion === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(dep2.iddepartamento)) {
+      // if (/^([0-9]{1,4})+$/.test(dep2.iddepartamento)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(dep2.nombre)) {
           if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(dep2.ubicacion)) {
             alert('Datos Correctos');
@@ -78,15 +78,15 @@ export class RudadmindepartamentosComponent implements OnInit {
           alert('Formato de Nombre inválido, por favor verificalo');
           return false;
         }
-      } else {
-        alert('Formato de Id departamento inválido, por favor verificalo');
-        return false;
-      }
+      // } else {
+      //   alert('Formato de Id departamento inválido, por favor verificalo');
+      //   return false;
+      // }
     }
   }
 
   validarId(depa) {
-    if (/^([0-9]{1,4})+$/.test(depa)) {
+    if (/^([0-9]{1,3})+$/.test(depa)) {
       alert('Datos Correctos');
       this.departamentos.buscar1(depa);
     } else {

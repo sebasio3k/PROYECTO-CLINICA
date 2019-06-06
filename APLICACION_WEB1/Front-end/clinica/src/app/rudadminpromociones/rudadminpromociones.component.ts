@@ -69,28 +69,28 @@ eliminarPromocion(promo2) {
   validarPromocion(promo2) {
 
     // Si estan vacios:
-    if ((promo2.idpromocion === '') || (promo2.descripcion === '') || (promo2.porcentajerebaja === '') ) {
+    if ( (promo2.descripcion === '') || (promo2.porcentajerebaja === '') ) {
       alert('Se requiere que todos los campos esten llenos!');
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([0-9]{1,4})+$/.test(promo2.idpromocion)) {
+      // if (/^([0-9]{1,4})+$/.test(promo2.idpromocion)) {
         if (/^([A-Za-z\sáéíóú\0-9]{1,30})+$/.test(promo2.descripcion)) {
           if (/^([0-9]{2,4})+$/.test(promo2.porcentajerebaja)) {
             alert('Datos Correctos');
             this.promocion.actualizarPromocion(promo2);
           } else {
-            alert('Formato de Porcentaje inválido, por favor verificalo');
+            alert('Formato de Monto inválido, por favor verificalo');
             return false;
           }
         } else {
           alert('Formato de Descripcion inválido, por favor verificalo');
           return false;
         }
-      } else {
-        alert('Formato de Id Promoción inválido, por favor verificalo');
-        return false;
-      }
+      // } else {
+      //   alert('Formato de Id Promoción inválido, por favor verificalo');
+      //   return false;
+      // }
     }
   }
 

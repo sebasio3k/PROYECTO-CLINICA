@@ -37,7 +37,7 @@ export class RegistrodepartamentoComponent implements OnInit {
 
     } else {
       /*VALIDA QUE EL formato de this.usr SEA VALIDO*/
-      if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.nombre)) {
+      if (/^([A-Za-z\sáéíóú]{2,100})+$/.test(this.data.nombre)) {
         if (/^([A-Za-z\sáéíóú]{2,15})+$/.test(this.data.ubicacion)) {
           alert('Datos Correctos');
           this.departamentos2.agregar(this.data);

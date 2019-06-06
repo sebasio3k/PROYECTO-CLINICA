@@ -14,7 +14,7 @@
           <form id="formulario ">
             <!-- Nombre -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="nombre" class="textcolorw">Nombre</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -36,7 +36,7 @@
             </div>
             <!-- apaterno -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="apaterno" class="textcolorw">Apellido Paterno</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -57,7 +57,7 @@
             </div>
             <!-- am -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="amaterno" class="textcolorw">Apellido Materno</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -78,7 +78,7 @@
             </div>
             <!-- Genero -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="genero" class="textcolorw">Genero</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -101,7 +101,7 @@
             </div>
             <!-- No cedula -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="cedula" class="textcolorw">N. Cédula</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -110,7 +110,7 @@
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     name="cedula"
                     required
                     class="form-control"
@@ -122,7 +122,7 @@
             </div>
             <!-- fracc -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="fracc" class="textcolorw">Fraccionamiento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -143,7 +143,7 @@
             </div>
             <!-- num -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="num" class="textcolorw">Numero</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -152,7 +152,7 @@
                     </div>
                   </div>
                   <input
-                    type="num"
+                    type="number"
                     name="num"
                     required
                     class="form-control"
@@ -164,7 +164,7 @@
             </div>
             <!-- Calle-->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="calle" class="textcolorw">Calle</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -185,7 +185,7 @@
             </div>
             <!-- Edad -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="edad" class="textcolorw">Edad</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -194,7 +194,9 @@
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="number"
+                    min="20"
+                    max="80"
                     name="edad"
                     required
                     class="form-control"
@@ -205,7 +207,7 @@
             </div>
             <!-- Telefono-->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="telefono" class="textcolorw">Teléfono</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -214,7 +216,7 @@
                     </div>
                   </div>
                   <input
-                    type="telefono"
+                    type="tel"
                     name="phone"
                     required
                     class="form-control"
@@ -226,7 +228,7 @@
             </div>
             <!-- Email -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="correo" class="textcolorw">Email</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -235,19 +237,19 @@
                     </div>
                   </div>
                   <input
-                    type="correo"
+                    type="text"
                     name="correo"
                     required
                     class="form-control"
                     id="correo"
                     [(ngModel)]="data.correo"
-                    placeholder="correo electronico del médico, de tipo: correo@email.com"/>
+                    placeholder="correo electronico tipo: correo@email.com"/>
                 </div>
               </div>
             </div>
             <!-- Especialidad -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="especialidad" class="textcolorw">Especialidad</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -268,7 +270,7 @@
             </div>
             <!-- N. Consultorio -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="nconsultorio" class="textcolorw">N. Consultorio</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -277,19 +279,20 @@
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="number"
+                    min="1"
                     name="nconsultorio"
                     required
                     class="form-control"
                     id="nconsultorio"
                     [(ngModel)]="data.nconsultorio"
-                    placeholder="Número de consultorio donde atiende el médico"/>
+                    placeholder="N. de consultorio donde atiende el médico"/>
                 </div>
               </div>
             </div>
             <!-- Sueldo -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="sueldo" class="textcolorw">Sueldo</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -298,7 +301,7 @@
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     name="sueldo"
                     required
                     class="form-control"
@@ -310,7 +313,7 @@
             </div>
             <!-- Id-Departamento -->
             <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-8">
+              <div class="form-group col-xs-12 col-10">
                 <label for="iddepartamento" class="textcolorw">Id-Departamento</label>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -319,7 +322,7 @@
                     </div>
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     name="iddepartamento"
                     required
                     class="form-control"

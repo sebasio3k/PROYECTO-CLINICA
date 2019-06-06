@@ -17,7 +17,7 @@
             <!--/primero del typescript y el 2do resultado del servicio-->
             <div *ngFor="let horario2 of horario.horario1">
               <br> <label for="nombre" class="textcolorw">Id Doctor</label>
-              <input class="form-control" type="text" [(ngModel)] = "horario2.iddoctor" name="iddoctor">
+              <input class="form-control" type="number" min="1" [(ngModel)] = "horario2.iddoctor" name="iddoctor">
               <br> <label for="nombre" class="textcolorw">N. Consultorio</label>
               <input class="form-control" type="text" [(ngModel)] = "horario2.nconsultorio" name="nconsultorio">
               <br> <label for="nombre" class="textcolorw">Hora</label>
